@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Homemade Bacon Recipe — My Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Homemade Bacon Recipe</h1>
+        <p>Simple cured bacon using weight-based ratios + Cure #1, then smoke and cook to temp.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Cure: 7 days</span>
+        <span class="badge">Dry: 24 hrs</span>
+        <span class="badge">Smoke: 1 hr</span>
+        <span class="badge">Cook: to 145°F</span>
+        <span class="badge">Rest: 24 hrs</span>
+      </div>
+
+      <!-- Hero image (auto-loads ../images/<this-file-name>.jpg|png|webp) -->
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Recipe photo" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          img.alt = document.querySelector("h1")?.textContent || "Recipe photo";
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li><strong>Pork belly:</strong> base weight (weigh your meat)</li>
+        <li><strong>Salt:</strong> 2.5% of pork belly weight</li>
+        <li><strong>Sugar:</strong> 5.0% of pork belly weight (maple syrup, or 50/50 syrup + brown sugar)</li>
+        <li><strong>Curing Salt #1 (Prague Powder):</strong> 25g per 10kg of meat (2.5g per 1kg)</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>
+          <strong>Cure</strong><br />
+          Combine cure ingredients with the pork belly. Seal (vacuum seal or ziplock) and refrigerate for 7 days.
+        </li>
+        <li>
+          <strong>Dry</strong><br />
+          Remove from packaging and let air dry in the refrigerator for 24 hours.
+        </li>
+        <li>
+          <strong>Cold Smoke</strong><br />
+          Cold smoke the belly for 1 hour.
+        </li>
+        <li>
+          <strong>Cook</strong><br />
+          Raise smoker/oven temperature to 170°F (77°C). Hold until the internal temperature reaches 145°F (63°C).
+        </li>
+        <li>
+          <strong>If needed</strong><br />
+          If internal temp isn’t reached after 5 hours, increase smoker/oven temp to 180°F (82°C).
+        </li>
+        <li>
+          <strong>Remove</strong><br />
+          Take the bacon out once it reaches a maximum internal temperature of 145°F (63°C).
+        </li>
+        <li>
+          <strong>Rest</strong><br />
+          Wrap and cool in the fridge for 24 hours before slicing.
+        </li>
+      </ol>
+
+      <h3>Quick Math Guide (per 1kg of meat)</h3>
+      <ul>
+        <li><strong>Salt:</strong> 25g</li>
+        <li><strong>Sugar/Syrup:</strong> 50g</li>
+        <li><strong>Curing Salt #1:</strong> 2.5g</li>
+      </ul>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>Use a scale for accurate curing ratios.</li>
+        <li>Slice after the 24-hour rest for cleaner, thinner slices.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-30">January 30, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
