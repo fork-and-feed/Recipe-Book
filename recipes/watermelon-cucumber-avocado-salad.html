@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Watermelon, Cucumber, and Avocado Salad — My Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Watermelon, Cucumber, and Avocado Salad</h1>
+        <p>Fresh, juicy, and creamy—finished with feta, basil, and a lime-olive oil drizzle.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 10 min</span>
+        <span class="badge">Cook: 0 min</span>
+        <span class="badge">Total: 10 min</span>
+        <span class="badge">Serves: 4–6</span>
+      </div>
+
+      <!-- Hero image (auto-loads ../images/<this-file-name>.jpg|png|webp) -->
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Recipe photo" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          img.alt = document.querySelector("h1")?.textContent || "Recipe photo";
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>4 cups watermelon, cubed</li>
+        <li>2 cups cucumber, diced</li>
+        <li>1–2 medium avocados, cubed</li>
+        <li>3 tbsp olive oil</li>
+        <li>3 tbsp lime juice</li>
+        <li>1/2 cup feta cheese, crumbled</li>
+        <li>1/4 cup fresh basil, torn or chiffonade</li>
+        <li>Salt &amp; pepper, to taste</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>In a small bowl, whisk together the olive oil and lime juice to make the dressing.</li>
+        <li>In a large salad bowl, combine watermelon, cucumber, and avocado.</li>
+        <li>Drizzle dressing over the salad and toss gently to coat.</li>
+        <li>Season with salt and pepper.</li>
+        <li>Top with crumbled feta and fresh basil just before serving.</li>
+      </ol>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>For the best texture, serve immediately after adding avocado.</li>
+        <li>If making ahead, prep everything and add avocado + dressing right before serving.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-30">January 30, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

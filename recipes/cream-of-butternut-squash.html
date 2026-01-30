@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cream of Butternut Squash — My Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Cream of Butternut Squash</h1>
+        <p>Roasted squash + carrots blended silky with cream, butter, maple, and warm spices.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 20 min</span>
+        <span class="badge">Cook: 45 min</span>
+        <span class="badge">Total: 65 min</span>
+        <span class="badge">Serves: 6</span>
+      </div>
+
+      <!-- Hero image (auto-loads ../images/<this-file-name>.jpg|png|webp) -->
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Recipe photo" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          img.alt = document.querySelector("h1")?.textContent || "Recipe photo";
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>3 lbs butternut squash, peeled and cut into 1&quot; cubes</li>
+        <li>2 carrots, peeled and chopped</li>
+        <li>1 large onion, diced</li>
+        <li>4 cloves garlic, minced</li>
+        <li>3 cups vegetable or chicken stock</li>
+        <li>1 cup heavy cream</li>
+        <li>1 tbsp apple cider vinegar (or dry white wine)</li>
+        <li>4 tbsp butter (divided)</li>
+        <li>4 tbsp maple syrup</li>
+        <li>1/2 tsp cinnamon</li>
+        <li>1/8 tsp nutmeg</li>
+        <li>Salt and black pepper, to taste</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>
+          <strong>Roast the Veggies</strong><br />
+          Toss squash and carrots with a little oil and roast at 400°F for 30–35 minutes,
+          until fork-tender with golden edges.
+        </li>
+
+        <li>
+          <strong>Sauté the Base</strong><br />
+          While squash roasts, melt 1 tbsp butter in a large pot over medium heat.
+          Sauté onion and garlic until soft and translucent (about 5–8 minutes).
+        </li>
+
+        <li>
+          <strong>Deglaze</strong><br />
+          Pour in apple cider vinegar (or wine), scraping up browned bits. Simmer 1 minute.
+        </li>
+
+        <li>
+          <strong>Combine &amp; Blend</strong><br />
+          Add roasted squash, carrots, and stock. Blend until completely smooth (immersion blender or in batches).
+        </li>
+
+        <li>
+          <strong>Simmer</strong><br />
+          Stir in cinnamon and nutmeg. Bring to a gentle boil, then reduce heat to low.
+        </li>
+
+        <li>
+          <strong>Finish</strong><br />
+          Stir in heavy cream, maple syrup, and remaining 3 tbsp butter. Stir until melted and silky.
+        </li>
+
+        <li>
+          <strong>Season</strong><br />
+          Taste and add salt and pepper as needed before serving.
+        </li>
+      </ol>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>If you want it thinner, add a splash more stock.</li>
+        <li>For a little heat, add a pinch of cayenne or smoked paprika.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-30">January 30, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
