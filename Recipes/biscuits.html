@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Biscuits — My Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Biscuits</h1>
+        <p>Flaky, buttery biscuits with simple layering folds.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Yield: 8–10</span>
+        <span class="badge">Oven: 450°F</span>
+        <span class="badge">Bake: 12–15 min</span>
+      </div>
+
+      <hr />
+<figure class="recipe-hero">
+  <img id="recipeHero" alt="Recipe photo" />
+</figure>
+
+<script>
+  (function () {
+    const img = document.getElementById("recipeHero");
+    const fig = img.closest("figure");
+    const page = location.pathname.split("/").pop().replace(".html", "");
+    const exts = ["jpg", "png", "webp"]; // try these in order
+    let i = 0;
+
+    img.alt = document.querySelector("h1")?.textContent || "Recipe photo";
+
+    function tryNext() {
+      if (i >= exts.length) { fig.remove(); return; } // no image found -> remove placeholder
+      img.src = `../images/${page}.${exts[i++]}`;
+    }
+
+    img.onerror = tryNext;
+    tryNext();
+  })();
+</script>
+
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>2 cups all-purpose flour (~250g)</li>
+        <li>1 1/2 tbsp baking powder</li>
+        <li>1 tsp sugar</li>
+        <li>3/4 tsp salt</li>
+        <li>113g unsalted butter (cold and cubed)</li>
+        <li>210 ml whole milk (cold)</li>
+        <li>1 tbsp unsalted butter (melted and cooled)</li>
+        <li>Extra melted butter (for brushing)</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>
+          <strong>Preparation</strong><br />
+          Preheat oven to 450°F. Line a baking sheet with parchment paper.
+        </li>
+
+        <li>
+          <strong>Mix Liquid</strong><br />
+          Stir the 1 tbsp melted butter into the 210 ml cold milk. Keep in the fridge until needed.
+        </li>
+
+        <li>
+          <strong>Combine Dry &amp; Fat</strong><br />
+          Whisk flour, baking powder, sugar, and salt. Cut the cold butter into the flour until it resembles small peas.
+        </li>
+
+        <li>
+          <strong>Form Dough</strong><br />
+          Stir in the cold milk mixture until just combined (don’t overmix).
+        </li>
+
+        <li>
+          <strong>Fold</strong><br />
+          Turn dough onto a floured surface. Fold it over itself 5–6 times to create layers.
+        </li>
+
+        <li>
+          <strong>Cut</strong><br />
+          Pat dough to 1-inch thick. Cut into circles by pressing straight down (do not twist).
+        </li>
+
+        <li>
+          <strong>Bake</strong><br />
+          Bake 12–15 minutes until golden. Brush with extra melted butter immediately.
+        </li>
+      </ol>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>Keep everything cold for maximum flake (cold butter + cold milk).</li>
+        <li>For taller biscuits, place them close together on the baking sheet.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-28">January 28, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

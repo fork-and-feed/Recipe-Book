@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sweet and Sour Chili Chicken — My Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Sweet and Sour Chili Chicken</h1>
+        <p>Seafood-free • cilantro-free • extra crunch • pineapple-forward glossy glaze</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 15 min</span>
+        <span class="badge">Marinate: 15 min</span>
+        <span class="badge">Cook: 12–15 min</span>
+        <span class="badge">Total: ~45 min</span>
+        <span class="badge">Serves: 4</span>
+      </div>
+
+      <!-- Hero image (auto-matches the HTML filename) -->
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Recipe photo" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"]; // tries these in order
+          let i = 0;
+
+          img.alt = document.querySelector("h1")?.textContent || "Recipe photo";
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; } // no image found -> remove placeholder
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+
+      <h3>1) The Chicken &amp; Marinade (Velveting)</h3>
+      <ul>
+        <li>1.5 lbs chicken breast or thighs, cut into 1-inch pieces</li>
+        <li>2 tbsp cornstarch</li>
+        <li>1 tbsp soy sauce</li>
+        <li>1 tbsp vegetable oil</li>
+      </ul>
+      <p class="small">Mix and let sit for 15 minutes.</p>
+
+      <h3>2) The “Gold Standard” Sauce</h3>
+      <p class="small">Whisk together in a bowl:</p>
+      <ul>
+        <li>3 tbsp sweet chili sauce <em>(or substitute below)</em></li>
+        <li>4 tbsp soy sauce</li>
+        <li>1 tbsp Worcestershire sauce (seafood-safe)</li>
+        <li>2 tbsp white wine vinegar</li>
+        <li>2 tbsp ketchup</li>
+        <li>2 tbsp pineapple juice (reserved from the can)</li>
+        <li>1 tbsp brown sugar</li>
+      </ul>
+
+      <h3>Sweet Chili Substitute (Quick)</h3>
+      <ul>
+        <li>2 tbsp honey</li>
+        <li>1 tbsp vinegar</li>
+        <li>1 tsp red pepper flakes</li>
+      </ul>
+
+      <h3>3) The Fresh Lineup</h3>
+      <ul>
+        <li><strong>Produce:</strong> 2 bell peppers (sliced), 1 cup snap peas, 1 head baby bok choi (chopped)</li>
+        <li><strong>The Crunch:</strong> 1–2 cups fresh bean sprouts</li>
+        <li><strong>The Fruit:</strong> 1 can (~14 oz) pineapple chunks or tidbits, drained (reserve 2 tbsp juice)</li>
+        <li><strong>Aromatics:</strong> 2 cloves garlic (minced) + 1 tbsp fresh ginger (grated)</li>
+        <li><strong>Finishers:</strong> 1 tsp toasted sesame oil + fresh lime</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>
+          <strong>The Sear</strong><br />
+          Heat 2 tbsp oil in a wok or skillet over high heat. Add chicken in a single layer.
+          Sear 3 minutes undisturbed, flip, and cook 2 more minutes. Remove chicken to a plate.
+        </li>
+
+        <li>
+          <strong>The Fruit &amp; Veg</strong><br />
+          In the same pan, add pineapple chunks, peppers, and snap peas. Stir-fry 3 minutes.
+          The pineapple will start to caramelize at the edges.
+        </li>
+
+        <li>
+          <strong>The Aromatics</strong><br />
+          Add garlic and ginger; stir-fry 30 seconds until fragrant.
+        </li>
+
+        <li>
+          <strong>The Glaze</strong><br />
+          Pour in sauce mixture. Let it bubble 1 minute until it thickens into a glossy glaze.
+        </li>
+
+        <li>
+          <strong>The Final Mix</strong><br />
+          Add chicken back in with baby bok choi and bean sprouts. Toss 60–90 seconds until sprouts are
+          just tender but still “snappy.”
+        </li>
+
+        <li>
+          <strong>Off-Heat</strong><br />
+          Turn off heat. Stir in toasted sesame oil and a squeeze of lime.
+        </li>
+      </ol>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>If the sauce gets too thick, loosen with a splash of water or broth.</li>
+        <li>Serve over rice, noodles, or cauliflower rice.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-28">January 28, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recipe Name — My Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Recipe Name</h1>
+        <p>Short description of the recipe.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 10 min</span>
+        <span class="badge">Cook: 20 min</span>
+        <span class="badge">Total: 30 min</span>
+        <span class="badge">Serves: 4</span>
+      </div>
+<figure class="recipe-hero">
+  <img id="recipeHero" alt="Recipe photo" />
+</figure>
+
+<script>
+  (function () {
+    const img = document.getElementById("recipeHero");
+    const fig = img.closest("figure");
+    const page = location.pathname.split("/").pop().replace(".html", "");
+    const exts = ["jpg", "png", "webp"]; // try these in order
+    let i = 0;
+
+    img.alt = document.querySelector("h1")?.textContent || "Recipe photo";
+
+    function tryNext() {
+      if (i >= exts.length) { fig.remove(); return; } // no image found -> remove placeholder
+      img.src = `../images/${page}.${exts[i++]}`;
+    }
+
+    img.onerror = tryNext;
+    tryNext();
+  })();
+</script>
+
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>Ingredient 1</li>
+        <li>Ingredient 2</li>
+        <li>Ingredient 3</li>
+      </ul>
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>Step one…</li>
+        <li>Step two…</li>
+        <li>Step three…</li>
+      </ol>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>Optional tips, substitutions, storage, etc.</li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      <p class="small">Last updated: <time datetime="2026-01-28">January 28, 2026</time></p>
+    </footer>
+  </div>
+</body>
+</html>

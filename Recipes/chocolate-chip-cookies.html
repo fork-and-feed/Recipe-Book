@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chocolate Chip Cookies — My Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Chocolate Chip Cookies</h1>
+        <p>Chewy in the middle, crisp at the edges.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 15 min</span>
+        <span class="badge">Cook: 10 min</span>
+        <span class="badge">Total: 25 min</span>
+        <span class="badge">Makes: 18 cookies</span>
+      </div>
+<figure class="recipe-hero">
+  <img id="recipeHero" alt="Recipe photo" />
+</figure>
+
+<script>
+  (function () {
+    const img = document.getElementById("recipeHero");
+    const fig = img.closest("figure");
+    const page = location.pathname.split("/").pop().replace(".html", "");
+    const exts = ["jpg", "png", "webp"]; // try these in order
+    let i = 0;
+
+    img.alt = document.querySelector("h1")?.textContent || "Recipe photo";
+
+    function tryNext() {
+      if (i >= exts.length) { fig.remove(); return; } // no image found -> remove placeholder
+      img.src = `../images/${page}.${exts[i++]}`;
+    }
+
+    img.onerror = tryNext;
+    tryNext();
+  })();
+</script>
+
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>1/2 cup (113g) unsalted butter, softened</li>
+        <li>1/2 cup (100g) brown sugar</li>
+        <li>1/4 cup (50g) white sugar</li>
+        <li>1 large egg</li>
+        <li>1 tsp vanilla extract</li>
+        <li>1 1/4 cups (155g) all-purpose flour</li>
+        <li>1/2 tsp baking soda</li>
+        <li>1/2 tsp salt</li>
+        <li>1 cup (170g) chocolate chips</li>
+      </ul>
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>Preheat oven to 350°F (175°C). Line a baking sheet with parchment.</li>
+        <li>Cream butter and sugars until fluffy. Beat in egg and vanilla.</li>
+        <li>Mix flour, baking soda, and salt. Stir into wet ingredients.</li>
+        <li>Fold in chocolate chips.</li>
+        <li>Scoop 1–2 tbsp portions, spacing them apart.</li>
+        <li>Bake 9–11 minutes until edges are set (centers will look slightly underbaked).</li>
+        <li>Cool 5 minutes on the sheet, then move to a rack.</li>
+      </ol>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>For thicker cookies, chill dough 30–60 minutes.</li>
+        <li>Swap in chopped dark chocolate for gooier pockets.</li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      <p class="small">Last updated: <time datetime="2026-01-28">January 28, 2026</time></p>
+    </footer>
+  </div>
+</body>
+</html>

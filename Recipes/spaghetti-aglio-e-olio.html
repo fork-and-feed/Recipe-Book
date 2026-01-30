@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spaghetti Aglio e Olio — My Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Spaghetti Aglio e Olio</h1>
+        <p>Fast garlic-and-olive-oil pasta with a little heat.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 5 min</span>
+        <span class="badge">Cook: 15 min</span>
+        <span class="badge">Total: 20 min</span>
+        <span class="badge">Serves: 2</span>
+      </div>
+<figure class="recipe-hero">
+  <img id="recipeHero" alt="Recipe photo" />
+</figure>
+
+<script>
+  (function () {
+    const img = document.getElementById("recipeHero");
+    const fig = img.closest("figure");
+    const page = location.pathname.split("/").pop().replace(".html", "");
+    const exts = ["jpg", "png", "webp"]; // try these in order
+    let i = 0;
+
+    img.alt = document.querySelector("h1")?.textContent || "Recipe photo";
+
+    function tryNext() {
+      if (i >= exts.length) { fig.remove(); return; } // no image found -> remove placeholder
+      img.src = `../images/${page}.${exts[i++]}`;
+    }
+
+    img.onerror = tryNext;
+    tryNext();
+  })();
+</script>
+
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>200g spaghetti</li>
+        <li>1/4 cup olive oil</li>
+        <li>4–6 cloves garlic, thinly sliced</li>
+        <li>1/2 tsp red pepper flakes (more/less to taste)</li>
+        <li>Salt</li>
+        <li>Parsley, chopped (optional)</li>
+        <li>Grated parmesan (optional)</li>
+      </ul>
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>Cook spaghetti in salted water until al dente. Reserve 1/2 cup pasta water.</li>
+        <li>Meanwhile, warm olive oil in a pan over medium-low heat. Add garlic and cook gently until lightly golden.</li>
+        <li>Add red pepper flakes for 10–20 seconds.</li>
+        <li>Toss in drained spaghetti with a splash of pasta water to emulsify into a light sauce.</li>
+        <li>Season with salt. Finish with parsley and/or parmesan if you like.</li>
+      </ol>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>Keep heat low so garlic doesn’t burn (burnt garlic tastes bitter).</li>
+        <li>Add lemon zest or sautéed shrimp for a variation.</li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      <p class="small">Last updated: <time datetime="2026-01-28">January 28, 2026</time></p>
+    </footer>
+  </div>
+</body>
+</html>

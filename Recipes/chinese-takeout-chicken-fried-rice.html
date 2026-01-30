@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chinese Takeout-Style Chicken Fried Rice — My Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Chinese Takeout-Style Chicken Fried Rice</h1>
+        <p>Wok-style fried rice with eggs, chicken, and classic Chinese takeout seasoning.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 15 min</span>
+        <span class="badge">Cook: 10 min</span>
+        <span class="badge">Total: 25 min</span>
+        <span class="badge">Serves: 3–4</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Recipe photo" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          img.alt = document.querySelector("h1")?.textContent || "Recipe photo";
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+
+      <h3>Main Components</h3>
+      <ul>
+        <li>3 tbsp neutral oil (vegetable or peanut), divided</li>
+        <li>2 cups (350g) cooked rice (2 parts long-grain, 1 part jasmine)</li>
+        <li>2 eggs, beaten (seasoned with a pinch of salt and MSG)</li>
+        <li>2 oz (56g) marinated chicken slivers (see below)</li>
+        <li>1/2 cup (75g) yellow onion, medium dice </li>
+        <li>2 tbsp (28g) carrot, medium dice</li>
+        <li>2 cloves garlic, roughly chopped garlic</li>
+        <li>Bean sprouts, small handful (40g)</li>
+        <li>2 tbsp (28g) frozen green peas</li>
+        <li>2 tbsp (12g) green onion, finely sliced</li>
+      </ul>
+
+      <h3>Sauce Mixture</h3>
+      <ul>
+        <li>1/2 tsp (2g) sugar</li>
+        <li>2 tsp (10g) light soy sauce</li>
+        <li>1/2 tsp (2.5g) dark soy sauce</li>
+      </ul>
+
+      <h3>Seasoning Mixture</h3>
+      <ul>
+        <li>1/2 tsp (2g) MSG</li>
+        <li>1 tsp (3g) kosher salt</li>
+        <li>2 pinches white pepper</li>
+      </ul>
+
+      <h3>Finish</h3>
+      <ul>
+        <li>2 tsp (9g) Shaoxing wine</li>
+        <li>1 tsp (5g) toasted sesame oil</li>
+        <li>Additional seasoning (salt &amp; white pepper), to taste</li>
+      </ul>
+
+      <hr />
+
+      <h2>Directions</h2>
+      <ol>
+        <li>Heat wok or pan over medium high heat until lightly smoking</li>
+
+        <li>Add 1 tbsp neutral oil swirl around and allow to heat for 15–30 seconds until shimmering</li>
+
+        <li>Turn heat to low and add eggs</li>
+
+        <li>Cook eggs for 20–30 seconds until puffed up around the edges</li>
+
+        <li>Turn egg over with cooking utensil and lightly scramble, about 20–30 seconds</li>
+
+        <li>Remove egg from pan to bowl and wipe out wok or pan</li>
+
+        <li>Return wok to medium-high heat and add 1 tbsp neutral oil, swirl and heat until shimmering</li>
+
+        <li>Add chicken and cook until 90% done, about 2–3 minutes</li>
+
+        <li>Remove chicken and add to bowl with egg</li>
+
+        <li>Return wok to medium to medium-high heat and add final tbsp oil, heat until shimmering</li>
+
+        <li>Add onion and carrot and cook until onion is translucent, about 1–2 minutes</li>
+
+        <li>Add garlic and cook for about 15–20 seconds</li>
+
+        <li>Add rice and toss with vegetables</li>
+
+        <li>Push rice down flat and break up any clumps with spoon, cook rice until lightly toasted, about 2–4 minutes</li>
+
+        <li>Add the chicken and egg to the rice and mix in well</li>
+
+        <li>Push rice to center of wok and add sauce mixture around the rim, immediately stir into the rice until fully incorporated and no clumps of white rice remains</li>
+
+        <li>Add seasoning mixture and stir into rice</li>
+
+        <li>Add green peas and bean sprouts, mix into rice</li>
+
+        <li>Push rice to center of the wok and add Shaoxing wine around the rim of wok, immediately stir into the rice</li>
+
+        <li>Turn off the heat and mix in green onions and toasted sesame oil, stir until combined</li>
+
+        <li>Taste, adjust seasoning with salt and white pepper and serve</li>
+      </ol>
+
+      <h2>Chicken Marinade</h2>
+      <ul>
+        <li>1 chicken breast (12–16 oz / 340–450g) slivers</li>
+        <li>1/2 tsp (2g) baking soda</li>
+        <li><strong>Marinade ingredients:</strong></li>
+        <li>1/2 tsp (2.5g) light soy sauce</li>
+        <li>1/2 tsp (2g) sugar</li>
+        <li>1/2 tsp (1.5g) cornstarch</li>
+        <li>1/4 tsp (1g) kosher salt</li>
+        <li>1/8 tsp (0.5g) MSG</li>
+        <li>1 tsp (5g) neutral oil</li>
+      </ul>
+
+      <h3>Marinade Directions</h3>
+      <ol>
+        <li>Remove tenderloin and slice chicken lengthwise into 3–5 strips</li>
+        <li>Turn strips perpendicular and slice across the grain into 1/8 inch (3mm) slivers (repeat with tenderloin)</li>
+        <li>Wash chicken slivers under cold running water until they become slightly more white in appearance</li>
+        <li>Wring all water out of the slivers by hand or press against a colander</li>
+        <li>Mix in baking soda with washed chicken for 30–45 seconds</li>
+        <li>Mix in the rest of marinade ingredients and marinate at least 15 minutes (or up to overnight)</li>
+      </ol>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>Day-old rice works best for separation and texture.</li>
+        <li>High heat and quick movements are key to authentic takeout flavor.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-28">January 28, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

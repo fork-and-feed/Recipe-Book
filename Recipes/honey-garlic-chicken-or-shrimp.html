@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Honey Garlic Chicken or Shrimp — My Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Honey Garlic Chicken or Shrimp</h1>
+        <p>The wok-steam &amp; cornstarch velvet method for a glossy honey-soy glaze.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 10 min</span>
+        <span class="badge">Velvet: 15–20 min</span>
+        <span class="badge">Cook: 10 min</span>
+        <span class="badge">Total: ~35–40 min</span>
+        <span class="badge">Serves: 3–4</span>
+      </div>
+
+      <!-- Hero image (auto-matches the HTML filename) -->
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Recipe photo" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"]; // tries these in order
+          let i = 0;
+
+          img.alt = document.querySelector("h1")?.textContent || "Recipe photo";
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; } // no image found -> remove placeholder
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>1 lb chicken breast/thighs (sliced thin) <em>or</em> shrimp</li>
+        <li>1 cup broccoli florets</li>
+        <li>1 tbsp cornstarch (for velveting)</li>
+        <li>1 tbsp water or oil (for velveting)</li>
+        <li>4 tbsp honey</li>
+        <li>4 tbsp soy sauce (divided: 1 tbsp for marinade, 3 tbsp for sauce)</li>
+        <li>1 tsp garlic, minced</li>
+        <li>1/2 tsp ground ginger</li>
+        <li>1 tbsp cooking oil</li>
+        <li>Salt and pepper, to taste</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>
+          <strong>Velvet &amp; Marinate</strong><br />
+          Toss chicken (or shrimp) with cornstarch, water (or oil), and 1 tbsp soy sauce.
+          Mix until the cornstarch is dissolved and protein is evenly coated. Rest 15–20 minutes.
+        </li>
+
+        <li>
+          <strong>Prep Sauce</strong><br />
+          Whisk honey with the remaining 3 tbsp soy sauce.
+        </li>
+
+        <li>
+          <strong>Wok-Steam Broccoli</strong><br />
+          Add ~1 inch of water to the wok. Add broccoli, cover, and steam 5 minutes.
+          Remove broccoli, drain water, and wipe wok dry.
+        </li>
+
+        <li>
+          <strong>Bloom Aromatics</strong><br />
+          Heat cooking oil in the dry wok over medium heat. Add garlic and ginger; sauté 30 seconds until fragrant.
+        </li>
+
+        <li>
+          <strong>Sear Protein</strong><br />
+          Increase heat to medium-high and add velveted protein.<br /><br />
+          <em>For chicken:</em> Let it sear 1 minute before stirring, then stir-fry until cooked through.<br />
+          <em>For shrimp:</em> Cook about 1 minute per side until pink.
+        </li>
+
+        <li>
+          <strong>Glaze</strong><br />
+          Pour in honey-soy mixture. The cornstarch from the protein will thicken it into a glossy glaze.
+          Simmer 1 minute while tossing to coat.
+        </li>
+
+        <li>
+          <strong>Final Toss</strong><br />
+          Return broccoli to the wok and toss to coat. Season with salt and pepper to taste.
+        </li>
+
+        <li>
+          <strong>Serve</strong><br />
+          Serve over rice or rice noodles.
+        </li>
+      </ol>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>If the glaze gets too thick, loosen with a splash of water.</li>
+        <li>Add a squeeze of lime or a sprinkle of sesame seeds if you want a brighter finish.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-28">January 28, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

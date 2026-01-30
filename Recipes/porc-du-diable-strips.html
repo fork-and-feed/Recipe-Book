@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Porc du Diable Strips — My Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Porc du Diable Strips</h1>
+        <p>Quick maple-ketchup glaze with a sticky, dark finish.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 10 min</span>
+        <span class="badge">Marinate: 15–30 min</span>
+        <span class="badge">Cook: 8–10 min</span>
+        <span class="badge">Total: 25–40 min</span>
+        <span class="badge">Serves: 3–4</span>
+      </div>
+
+      <!-- Hero image (auto-matches the HTML filename) -->
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Recipe photo" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"]; // tries these in order
+          let i = 0;
+
+          img.alt = document.querySelector("h1")?.textContent || "Recipe photo";
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; } // no image found -> remove placeholder
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+
+      <h3>The Ingredients</h3>
+      <ul>
+        <li><strong>Protein:</strong> 1 pork tenderloin, sliced into 1/2-inch strips</li>
+        <li>
+          <strong>The Glaze:</strong> 1/4 cup maple syrup, 1/4 cup ketchup, 2 garlic cloves (minced),
+          1 tbsp apple cider vinegar
+        </li>
+        <li><strong>The Fat:</strong> 6 tbsp oil (for marinade) + 2 tbsp oil (for frying)</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+
+      <h3>The 3-Step Process</h3>
+      <ol>
+        <li>
+          <strong>Marinate</strong><br />
+          Whisk glaze ingredients with 6 tbsp oil. Toss with pork strips.
+          Let sit 15–30 minutes (the vinegar + maple tenderize quickly).
+        </li>
+
+        <li>
+          <strong>Sear</strong><br />
+          Heat a skillet with 2 tbsp oil over medium-high heat.
+          Add pork strips (drain excess marinade first). Cook 3–4 minutes until golden and no longer pink.
+        </li>
+
+        <li>
+          <strong>Glaze</strong><br />
+          Pour remaining marinade into the pan. Stir constantly 1–2 minutes until bubbling, thickened,
+          and coating the pork in a sticky, dark glaze.
+        </li>
+      </ol>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>Drain excess marinade before searing to reduce splatter and help the pork brown properly.</li>
+        <li>Great over rice with a quick side of steamed broccoli or green beans.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-28">January 28, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ground Beef Stir Fry (Onion &amp; Pepper Version) — My Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Ground Beef Stir Fry (Onion &amp; Pepper Version)</h1>
+        <p>Fast 20-minute stir fry with a sweet-savory BBQ–soy glaze.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 10 min</span>
+        <span class="badge">Cook: 10 min</span>
+        <span class="badge">Total: 20 min</span>
+        <span class="badge">Serves: 4</span>
+      </div>
+
+      <!-- Hero image (auto-matches the HTML filename) -->
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Recipe photo" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"]; // tries these in order
+          let i = 0;
+
+          img.alt = document.querySelector("h1")?.textContent || "Recipe photo";
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; } // no image found -> remove placeholder
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+
+      <h3>The Beef &amp; Veggies</h3>
+      <ul>
+        <li>1 lb ground beef (80/20 or 90/10)</li>
+        <li>1 large yellow onion, sliced into strips or wedges</li>
+        <li>2 large bell peppers (any color), sliced into strips</li>
+        <li>1 large carrot, julienned (matchsticks)</li>
+        <li>1 tbsp olive oil or avocado oil</li>
+      </ul>
+
+      <h3>The Stir Fry Sauce</h3>
+      <ul>
+        <li>3 tbsp BBQ sauce (original)</li>
+        <li>3 tbsp low-sodium soy sauce</li>
+        <li>2 tbsp maple syrup</li>
+        <li>1 tbsp sesame oil</li>
+        <li>2 cloves garlic, minced</li>
+        <li>1 tsp fresh ginger, grated</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>
+          <strong>Whisk the Sauce</strong><br />
+          In a small bowl, combine BBQ sauce, soy sauce, maple syrup, sesame oil, garlic, and ginger. Set aside.
+        </li>
+
+        <li>
+          <strong>Brown the Beef</strong><br />
+          Heat a large skillet or wok over medium-high heat with 1 tbsp oil.
+          Add ground beef and cook, breaking it up, until browned (about 5 minutes).
+          Use a slotted spoon to remove beef and set aside, leaving drippings in the pan.
+        </li>
+
+        <li>
+          <strong>Sauté the Onions &amp; Peppers</strong><br />
+          Add onion, bell peppers, and carrot to the same pan. Sauté 4–5 minutes, stirring frequently,
+          until onions are translucent and peppers are crisp-tender.
+        </li>
+
+        <li>
+          <strong>Combine</strong><br />
+          Add cooked beef back into the pan with the vegetables.
+        </li>
+
+        <li>
+          <strong>Thicken &amp; Glaze</strong><br />
+          Pour sauce over beef and vegetables. Toss 1–2 minutes until heated through and slightly thickened to glaze.
+        </li>
+
+        <li>
+          <strong>Serve</strong><br />
+          Serve immediately over white rice. Garnish with green onions or sesame seeds if desired.
+        </li>
+      </ol>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>If you want it spicier, add chili flakes or a squeeze of sriracha to the sauce.</li>
+        <li>For more sauce, double the sauce ingredients (great for extra rice).</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-28">January 28, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

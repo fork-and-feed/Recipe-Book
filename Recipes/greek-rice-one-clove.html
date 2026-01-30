@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Greek Rice (The “One Clove” Version) — My Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Greek Rice (The “One Clove” Version)</h1>
+        <p>Fast, tangy rice made with chicken broth and Greek dressing — big flavor from one garlic clove.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 2 min</span>
+        <span class="badge">Cook: 20 min</span>
+        <span class="badge">Total: 22 min</span>
+      </div>
+<figure class="recipe-hero">
+  <img id="recipeHero" alt="Recipe photo" />
+</figure>
+
+<script>
+  (function () {
+    const img = document.getElementById("recipeHero");
+    const fig = img.closest("figure");
+    const page = location.pathname.split("/").pop().replace(".html", "");
+    const exts = ["jpg", "png", "webp"]; // try these in order
+    let i = 0;
+
+    img.alt = document.querySelector("h1")?.textContent || "Recipe photo";
+
+    function tryNext() {
+      if (i >= exts.length) { fig.remove(); return; } // no image found -> remove placeholder
+      img.src = `../images/${page}.${exts[i++]}`;
+    }
+
+    img.onerror = tryNext;
+    tryNext();
+  })();
+</script>
+
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li><strong>Rice:</strong> 1 cup long-grain white rice</li>
+        <li><strong>Liquid:</strong> 1.75 cups chicken broth</li>
+        <li><strong>Flavor:</strong> 1/4 cup Kraft Greek Dressing</li>
+        <li><strong>Aromatic:</strong> 1 large clove fresh garlic, minced</li>
+        <li><strong>Fat (optional):</strong> 1 tbsp butter (helps keep grains separate)</li>
+      </ul>
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>
+          <strong>Sauté</strong><br />
+          Heat the butter (or a splash of the dressing) in a medium pot over medium heat.
+          Add the minced garlic and cook for about 45 seconds—just until fragrant.
+        </li>
+        <li>
+          <strong>Toast</strong><br />
+          Stir in the dry rice and toast with the garlic for 1 minute. This adds a nutty flavor
+          and helps prevent mushy rice.
+        </li>
+        <li>
+          <strong>Liquids</strong><br />
+          Pour in the chicken broth and the Greek dressing. Give it one quick stir.
+        </li>
+        <li>
+          <strong>Simmer</strong><br />
+          Bring to a boil, then immediately reduce heat to low. Cover with a tight lid.
+        </li>
+        <li>
+          <strong>Steam</strong><br />
+          Simmer for 15–18 minutes. Don’t lift the lid.
+        </li>
+        <li>
+          <strong>Rest</strong><br />
+          Remove from heat and let sit (covered) for 5 minutes. Fluff with a fork and serve.
+        </li>
+      </ol>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>If you want it extra tangy, add a tiny splash more dressing after fluffing.</li>
+        <li>For more bite, stir in lemon zest or chopped parsley at the end.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-28">January 28, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

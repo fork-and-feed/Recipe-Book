@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Recipe Book</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>My Recipe Book</h1>
+        <p>Search recipes, filter by tags, and print cleanly.</p>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+      </nav>
+    </header>
+<!-- Cover hero (image only) -->
+<section class="cover-hero" aria-label="Recipe book cover">
+  <img class="cover-img" src="images/cover.png" alt="Recipe book cover image" />
+</section>
+
+
+
+    <section class="card">
+      <h2>Find a recipe</h2>
+
+      <div class="controls">
+        <label class="control">
+          <span class="control-label">Search</span>
+          <input id="searchInput" class="input" type="search" placeholder="Type a name, ingredient, or description…" />
+        </label>
+
+        <label class="control">
+          <span class="control-label">Filter by tag</span>
+          <select id="tagSelect" class="select">
+            <option value="">All tags</option>
+          </select>
+        </label>
+
+        <button id="clearBtn" class="button" type="button">Clear</button>
+      </div>
+
+      <p id="status" class="small" style="margin-top:10px;"></p>
+
+      <div id="recipeGrid" class="grid" style="margin-top: 14px;"></div>
+
+      <noscript>
+        <p class="small">This page needs JavaScript enabled to show the searchable recipe list.</p>
+      </noscript>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> My Recipe Book</p>
+    </footer>
+  </div>
+
+  <script>
+    // ✅ Edit recipes here (instead of recipes.json) so Chrome file:// works.
+    const RECIPES = [
+{
+  title: "Chinese Takeout-Style Chicken Fried Rice",
+  file: "chinese-takeout-chicken-fried-rice.html",
+  description: "Classic wok-style fried rice with eggs, chicken, soy sauces, and Shaoxing wine.",
+  tags: ["fried-rice", "chicken", "weeknight", "stir-fry", "takeout-style"]
+},
+
+
+{
+  title: "Steakhouse-Style Stuffed Peppers",
+  file: "steakhouse-style-stuffed-peppers.html",
+  description: "Montreal-seasoned beef + rice with a rich, doctored tomato glaze.",
+  tags: ["weeknight", "beef", "comfort", "meal-prep", "pantry-hero"]
+},
+
+	
+      {
+        title: "Honey Garlic Chicken or Shrimp",
+        file: "honey-garlic-chicken-or-shrimp.html",
+        description: "Velveted protein + wok-steamed broccoli in a glossy honey-soy garlic glaze.",
+        tags: ["weeknight", "quick", "chicken", "shrimp", "stir-fry"]
+      },
+      {
+        title: "Rabbit Pie",
+        file: "rabbit-pie.html",
+        description: "Savory rabbit pie with slow-cooked meat, glossy lemon-tomato gravy, and a golden crust.",
+        tags: ["pie", "comfort", "slow-cooker", "dinner"]
+      },
+      {
+        title: "Sweet and Sour Chili Chicken",
+        file: "sweet-and-sour-chili-chicken.html",
+        description: "Pineapple + crisp veg stir fry with velvety chicken and a glossy sweet-chili glaze.",
+        tags: ["chicken", "stir-fry", "weeknight", "quick", "pineapple", "crunchy"]
+      },
+      {
+        title: "Porc du Diable Strips",
+        file: "porc-du-diable-strips.html",
+        description: "Pork tenderloin strips with a quick maple-ketchup-garlic glaze (15–30 min marinade).",
+        tags: ["pork", "weeknight", "quick", "maple"]
+      },
+      {
+        title: "Slow-Cooker Chili",
+        file: "slow-cooker-chili.html",
+        description: "Bold, beefy slow-cooker chili with a deep spice bloom and late-added beans.",
+        tags: ["chili", "beef", "slow-cooker", "comfort", "meal-prep"]
+      },
+      {
+        title: "The Ultimate Fluffy Pancakes",
+        file: "ultimate-fluffy-pancakes.html",
+        description: "Extra fluffy pancakes with a short batter rest and low-heat cooking.",
+        tags: ["breakfast", "baking", "quick", "vegetarian"]
+      },
+      {
+        title: "Petit Pains Fourrés",
+        file: "petit-pains-fourres.html",
+        description: "From Jocelyne — savory stuffed buns with simmered meat filling (gumbo + chili sauce).",
+        tags: ["beef", "pork", "party", "comfort"]
+      },
+      {
+        title: "Creamy Kraft Greek Marinade",
+        file: "creamy-kraft-greek-marinade.html",
+        description: "Greek dressing + mayo + garlic + lemon for ultra-juicy, beautifully browned chicken.",
+        tags: ["chicken", "marinade", "grill", "weeknight", "quick"]
+      },
+      {
+        title: "Ground Beef Stir Fry (Onion & Pepper Version)",
+        file: "ground-beef-stir-fry.html",
+        description: "20-minute beef + veggie stir fry with a sweet-savory BBQ–soy maple glaze.",
+        tags: ["weeknight", "beef", "quick", "stir-fry"]
+      },
+      {
+        title: "Biscuits",
+        file: "biscuits.html",
+        description: "Flaky, buttery biscuits with easy folds for layers (450°F, 12–15 min).",
+        tags: ["baking", "bread", "side", "breakfast"]
+      },
+      {
+        title: "Chicken Pot Pie Soup",
+        file: "chicken-pot-pie-soup.html",
+        description: "Buttery, thick pot-pie-style soup with chicken, potatoes, and mixed veggies.",
+        tags: ["soup", "chicken", "comfort", "family", "weeknight"]
+      },
+      {
+        title: "Chicken & Broccoli (or Cauliflower) Casserole",
+        file: "chicken-broccoli-casserole.html",
+        description: "Creamy pasta bake with chicken, broccoli (or cauliflower), and a savory stock-based cheese sauce.",
+        tags: ["casserole", "chicken", "comfort", "family", "weeknight"]
+      },
+      {
+        title: "Beef Stroganoff",
+        file: "beef-stroganoff.html",
+        description: "Creamy weeknight stroganoff with mushroom soup + BTB and a glossy milk/butter finish.",
+        tags: ["weeknight", "beef", "pasta", "quick", "comfort"]
+      },
+      {
+        title: "Elevated Roasted Tomato Soup",
+        file: "elevated-roasted-tomato-soup.html",
+        description: "Balsamic-roasted tomatoes + caramelized paste with a silky butter & milk finish.",
+        tags: ["soup", "tomato", "comfort", "vegetarian-option"]
+      },
+      {
+        title: "Chicken Fajitas",
+        file: "chicken-fajitas.html",
+        description: "30-minute fajitas with a zesty lime spice marinade and sautéed peppers + onions.",
+        tags: ["weeknight", "chicken", "quick", "mexican-inspired"]
+      },
+      {
+        title: "Greek Rice (The “One Clove” Version)",
+        file: "greek-rice-one-clove.html",
+        description: "Tangy, garlicky rice with chicken broth + Greek dressing (super fast).",
+        tags: ["side", "rice", "quick", "weeknight"]
+      },
+      {
+        title: "Chocolate Chip Cookies",
+        file: "chocolate-chip-cookies.html",
+        description: "Chewy centers, crisp edges, classic comfort.",
+        tags: ["dessert", "baking", "snack"]
+      },
+      {
+        title: "Spaghetti Aglio e Olio",
+        file: "spaghetti-aglio-e-olio.html",
+        description: "Garlic, olive oil, chili flakes — fast and delicious.",
+        tags: ["weeknight", "vegetarian", "pasta", "quick"]
+      },
+      {
+        title: "Beef & Broccoli Noodles",
+        file: "beef-and-broccoli-noodles.html",
+        description: "Tender beef, bright broccoli, and glossy sauce over egg noodles.",
+        tags: ["weeknight", "beef", "noodles", "quick"]
+      }
+    ];
+
+    // --- Helpers
+    const normalize = (s) => (s || "")
+      .toLowerCase()
+      .normalize("NFKD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .trim();
+
+    const uniqueSorted = (arr) => Array.from(new Set(arr)).sort((a, b) => a.localeCompare(b));
+
+    // --- Elements
+    const grid = document.getElementById("recipeGrid");
+    const searchInput = document.getElementById("searchInput");
+    const tagSelect = document.getElementById("tagSelect");
+    const clearBtn = document.getElementById("clearBtn");
+    const status = document.getElementById("status");
+
+    let recipes = [];
+
+    function render(list) {
+      grid.innerHTML = "";
+
+      if (!list.length) {
+        status.textContent = "No recipes match your search/filter.";
+        return;
+      }
+
+      status.textContent = `Showing ${list.length} recipe${list.length === 1 ? "" : "s"}.`;
+
+      for (const r of list) {
+        const tags = (r.tags || []).map(t => `<span class="tag">#${t}</span>`).join("");
+
+        const imgBase = r.file.replace(".html", "");
+        const pngUrl = `images/${imgBase}.png`;
+        const jpgUrl = `images/${imgBase}.jpg`;
+
+        const card = document.createElement("a");
+        card.className = "recipe-link";
+        card.href = `recipes/${r.file}`;
+
+        // Full image visible + bottom overlay text (matches your latest CSS)
+        card.innerHTML = `
+          <div class="card-media">
+            <img class="card-hero" alt="" src="${pngUrl}"
+                 onerror="if(!this.dataset.f){this.dataset.f=1;this.src='${jpgUrl}';}else{this.remove();}" />
+
+            <div class="card-overlay">
+              <h3 class="card-title">${r.title}</h3>
+              <p class="card-desc">${r.description || ""}</p>
+              <div class="tag-row">${tags}</div>
+            </div>
+          </div>
+        `;
+
+        grid.appendChild(card);
+      }
+    }
+
+    function applyFilters() {
+      const q = normalize(searchInput.value);
+      const selectedTag = tagSelect.value;
+
+      const filtered = recipes.filter(r => {
+        const text = normalize(`${r.title} ${r.description} ${(r.tags || []).join(" ")}`);
+        const matchesQuery = !q || text.includes(q);
+        const matchesTag = !selectedTag || (r.tags || []).includes(selectedTag);
+        return matchesQuery && matchesTag;
+      });
+
+      render(filtered);
+    }
+
+    function setupTags(data) {
+      tagSelect.innerHTML = `<option value="">All tags</option>`;
+      const allTags = uniqueSorted(data.flatMap(r => r.tags || []));
+      for (const t of allTags) {
+        const opt = document.createElement("option");
+        opt.value = t;
+        opt.textContent = t;
+        tagSelect.appendChild(opt);
+      }
+    }
+
+    function init() {
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const sortKey = (t) => t.replace(/^(the|a|an)\s+/i, "").trim();
+      recipes = [...RECIPES].sort((a, b) => sortKey(a.title).localeCompare(sortKey(b.title)));
+
+      setupTags(recipes);
+      render(recipes);
+
+      searchInput.addEventListener("input", applyFilters);
+      tagSelect.addEventListener("change", applyFilters);
+
+      clearBtn.addEventListener("click", () => {
+        searchInput.value = "";
+        tagSelect.value = "";
+        render(recipes);
+        status.textContent = `Showing ${recipes.length} recipe${recipes.length === 1 ? "" : "s"}.`;
+        searchInput.focus();
+      });
+    }
+
+    init();
+  </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Chocolate Chip Cookies",
+    "file": "chocolate-chip-cookies.html",
+    "description": "Chewy centers, crisp edges, classic comfort.",
+    "tags": ["dessert", "baking", "snack"]
+  },
+  {
+    "title": "Spaghetti Aglio e Olio",
+    "file": "spaghetti-aglio-e-olio.html",
+    "description": "Garlic, olive oil, chili flakes — fast and delicious.",
+    "tags": ["weeknight", "vegetarian", "pasta", "quick"]
+  },
+  {
+    "title": "Beef & Broccoli Noodles",
+    "file": "beef-and-broccoli-noodles.html",
+    "description": "Tender beef, bright broccoli, and glossy sauce over egg noodles.",
+    "tags": ["weeknight", "beef", "noodles", "quick"]
+  }
+]

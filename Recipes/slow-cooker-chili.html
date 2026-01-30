@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Slow-Cooker Chili — My Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Slow-Cooker Chili</h1>
+        <p>Bold spice blend • browned beef base • slow-simmered tomato richness</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 15 min</span>
+        <span class="badge">Cook: 4 hr (High)</span>
+        <span class="badge">Cook: 8 hr (Low)</span>
+        <span class="badge">Serves: 6–8</span>
+      </div>
+
+      <!-- Hero image (auto-matches the HTML filename) -->
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Recipe photo" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"]; // tries these in order
+          let i = 0;
+
+          img.alt = document.querySelector("h1")?.textContent || "Recipe photo";
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; } // no image found -> remove placeholder
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>800g ground beef</li>
+        <li>1 large onion, diced</li>
+        <li>3 cloves garlic, minced</li>
+        <li>1 can tomato paste</li>
+        <li>1 cup beef broth</li>
+        <li>750 ml tomato sauce</li>
+        <li>1 can diced tomatoes (800 ml)</li>
+        <li>2 cans beans (800 ml total), drained and rinsed</li>
+      </ul>
+
+      <h3>The Bold Spice Blend</h3>
+      <ul>
+        <li>4 tbsp chili powder</li>
+        <li>1 tbsp cumin</li>
+        <li>1 tbsp smoked paprika</li>
+        <li>1 tbsp garlic powder</li>
+        <li>2 tsp oregano</li>
+        <li>1 tbsp brown sugar</li>
+        <li>1 tbsp Worcestershire sauce</li>
+        <li>1 1/2 tsp salt (adjust to taste)</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>
+          <strong>Sear &amp; Sauté</strong><br />
+          Brown ground beef in a skillet over medium-high heat. Add onions and cook until soft.
+          Stir in garlic and tomato paste; cook 2 minutes until the paste turns a deep rust color.
+        </li>
+
+        <li>
+          <strong>Bloom Spices</strong><br />
+          Add chili powder, cumin, smoked paprika, garlic powder, and oregano. Stir for 60 seconds until very fragrant.
+        </li>
+
+        <li>
+          <strong>Transfer</strong><br />
+          Pour beef broth into the pan to scrape up the flavorful bits, then transfer everything to the slow cooker.
+        </li>
+
+        <li>
+          <strong>Slow Cook</strong><br />
+          Stir in tomato sauce, diced tomatoes, brown sugar, salt, and Worcestershire.
+          Cook on High for 4 hours (or Low for 8 hours).
+        </li>
+
+        <li>
+          <strong>Finish</strong><br />
+          Add drained/rinsed beans about 2 hours before serving to help them keep their texture.
+        </li>
+      </ol>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>For thicker chili, crack the lid for the last 30–60 minutes on High.</li>
+        <li>Great toppings: shredded cheese, sour cream, green onions, jalapeños, or tortilla chips.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-28">January 28, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

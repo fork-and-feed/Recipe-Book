@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beef &amp; Broccoli Noodles — My Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Beef &amp; Broccoli Noodles</h1>
+        <p>Tender velveted beef, bright broccoli, and glossy sauce tossed with egg noodles.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 20 min</span>
+        <span class="badge">Cook: 10 min</span>
+        <span class="badge">Total: 30 min</span>
+        <span class="badge">Serves: 2–3</span>
+      </div>
+<figure class="recipe-hero">
+  <img id="recipeHero" alt="Recipe photo" />
+</figure>
+
+<script>
+  (function () {
+    const img = document.getElementById("recipeHero");
+    const fig = img.closest("figure");
+    const page = location.pathname.split("/").pop().replace(".html", "");
+    const exts = ["jpg", "png", "webp"]; // try these in order
+    let i = 0;
+
+    img.alt = document.querySelector("h1")?.textContent || "Recipe photo";
+
+    function tryNext() {
+      if (i >= exts.length) { fig.remove(); return; } // no image found -> remove placeholder
+      img.src = `../images/${page}.${exts[i++]}`;
+    }
+
+    img.onerror = tryNext;
+    tryNext();
+  })();
+</script>
+
+
+      <hr />
+
+      <h2>Ingredients</h2>
+
+      <h3>The Protein &amp; Veggies</h3>
+      <ul>
+        <li>450g flank steak or sirloin, thinly sliced against the grain</li>
+        <li>2 large heads broccoli, cut into bite-sized florets</li>
+        <li>250g–280g egg noodles, cooked al dente</li>
+        <li>Aromatics: 3 cloves garlic (minced), 1 tsp fresh ginger (grated)</li>
+      </ul>
+
+      <h3>The Marinade (Velveting)</h3>
+      <ul>
+        <li>1 tbsp cornstarch</li>
+        <li>1 tbsp soy sauce</li>
+      </ul>
+
+      <h3>The Pro-Blend Sauce</h3>
+      <ul>
+        <li>180ml beef broth</li>
+        <li>2 tbsp soy sauce</li>
+        <li>1 tbsp hoisin sauce</li>
+        <li>1 tsp sesame oil</li>
+        <li>1.5 tsp cornstarch</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>
+          <strong>Marinate the Beef</strong><br />
+          In a bowl, toss the sliced beef with the cornstarch and soy sauce. Let it sit at room temperature for
+          15–20 minutes. This “velveting” technique protects the meat from the high heat, keeping it tender.
+        </li>
+
+        <li>
+          <strong>Prepare the Broccoli &amp; Noodles</strong><br />
+          <em>Broccoli:</em> Place florets in a microwave-safe bowl with a splash of water. Cover and microwave for
+          2 minutes until bright green. Drain and set aside.<br />
+          <em>Noodles:</em> Boil egg noodles, draining them 1 minute earlier than the package suggests. Rinse with cold
+          water and toss with a drop of oil to prevent sticking.
+        </li>
+
+        <li>
+          <strong>Sear the Beef</strong><br />
+          Heat 2 tablespoons of oil in a large skillet or wok over high heat. Add the beef in a single layer. Let it
+          sear undisturbed for 2 minutes to get a dark crust, then flip and cook for 1 more minute. Remove beef from the
+          pan and set aside.
+        </li>
+
+        <li>
+          <strong>Build the Sauce</strong><br />
+          Add a tiny splash of oil to the pan if dry. Sauté the garlic and ginger for 30 seconds. In a small bowl, whisk
+          together the Pro-Blend Sauce ingredients, then pour into the pan. Stir constantly for 1–2 minutes until the
+          liquid thickens into a glossy, dark glaze.
+        </li>
+
+        <li>
+          <strong>The Final Toss</strong><br />
+          Add the beef, broccoli, and noodles into the pan. Toss vigorously over high heat for about 1 minute. The noodles
+          will finish cooking as they soak up the sauce.
+        </li>
+      </ol>
+
+      <h3>Pro Tips</h3>
+      <ul>
+        <li><strong>Uniformity:</strong> Slice the beef to a consistent 3mm–5mm thickness so it cooks evenly.</li>
+        <li><strong>The Glaze:</strong> If the sauce becomes too thick, add a tablespoon of water or broth to loosen it up.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-28">January 28, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

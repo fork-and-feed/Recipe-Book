@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Creamy Kraft Greek Marinade — My Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Creamy Kraft Greek Marinade</h1>
+        <p>The mayonnaise creates a “protective coat” that locks in juices and helps browning.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 5 min</span>
+        <span class="badge">Marinate: 30 min–4 hr</span>
+        <span class="badge">Cook: 12–22 min</span>
+        <span class="badge">Serves: 4</span>
+      </div>
+
+      <!-- Hero image (auto-matches the HTML filename) -->
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Recipe photo" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"]; // tries these in order
+          let i = 0;
+
+          img.alt = document.querySelector("h1")?.textContent || "Recipe photo";
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; } // no image found -> remove placeholder
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li><strong>Chicken:</strong> 1.5–2 lbs chicken breasts (pounded to even thickness)</li>
+        <li><strong>The Base:</strong> 3/4 cup Kraft Greek Dressing</li>
+        <li><strong>The Secret:</strong> 1/4 cup mayonnaise</li>
+        <li><strong>Fresh Kick:</strong> 1 large clove garlic, minced</li>
+        <li><strong>The Zing:</strong> Juice of 1/2 a fresh lemon</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>
+          <strong>Whisk the Sauce</strong><br />
+          In a bowl, whisk together the Greek dressing, mayonnaise, garlic, and lemon juice until smooth and creamy.
+        </li>
+        <li>
+          <strong>Coat the Chicken</strong><br />
+          Place chicken in a large Ziploc bag or bowl and pour the mixture over it. Make sure the chicken is fully
+          “painted” in the creamy sauce.
+        </li>
+        <li>
+          <strong>Marinate</strong><br />
+          Chill in the fridge at least 30 minutes (up to 4 hours).
+        </li>
+        <li>
+          <strong>Cook (choose one)</strong><br />
+          <ul>
+            <li><strong>Grill:</strong> Medium heat. The mayo helps prevent sticking and encourages browning.</li>
+            <li><strong>Oven:</strong> Bake at 400°F (200°C) for 18–22 minutes.</li>
+            <li><strong>Air Fryer:</strong> 375°F for 12–15 minutes.</li>
+          </ul>
+        </li>
+      </ol>
+
+      <h3>Why Mayo?</h3>
+      <ul>
+        <li><strong>No sticking:</strong> Better than oil at keeping chicken from clinging to grill grates.</li>
+        <li><strong>Even browning:</strong> Mayo proteins brown well, giving a better crust.</li>
+        <li><strong>Juiciness:</strong> Acts like an insulator so lean breast meat doesn’t dry out as fast.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-28">January 28, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
