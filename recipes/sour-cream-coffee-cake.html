@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sour Cream Coffee Cake — My Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Sour Cream Coffee Cake</h1>
+        <p>Classic tender coffee cake with a cinnamon-brown sugar nut swirl and crunchy topping.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 15 min</span>
+        <span class="badge">Bake: 45 min</span>
+        <span class="badge">Total: 60 min</span>
+        <span class="badge">Pan: 9x9</span>
+        <span class="badge">Serves: 9</span>
+      </div>
+
+      <!-- Hero image (auto-loads ../images/<this-file-name>.jpg|png|webp) -->
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Recipe photo" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          img.alt = document.querySelector("h1")?.textContent || "Recipe photo";
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>1/2 cup butter or margarine, softened</li>
+        <li>1 cup granulated sugar</li>
+        <li>2 eggs</li>
+        <li>1 tsp baking soda</li>
+        <li>1 cup sour cream</li>
+        <li>1 1/2 cups all-purpose flour</li>
+        <li>1 1/2 tsp baking powder</li>
+        <li>1/4 tsp salt</li>
+      </ul>
+
+      <h3>Cinnamon-Nut Layer &amp; Topping</h3>
+      <ul>
+        <li>1/2 cup brown sugar, packed</li>
+        <li>1 tsp cinnamon</li>
+        <li>1/2 cup finely chopped nuts</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>Preheat oven to 350°F (180°C). Grease a 9x9-inch (22x22 cm) pan.</li>
+
+        <li>
+          Cream butter, sugar, and 1 egg together well. Beat in the second egg.
+          Mix in baking soda and sour cream.
+        </li>
+
+        <li>In another bowl, mix flour, baking powder, and salt. Add to batter and stir just to combine.</li>
+
+        <li>Spread 1/2 the batter into the prepared pan.</li>
+
+        <li>Mix brown sugar, cinnamon, and nuts together. Sprinkle 1/2 over the batter.</li>
+
+        <li>
+          Spoon the remaining batter in small dollops over the top (it doesn’t need to cover perfectly).
+          Sprinkle the remaining cinnamon mixture over all.
+        </li>
+
+        <li>Bake 45 minutes, or until a toothpick inserted in the center comes out clean.</li>
+
+        <li>Serve warm.</li>
+      </ol>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>If your nuts are large, chop them fairly fine so the layers sit nicely.</li>
+        <li>Let it cool 10–15 minutes for cleaner slices (still warm and cozy).</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-30">January 30, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

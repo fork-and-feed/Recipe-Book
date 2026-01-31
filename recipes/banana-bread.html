@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Banana Bread — My Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Banana Bread</h1>
+        <p>Classic moist banana bread with walnuts—optionally loaded with chocolate chips.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 15 min</span>
+        <span class="badge">Bake: ~60 min</span>
+        <span class="badge">Total: ~75 min</span>
+        <span class="badge">Oven: 350°F</span>
+        <span class="badge">Yield: 1 loaf</span>
+      </div>
+
+      <!-- Hero image (auto-loads ../images/<this-file-name>.jpg|png|webp) -->
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Recipe photo" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          img.alt = document.querySelector("h1")?.textContent || "Recipe photo";
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>1/2 cup (125 mL) butter or margarine, softened</li>
+        <li>1 cup (250 mL) granulated sugar</li>
+        <li>2 eggs</li>
+        <li>1 cup (250 mL) mashed ripe bananas (about 3 medium)</li>
+        <li>2 cups (500 mL) all-purpose flour</li>
+        <li>1 tsp (5 mL) baking soda</li>
+        <li>1/2 tsp (2 mL) baking powder</li>
+        <li>1/2 tsp (2 mL) salt</li>
+        <li>1 cup (250 mL) chopped walnuts</li>
+        <li><em>Optional:</em> 3/4 cup (175 mL) semi-sweet chocolate chips</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>Preheat oven to 350°F (180°C). Grease a 9x5x3 inch (23x12x7 cm) loaf pan.</li>
+
+        <li>In a large bowl, cream butter and sugar together.</li>
+
+        <li>Add eggs one at a time, beating until smooth. Blend in mashed bananas.</li>
+
+        <li>In a second bowl, stir together flour, baking soda, baking powder, salt, and walnuts.</li>
+
+        <li>Add dry ingredients to banana mixture, stirring only until moistened. (If using, fold in chocolate chips.)</li>
+
+        <li>Transfer batter to prepared loaf pan.</li>
+
+        <li>Bake about 1 hour, or until a toothpick inserted in the center comes out clean.</li>
+
+        <li>Let stand 10 minutes. Remove from pan and cool on a rack.</li>
+
+        <li>Wrap to store.</li>
+      </ol>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>For best flavor and texture, use bananas with lots of brown spots.</li>
+        <li>Don’t overmix once flour goes in—stir just until combined.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-30">January 30, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

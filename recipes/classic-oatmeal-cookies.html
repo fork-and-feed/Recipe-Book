@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Classic Oatmeal Cookies — My Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Classic Oatmeal Cookies</h1>
+        <p>Soft-centered, lightly chewy oatmeal cookies with a golden edge—classic and endlessly customizable.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Yield: ~48 cookies</span>
+        <span class="badge">Prep: 25 min</span>
+        <span class="badge">Oven: 375°F</span>
+        <span class="badge">Bake: 8–10 min</span>
+      </div>
+
+      <!-- Hero image (auto-loads ../images/<this-file-name>.jpg|png|webp) -->
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Recipe photo" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          img.alt = document.querySelector("h1")?.textContent || "Recipe photo";
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>3/4 cup butter, softened</li>
+        <li>1 cup packed brown sugar</li>
+        <li>1/2 cup granulated sugar</li>
+        <li>1 tsp baking powder</li>
+        <li>1/4 tsp baking soda</li>
+        <li>1/2 tsp ground cinnamon (optional)</li>
+        <li>1/4 tsp ground cloves (optional)</li>
+        <li>2 eggs</li>
+        <li>1 tsp vanilla</li>
+        <li>1 3/4 cups all-purpose flour</li>
+        <li>2 cups rolled oats</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>
+          <strong>Cream the Base</strong><br />
+          In a large mixing bowl, beat butter with an electric mixer on medium-high speed for 30 seconds.
+        </li>
+
+        <li>
+          <strong>Mix Sugars &amp; Leavening</strong><br />
+          Add brown sugar, granulated sugar, baking powder, baking soda, and (if using) cinnamon and cloves.
+          Beat until combined, scraping the bowl occasionally.
+        </li>
+
+        <li>
+          <strong>Add Wet Ingredients</strong><br />
+          Beat in eggs and vanilla until combined.
+        </li>
+
+        <li>
+          <strong>Incorporate Flour</strong><br />
+          Beat in as much flour as you can with the mixer. Stir in remaining flour by hand.
+        </li>
+
+        <li>
+          <strong>Add Oats</strong><br />
+          Stir in rolled oats.
+        </li>
+
+        <li>
+          <strong>Portion &amp; Bake</strong><br />
+          Drop dough by rounded teaspoons, 2 inches apart, onto an ungreased cookie sheet.
+          Bake at 375°F for 8–10 minutes, or until edges are golden.
+        </li>
+
+        <li>
+          <strong>Cool</strong><br />
+          Cool on the cookie sheet for 1 minute, then transfer to a wire rack to cool completely.
+        </li>
+      </ol>
+
+      <h3>Variations</h3>
+      <ul>
+        <li><strong>Oatmeal-Raisin:</strong> Stir in 1 cup raisins or dried tart cherries after the oats. (Makes ~54)</li>
+        <li><strong>Oatmeal-Chip:</strong> Stir in 1 cup chocolate, butterscotch, or peanut butter chips and 1/2 cup chopped walnuts or pecans. (Makes ~54)</li>
+        <li><strong>Oversize Cookies:</strong> Use a 1/4-cup measure to drop mounds 2 inches apart. Press into 3-inch circles. Bake 8–10 minutes. (Makes 10)</li>
+      </ul>
+
+      <h3>Quick Tip</h3>
+      <ul>
+        <li>For the best texture, use butter that’s softened (pliable, not melted) and pack brown sugar firmly in the cup.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-30">January 30, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
