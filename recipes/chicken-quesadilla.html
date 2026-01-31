@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chicken Quesadilla — My Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Chicken Quesadilla</h1>
+        <p>Crispy golden tortillas stuffed with salsa chicken, sautéed peppers and onions, and melty cheese.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 10 min</span>
+        <span class="badge">Cook: 15 min</span>
+        <span class="badge">Total: 25 min</span>
+        <span class="badge">Serves: 4</span>
+      </div>
+
+      <!-- Hero image (auto-loads ../images/<this-file-name>.jpg|png|webp) -->
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Chicken Quesadilla" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>1 lb chicken breast or thighs, cut into small bite-sized pieces</li>
+        <li>1/2 cup store-bought salsa</li>
+        <li>2 cups shredded cheese (Mexican blend or Monterey Jack)</li>
+        <li>4 large flour tortillas</li>
+        <li>1/2 onion, diced</li>
+        <li>1 bell pepper, diced</li>
+        <li>1 tsp cumin</li>
+        <li>1 tsp chili powder</li>
+        <li>Salt &amp; pepper, to taste</li>
+        <li>Butter or oil, for frying</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>
+          <strong>Sear Chicken</strong><br />
+          Heat oil in a skillet over medium-high heat. Season chicken with salt, pepper, cumin, and chili powder.
+          Cook 5–7 minutes until browned and just cooked through. Remove chicken and set aside.
+        </li>
+
+        <li>
+          <strong>Sauté Veggies</strong><br />
+          In the same pan, add onions and peppers. Sauté 3–4 minutes until softened and slightly charred.
+        </li>
+
+        <li>
+          <strong>Combine &amp; Simmer</strong><br />
+          Lower the heat. Add chicken back to the pan with the salsa. Stir 1 minute to coat and warm through,
+          then remove filling from heat.
+        </li>
+
+        <li>
+          <strong>Prep Pan</strong><br />
+          Wipe skillet clean. Melt a pat of butter over medium heat (or add a small slick of oil).
+        </li>
+
+        <li>
+          <strong>Assemble</strong><br />
+          Lay a tortilla flat. Sprinkle cheese over the surface. Spoon the salsa-chicken mixture over one half.
+        </li>
+
+        <li>
+          <strong>Fold &amp; Crisp</strong><br />
+          Fold tortilla over. Cook 2–3 minutes per side until golden and crisp and cheese is bubbly.
+        </li>
+      </ol>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>If your salsa is very watery, simmer the filling 1–2 minutes longer so it doesn’t leak.</li>
+        <li>Cut into wedges and serve with extra salsa, sour cream, or guac.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-30">January 30, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
