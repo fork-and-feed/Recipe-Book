@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Homemade Apple Sauce — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Homemade Apple Sauce</h1>
+        <p>Simple stovetop applesauce with cinnamon, lemon, and the perfect sweet-salt balance.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 20 min</span>
+        <span class="badge">Cook: 30 min</span>
+        <span class="badge">Total: 50 min</span>
+        <span class="badge">Yield: ~8 cups</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Homemade Apple Sauce" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>6 lb apples (after cored and peeled)</li>
+        <li>1/4 cup brown sugar</li>
+        <li>1/4 cup white sugar</li>
+        <li>1 tsp cinnamon</li>
+        <li>1/2 tsp salt</li>
+        <li>4 tbsp lemon juice</li>
+        <li>1 cup water</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li><strong>Prep the apples:</strong> Core and peel the apples (then slice or chunk them so they cook evenly).</li>
+        <li><strong>Cook:</strong> Combine all ingredients in a large pot. Cover and simmer for <strong>20–30 minutes</strong>, stirring occasionally, until the apples are very tender.</li>
+        <li><strong>Finish:</strong> Mash or blend to your desired consistency.</li>
+      </ol>
+
+      <h3>Pro-Tip</h3>
+      <p>
+        If you like it extra smooth, an immersion blender works wonders right in the pot.
+        If you prefer it chunky, a potato masher is your best friend!
+      </p>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>Taste at the end and adjust sweetness or cinnamon to your liking.</li>
+        <li>For a looser sauce, add a splash more water while simmering.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-30">January 30, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

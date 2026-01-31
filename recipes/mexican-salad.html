@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mexican Salad — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Mexican Salad</h1>
+        <p>Fresh romaine topped with a zesty lime-jalapeño bean mix (from Richard).</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Serves: 4–6</span>
+        <span class="badge">Prep: 15 min</span>
+        <span class="badge">Marinate: 10–20 min</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Mexican Salad" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>1 head romaine lettuce</li>
+        <li>1 can kidney beans, drained and rinsed</li>
+        <li>1 cup corn</li>
+        <li>1 cup scallions or green onions, finely chopped</li>
+        <li>3 tomatoes, chopped and seeded</li>
+        <li>1 avocado (to serve)</li>
+      </ul>
+
+      <h3>Dressing</h3>
+      <ul>
+        <li>1/4 cup lime juice</li>
+        <li>1/2 tsp sugar</li>
+        <li>1/2 jalapeño, seeded and finely chopped</li>
+        <li>1 tsp minced garlic</li>
+        <li>2 tbsp olive oil</li>
+        <li>Salt and pepper, to taste</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>In a large bowl, mix the kidney beans, corn, scallions, and chopped tomatoes.</li>
+        <li>In a small bowl, whisk together the lime juice, sugar, jalapeño, garlic, and olive oil to make the dressing.</li>
+        <li>Pour the dressing over the bean mixture and let it sit to marinate for 10–20 minutes.</li>
+        <li>Coarsely chop the romaine and place it in a serving dish (or a large salad bowl).</li>
+        <li>Spoon the marinated bean mixture over the lettuce.</li>
+        <li>Season with salt and pepper to taste, and top with sliced avocado.</li>
+      </ol>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>For extra crunch, add crushed tortilla chips right before serving.</li>
+        <li>If making ahead, keep the lettuce separate until serving so it stays crisp.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-30">January 30, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

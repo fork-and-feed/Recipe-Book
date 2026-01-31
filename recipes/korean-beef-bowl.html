@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Korean Beef Bowl — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Korean Beef Bowl</h1>
+        <p>Broth-infused rice, sweet-salty glazed beef, and quick tangy cucumber pickles.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 10 min</span>
+        <span class="badge">Cook: 20 min</span>
+        <span class="badge">Total: 30 min</span>
+        <span class="badge">Serves: 4</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Korean Beef Bowl" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+
+      <h3>The Savory Rice</h3>
+      <ul>
+        <li>1 cup jasmine or basmati rice</li>
+        <li>1.5–2 cups chicken or beef broth (use amount suggested on your rice package)</li>
+        <li>Optional: 1 clove smashed garlic or a slice of ginger tossed into the pot</li>
+      </ul>
+
+      <h3>The Quick Pickles</h3>
+      <ul>
+        <li>2 mini cucumbers (Persian), thinly sliced</li>
+        <li>2 tbsp rice vinegar</li>
+        <li>1 tsp sugar</li>
+        <li>1/2 tsp sesame oil</li>
+        <li>Pinch of salt</li>
+      </ul>
+
+      <h3>The Beef &amp; Sauce</h3>
+      <ul>
+        <li>1 lb ground beef</li>
+        <li>1/2 Asian pear (or sweet apple), finely grated</li>
+        <li>1/4 cup soy sauce</li>
+        <li>2 tbsp brown sugar</li>
+        <li>1 tbsp sesame oil</li>
+        <li>3 cloves garlic, minced</li>
+        <li>1 tbsp fresh ginger, minced</li>
+        <li>1/4 tsp red pepper flakes</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>
+          <strong>Simmer the broth rice:</strong>
+          Rinse the rice until the water runs clear. Add it to a pot with broth (instead of water).
+          Bring to a boil, then reduce heat to low, cover, and simmer according to package directions.
+        </li>
+        <li>
+          <strong>Prep the pickles:</strong>
+          Toss sliced cucumbers with rice vinegar, sugar, salt, and 1/2 tsp sesame oil. Let marinate while everything cooks.
+        </li>
+        <li>
+          <strong>Toast the aromatics:</strong>
+          Heat 1 tbsp sesame oil in a large skillet over medium heat. Add minced garlic and ginger.
+          Sauté 1–2 minutes until fragrant and lightly golden.
+        </li>
+        <li>
+          <strong>Brown &amp; caramelize:</strong>
+          Add ground beef. Brown thoroughly and drain excess fat.
+          In a small bowl, whisk grated pear/apple with soy sauce, brown sugar, and red pepper flakes.
+          Pour over beef and simmer 3–5 minutes until glossy and slightly thickened.
+        </li>
+        <li>
+          <strong>Assemble:</strong>
+          Fluff the broth-infused rice, top with glazed beef, and finish with a pile of pickled cucumbers.
+        </li>
+      </ol>
+
+      <h3>The Flavor Profile</h3>
+      <ul>
+        <li><strong>The rice:</strong> Deep, savory, and rich.</li>
+        <li><strong>The beef:</strong> Sweet, salty, and tender with fruit-driven caramelization.</li>
+        <li><strong>The pickles:</strong> Cold, crisp, and acidic to cleanse the palate.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-30">January 30, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
