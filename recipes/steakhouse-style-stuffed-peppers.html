@@ -24,10 +24,28 @@
         A savory “pantry-hero” recipe featuring Montreal-seasoned beef and a rich, doctored tomato glaze.
       </p>
 
-      <!-- Optional hero image -->
-      <div class="recipe-hero">
-        <img src="../images/steakhouse-style-stuffed-peppers.png" alt="Steakhouse-Style Stuffed Peppers" />
-      </div>
+      <!-- Hero image (auto-loads ../images/<this-file-name>.jpg|png|webp) -->
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Steakhouse-Style Stuffed Peppers" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
 
       <hr />
 
