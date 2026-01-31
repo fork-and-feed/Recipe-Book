@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Double-Breaded Chicken Schnitzel — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Double-Breaded Chicken Schnitzel</h1>
+        <p>Ultra-crispy schnitzel with a reinforced, double breadcrumb crust (minimalist shallow fry).</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 15 min</span>
+        <span class="badge">Cook: 10 min</span>
+        <span class="badge">Total: 25 min</span>
+        <span class="badge">Serves: 4</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Double-Breaded Chicken Schnitzel" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>2 large chicken breasts (about 4 cutlets once butterflied)</li>
+        <li>Salt and black pepper</li>
+        <li>Plain flour (for dredging)</li>
+        <li>2–3 eggs, whisked (for egg wash)</li>
+        <li>Fine breadcrumbs (for coating)</li>
+        <li>Neutral oil (for shallow frying)</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+
+      <h3>1) The Prep</h3>
+      <ol>
+        <li>Butterfly the chicken breasts and pound them between plastic wrap until evenly thin (about <strong>5 mm</strong>).</li>
+        <li>Season both sides generously with <strong>salt</strong> and <strong>black pepper</strong>.</li>
+      </ol>
+
+      <h3>2) The 5-Step Breading Process</h3>
+      <p>Set up three bowls: <strong>(1) plain flour</strong>, <strong>(2) whisked eggs</strong>, <strong>(3) fine breadcrumbs</strong>.</p>
+      <ol>
+        <li><strong>Flour:</strong> Coat the chicken lightly and shake off excess.</li>
+        <li><strong>Egg:</strong> Submerge in the whisked egg wash.</li>
+        <li><strong>Breadcrumbs:</strong> Press firmly into fine breadcrumbs.</li>
+        <li><strong>Egg:</strong> Dip back into the egg wash for a second coating.</li>
+        <li><strong>Breadcrumbs:</strong> Final press into breadcrumbs to seal the double layer.</li>
+      </ol>
+
+      <h3>3) The Minimalist Shallow Fry</h3>
+      <ol>
+        <li>Heat a skillet over medium heat. Add just enough neutral oil to thinly cover the bottom of the pan.</li>
+        <li>When the oil is shimmering, lay the chicken in carefully (work in batches if needed).</li>
+        <li>Fry <strong>3–4 minutes per side</strong> until deep golden brown and cooked through.</li>
+        <li>Drain on a wire rack or paper towel for 1 minute before serving.</li>
+      </ol>
+
+      <h3>Serving Ideas</h3>
+      <ul>
+        <li>Lemon wedges + simple salad</li>
+        <li>Potato wedges or mashed potatoes</li>
+        <li>Cucumber salad or quick slaw</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-30">January 30, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

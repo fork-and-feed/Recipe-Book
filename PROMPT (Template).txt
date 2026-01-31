@@ -1,21 +1,20 @@
-Use the attached recipe photo as the exact content reference for the dish. Keep the dish the same (buttercream icing). Keep the main ingredients, texture, and serving vessel recognizable. Do not change the recipe type or add unrelated foods.
+Use the attached recipe photo as the exact content reference for the dish. Keep the dish the same (do not change the recipe type). Keep the main ingredients, plating style, and serving vessel recognizable. Do not add unrelated foods or change the dish into something else.
 
 Restyle into a cinematic cookbook hero image with a consistent moody dark rustic look: deep shadows, warm amber highlights, subtle vignette, textured dark stone tabletop, dark mottled brown/charcoal background. Photorealistic, high detail, natural imperfections; no CGI, no illustration.
 
-Composition: 3:2 landscape. Hero bowl centered or slightly right-of-center. Camera at a 3/4 angle (slightly above tabletop). Shallow depth of field: buttercream sharp, background softly blurred.
+Composition: 3:2 landscape. Hero dish centered or slightly right-of-center. Camera at a 3/4 angle (slightly above tabletop). Shallow depth of field: dish sharp, background softly blurred. Add gentle steam only if the dish would realistically be hot.
 
-Spreads & frostings presentation (important):
-Present the buttercream in a rustic ceramic bowl with visible swirls, peaks, and spatula marks to clearly show texture and consistency. Include a palette knife or offset spatula partially resting in the bowl. Do not add steam.
+Props & styling: Minimal rustic props consistent with the reference series: small matte dark ceramic bowls with relevant toppings/spices, scattered herbs, garlic, olive oil bottle, linen cloth, crumbs/salt flecks. Keep the scene cohesive, cinematic, and uncluttered.
 
-Props & styling: Minimal baking-appropriate rustic props only—small bowl of powdered sugar, a stick of butter (partially wrapped), or a blurred cake layer in the background. No herbs, garlic, oil bottles, or savory props. Keep the scene cohesive, cinematic, and uncluttered.
-
-Color palette: warm cream and ivory tones in the buttercream, warm copper/amber highlights, deep espresso/brown shadows. Natural color only (no neon, no oversaturation).
+Color palette: warm copper/amber highlights, deep espresso/brown shadows, rich natural food colors (no neon, no oversaturation).
 
 TITLE TEXT (required, must be included):
 Place the recipe title at the very top of the image, centered, with generous negative space behind it. Use a large elegant high-contrast serif font (Didot/Playfair Display-like). Text color warm ivory/off-white with a subtle soft shadow/glow. The title must be crisp, perfectly spelled, and easy to read.
-Title text must read exactly: “Butter Cream Icing”
+Title text must read exactly: “{RECIPE TITLE}”
 No other text. No logos. No watermarks. Keep title placement consistent across the whole series.
 
-Avoid: steam, bright white backgrounds, high-key lighting, clutter, modern glossy props, plastic look, neon colors, harsh HDR, borders/frames, hands/people, piped cupcakes or finished cakes as the hero, misspelled or warped text.
+Avoid: bright white backgrounds, high-key lighting, flat lighting, clutter, modern glossy props, plastic look, neon colors, harsh HDR, borders/frames, hands/people, misspelled or warped text.
 
 If the title is not perfect and correctly spelled, regenerate until it is.
+
+for spreads, frostings, or sauces, present the mixture in a rustic ceramic bowl with visible swirls, peaks, and spatula marks to show texture and consistency. Include a palette knife or offset spatula partially resting in the bowl.
