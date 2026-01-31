@@ -447,6 +447,32 @@ li { margin: 6px 0; }
   outline: none;
 }
 
+/* -----------------------------
+   FIX: readable dropdown menu
+   (Tag filter <select>)
+-------------------------------- */
+
+/* Ask the browser to render native controls in dark mode */
+html { color-scheme: dark; }
+
+/* Keep the closed select looking consistent */
+.select{
+  background: rgba(17, 19, 26, 0.80);
+}
+
+/* Style the opened dropdown options (works in Chrome/Edge/Firefox) */
+.select option{
+  background: #11131a;
+  color: #e8e8ea;
+}
+
+/* Make the selected option stand out */
+.select option:checked{
+  background: rgba(119, 230, 200, 0.25);
+  color: #0b0c10;
+}
+
+
 .input::placeholder{
   color: rgba(181,183,194,0.70);
 }
@@ -521,4 +547,18 @@ li { margin: 6px 0; }
   .card-media { display: none !important; }
 
   hr { border-top: 1px solid #ccc; }
+}
+
+/* MOBILE: keep the cover hero visually aligned with the page width */
+@media (max-width: 720px){
+  .cover-hero{
+    width: 100%;
+    max-width: 100%;
+    margin: 10px 0 18px;              /* no sideways bleed */
+    box-shadow: 0 14px 34px rgba(0,0,0,0.32); /* match .card shadow */
+  }
+
+  .cover-img{
+    transform: none;                   /* remove the tiny scale that can “feel” wider */
+  }
 }
