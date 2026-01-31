@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dandelion Jelly — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Dandelion Jelly</h1>
+        <p>Sunny, honey-like jelly made from dandelion “tea” with lemon and pectin.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: overnight</span>
+        <span class="badge">Cook: 15 min</span>
+        <span class="badge">Yield: ~5–6 half-pints</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Dandelion Jelly" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li><strong>Dandelion petals:</strong> 1-liter mason jar, loosely filled (yellow petals only)</li>
+        <li><strong>Boiling water:</strong> enough to fill the jar</li>
+        <li><strong>Lemon juice:</strong> 3 tbsp</li>
+        <li><strong>Sugar:</strong> 4 cups</li>
+        <li><strong>Pectin:</strong> 1 box (approx. 49–50 g)</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li><strong>Steep:</strong> Fill a 1-liter jar with dandelion petals. Pour boiling water over the petals until the jar is full. Cover and let steep overnight.</li>
+        <li><strong>Strain:</strong> Drain through a fine mesh strainer or cheesecloth, squeezing the petals well to extract all the liquid.</li>
+        <li><strong>Mix:</strong> In a large pot, combine the dandelion liquid, lemon juice, and pectin.</li>
+        <li><strong>First boil:</strong> Bring the mixture to a hard boil.</li>
+        <li><strong>Add sugar:</strong> Stir in the sugar until fully dissolved.</li>
+        <li><strong>Final boil:</strong> Bring back to a boil and boil vigorously for <strong>2 minutes</strong>, stirring frequently.</li>
+        <li><strong>Can:</strong> Pour into hot jars immediately. Process in a boiling-water canning bath according to standard canning safety guidelines.</li>
+      </ol>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>Use only clean, pesticide-free dandelions and petals-only (remove all green parts to avoid bitterness).</li>
+        <li>For best set, match the pectin type/box size your recipe calls for and keep the full rolling boil timing.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-30">January 30, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

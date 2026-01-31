@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Butter Cream Icing — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Butter Cream Icing</h1>
+        <p>Classic shortening-based buttercream for frosting a 2-layer cake (from Mom).</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Yield: 2 layers</span>
+        <span class="badge">Time: 10 min</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Butter Cream Icing" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>1 cup shortening</li>
+        <li>1 lb icing sugar</li>
+        <li>1/4 tsp coarse salt</li>
+        <li>A splash of lemon juice</li>
+        <li>Cream or milk (to reach desired consistency)</li>
+      </ul>
+
+      <hr />
+
+      <h2>Quick Instructions</h2>
+      <ol>
+        <li><strong>Cream:</strong> Beat the shortening, coarse salt, and lemon juice together until smooth.</li>
+        <li><strong>Combine:</strong> Gradually beat in the icing sugar until well mixed and fluffy.</li>
+        <li><strong>Adjust:</strong> Add cream or milk, 1 tablespoon at a time, until it’s perfectly spreadable.</li>
+      </ol>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>If it’s too sweet, add a tiny pinch more salt or an extra drop of lemon.</li>
+        <li>If it’s too soft, beat in a bit more icing sugar. Too stiff? Add more milk/cream.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-30">January 30, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
