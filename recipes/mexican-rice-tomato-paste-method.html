@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mexican Rice (Tomato Paste Method) — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Mexican Rice (Tomato Paste Method)</h1>
+        <p>Toasted rice with fried tomato paste and boiling stock for fast, predictable, flavorful results.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 5 min</span>
+        <span class="badge">Cook: 25 min</span>
+        <span class="badge">Total: 30 min</span>
+        <span class="badge">Serves: 4</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Mexican Rice (Tomato Paste Method)" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>1 cup long-grain white rice</li>
+        <li>2 cups chicken stock (boiling)</li>
+        <li>1 tbsp tomato paste</li>
+        <li>2 tbsp vegetable oil</li>
+        <li>1 tsp salt</li>
+        <li>1 tsp onion powder</li>
+        <li>1 tsp garlic powder</li>
+        <li>1/2 tsp cumin</li>
+	<li>1/2 cup of frozen vegetables</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li><strong>Prep stock:</strong> Bring the 2 cups of chicken stock to a boil and keep it hot.</li>
+        <li><strong>Toast rice:</strong> Heat oil in a saucepan over medium heat. Add rice and stir frequently until golden brown, about <strong>5–7 minutes</strong>.</li>
+        <li><strong>Fry paste:</strong> Add tomato paste to the rice. Stir for <strong>1 minute</strong> until the paste darkens slightly and coats the grains.</li>
+        <li><strong>Season:</strong> Stir in onion powder, garlic powder, cumin, and salt.</li>
+        <li><strong>Combine:</strong> Add thawed frozen veggies. Carefully pour the boiling stock into the pan (it will steam vigorously).</li>
+        <li><strong>Simmer:</strong> Cover with a tight lid and reduce heat to low. Cook for <strong>15 minutes</strong>.</li>
+        <li><strong>Rest:</strong> Turn off heat and let sit, covered and undisturbed, for <strong>10 minutes</strong>.</li>
+        <li><strong>Finish:</strong> Fluff with a fork and serve.</li>
+      </ol>
+
+      <h3>Why this method is great</h3>
+      <ul>
+        <li><strong>No heat lag:</strong> Adding boiling stock eliminates the 2–3 minutes it usually takes to come back up to temperature, so timings are more predictable.</li>
+        <li><strong>Texture:</strong> The rice starts absorbing flavored liquid immediately for a more even cook from bottom to top.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-30">January 30, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
