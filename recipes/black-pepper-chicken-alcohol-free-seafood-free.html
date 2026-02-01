@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Black Pepper Chicken (Alcohol-Free &amp; Seafood-Free) — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Black Pepper Chicken (Alcohol-Free &amp; Seafood-Free)</h1>
+        <p>A savory, peppery stir-fry with a glossy glaze.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 15 min</span>
+        <span class="badge">Cook: 10 min</span>
+        <span class="badge">Total: 25 min</span>
+        <span class="badge">Serves: 4</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Black Pepper Chicken (Alcohol-Free & Seafood-Free)" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+
+      <h3>The Protein</h3>
+      <ul>
+        <li>1 lb (450 g) boneless, skinless chicken thighs or breasts, cut into bite-sized pieces</li>
+      </ul>
+
+      <h3>The Produce</h3>
+      <ul>
+        <li>1/2 yellow onion, sliced into chunks</li>
+        <li>1 green bell pepper, sliced into chunks</li>
+        <li>1 red bell pepper, sliced into chunks</li>
+        <li>3 cloves garlic, minced</li>
+        <li>2 tsp fresh ginger, grated</li>
+        <li>2–3 green onions, sliced (keep white and green parts separate)</li>
+      </ul>
+
+      <h3>The Pantry &amp; Sauce</h3>
+      <ul>
+        <li>3 tbsp neutral oil (vegetable, canola, or grapeseed)</li>
+        <li><strong>Alcohol-free “wine” sub:</strong> 2 tbsp chicken broth + 1/2 tsp rice vinegar</li>
+        <li>2 1/2 tbsp soy sauce, divided (1/2 tbsp for marinade, 2 tbsp for sauce)</li>
+        <li>1 tbsp hoisin sauce (seafood-free oyster sauce substitute)</li>
+        <li>1 tsp Better Than Bouillon (roasted chicken base)</li>
+        <li>5 tbsp warm water</li>
+        <li>1 tbsp + 1 1/2 tsp cornstarch, divided (1 tbsp for marinade, 1 1/2 tsp for sauce)</li>
+        <li>1/4 tsp baking soda</li>
+        <li>1 tsp freshly cracked black pepper, plus more to taste</li>
+        <li>1/2 tsp sesame oil (optional garnish)</li>
+        <li><em>Optional:</em> 1/2 tsp dark soy sauce (for deeper color)</li>
+      </ul>
+
+      <hr />
+
+      <h2>Preparation</h2>
+      <ol>
+        <li>
+          <strong>Prep the liquid sub:</strong>
+          Mix 2 tbsp chicken broth and 1/2 tsp rice vinegar in a small bowl. Set aside.
+        </li>
+        <li>
+          <strong>Marinate the chicken (10–15 min):</strong>
+          In a bowl, combine chicken with:
+          1 tbsp of the broth/vinegar mix, 1/2 tbsp soy sauce, 1/2 tsp black pepper,
+          1/4 tsp baking soda, 1 tbsp cornstarch, and 1 tbsp oil. Mix well.
+        </li>
+        <li>
+          <strong>Make the sauce:</strong>
+          Whisk Better Than Bouillon into 5 tbsp warm water until dissolved.
+          Whisk in hoisin, 2 tbsp soy sauce, the remaining 1 tbsp broth/vinegar mix,
+          and 1 1/2 tsp cornstarch (and dark soy sauce if using).
+        </li>
+      </ol>
+
+      <hr />
+
+      <h2>Cooking Instructions</h2>
+      <ol>
+        <li>
+          <strong>Sear:</strong>
+          Heat 2 tbsp oil in a large skillet or wok over high heat.
+          Add chicken, spread it out, and sear for 2 minutes without moving.
+          Toss until cooked through. Remove chicken and set aside.
+        </li>
+        <li>
+          <strong>Aromatics:</strong>
+          Add 1 tbsp oil to the pan. Stir-fry garlic, ginger, and the white parts of the green onions for 30 seconds.
+        </li>
+        <li>
+          <strong>Veggies:</strong>
+          Add onion and bell peppers. Stir-fry 1–2 minutes until slightly softened but still crisp.
+        </li>
+        <li>
+          <strong>Glaze:</strong>
+          Add chicken back to the pan. Stir the sauce (cornstarch settles!) and pour it in.
+          Toss about 1 minute until bubbling and glossy.
+        </li>
+        <li>
+          <strong>Finish:</strong>
+          Turn off heat. Stir in green onion tops, sesame oil (if using), and extra black pepper to taste.
+          Serve over hot rice.
+        </li>
+      </ol>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>High heat + short cook keeps the peppers crisp and the sauce glossy.</li>
+        <li>For extra pepper punch, add another 1/2 tsp cracked black pepper at the very end.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-30">January 30, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

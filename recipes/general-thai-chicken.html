@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>General Thai Chicken — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>General Thai Chicken</h1>
+        <p>Crispy fried chicken tossed in a glossy pineapple-soy chili sauce with quick stir-fried veggies.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 15 min</span>
+        <span class="badge">Cook: 15 min</span>
+        <span class="badge">Total: 30 min</span>
+        <span class="badge">Serves: 2–3</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="General Thai Chicken" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+
+      <h3>The Crispy Chicken</h3>
+      <ul>
+        <li>1 lb chicken breast or thighs, cut into 1-inch cubes</li>
+        <li>1 egg, beaten</li>
+        <li>1/2 cup cornstarch</li>
+        <li>1/4 cup all-purpose flour</li>
+        <li>1 tsp salt</li>
+        <li>1/2 tsp white pepper</li>
+        <li>Oil for frying</li>
+      </ul>
+
+      <h3>The Signature Sauce</h3>
+      <ul>
+        <li>1/2 cup pineapple juice</li>
+        <li>3 tbsp soy sauce</li>
+        <li>2 tbsp ketchup</li>
+        <li>3 tbsp brown sugar</li>
+        <li>1 tbsp rice vinegar</li>
+        <li>1 tbsp garlic, minced</li>
+        <li>1 tbsp ginger, minced</li>
+        <li>1/2 tsp red chili flakes</li>
+        <li><strong>Slurry:</strong> 1 tbsp cornstarch mixed with 1 tbsp cold water</li>
+      </ul>
+
+      <h3>The Stir-Fry</h3>
+      <ul>
+        <li>1/2 red bell pepper, sliced</li>
+        <li>1/2 onion, sliced</li>
+        <li>1 large carrot, finely cubed</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>
+          <strong>Coat the chicken:</strong>
+          Toss chicken pieces in the beaten egg. In a separate bowl, mix cornstarch, flour, salt, and white pepper.
+          Dredge the egg-washed chicken in the dry mix until heavily coated.
+        </li>
+        <li>
+          <strong>Fry:</strong>
+          Heat about 1 inch of oil in a heavy pan or wok to <strong>350°F</strong>.
+          Fry chicken in batches until golden brown and crispy, about <strong>5–6 minutes</strong>.
+          Remove and drain on paper towels.
+        </li>
+        <li>
+          <strong>Make the sauce:</strong>
+          In a small bowl, whisk together pineapple juice, soy sauce, ketchup, brown sugar, vinegar,
+          garlic, ginger, and chili flakes. Set aside.
+        </li>
+        <li>
+          <strong>Stir-fry veggies:</strong>
+          Carefully pour off excess oil, leaving about <strong>1 tbsp</strong> in the pan.
+          On high heat, add the finely cubed carrots first for <strong>60–90 seconds</strong>,
+          then add onions and peppers for another <strong>1 minute</strong>.
+        </li>
+        <li>
+          <strong>Thicken:</strong>
+          Pour the sauce into the pan with the veggies and bring to a simmer.
+          Stir in the cornstarch slurry and cook about <strong>1 minute</strong> until thick and glossy.
+        </li>
+        <li>
+          <strong>The toss:</strong>
+          Turn off heat. Add crispy chicken and toss quickly to coat.
+        </li>
+        <li>
+          <strong>Serve:</strong>
+          Serve immediately over jasmine rice or vermicelli noodles.
+        </li>
+      </ol>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>Keep the toss quick to preserve crispiness — sauce thickens fast.</li>
+        <li>For extra heat, add a dash of chili oil at the end.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-30">January 30, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,14 +1,39 @@
+Randomly choose section (A) or section (B)
+
+Section (A):
 Use the attached recipe photo as the exact content reference for the dish. Keep the dish the same (do not change the recipe type). Keep the main ingredients, plating style, and serving vessel recognizable. Do not add unrelated foods or change the dish into something else.
 
 Restyle into a cinematic cookbook hero image with a consistent moody dark rustic look: deep shadows, warm amber highlights, subtle vignette, textured dark stone tabletop, dark mottled brown/charcoal background. Photorealistic, high detail, natural imperfections; no CGI, no illustration.
 
 Composition: 3:2 landscape. Hero dish centered or slightly right-of-center. Camera at a 3/4 angle (slightly above tabletop). Shallow depth of field: dish sharp, background softly blurred. Add gentle steam only if the dish would realistically be hot.
 
-Props & styling: Minimal rustic props consistent with the reference series: small matte dark ceramic bowls with relevant toppings/spices, scattered herbs, garlic, olive oil bottle, linen cloth, crumbs/salt flecks. Keep the scene cohesive, cinematic, and uncluttered.
+Props & Styling (Hard Requirements)
+
+Rice rule (mandatory): Whenever rice is one of the ingredients, show a rustic bag/sack of uncooked rice placed at the back of the image (fully visible, not cropped).
+Rice exclusion (mandatory): If rice is NOT listed in the ingredients, do NOT include rice in any form (no rice bag/sack, no cooked rice, no grains, no rice bowls, no “rice-like” props).
+
+Fresh produce rule (mandatory): Whenever fresh produce (vegetables, fruits, herbs, spices) are listed in the ingredients, they must be clearly featured in-scene as real, fresh ingredients (not flakes/powders unless specifically listed that way). 
+
+Fresh meat rule (mandatory): Whenever fresh meat (chicken, beef, pork, fish) are listed in the ingredients, they must be clearly featured in-scene as real, fresh ingredients, on a rustic cutting board, if the recipe says how the meat is cut then show it that way, if not display it as whole.
+
+Stir fry rule (mandatory): Whenever the recipe is a stir fry style recipe it should be displayed in a rustic wok type bowl.
+
+Asian meal rule (mandatory): Asian meals should include a pair of rustic chop sticks
+
+If 1–3 produce items: stage them as a small rustic “mise en place” cluster (fully in frame, recognizable, not hidden).
+
+If 4+ produce items: group them together in one rustic container (a small wooden crate, wicker basket, or burlap sack) to keep the scene uncluttered. Ensure each item is still clearly identifiable (not buried).
+
+Ingredient fidelity (mandatory): Do not add any ingredients or ingredient-props that are not explicitly listed. Only stage props that are neutral (linen, utensils, ceramic bowls) or directly tied to listed ingredients.
+
+In-dish visibility: If the produce is part of the cooked dish (e.g., peppers, onions, scallions), it must also be visible in the finished dish (recognizable pieces + garnish where appropriate).
+
+Minimal rustic props consistent with the reference series: small matte dark ceramic bowls with relevant toppings/spices, scattered herbs, garlic, olive oil bottle, linen cloth, crumbs/salt flecks. Keep the scene cohesive, cinematic, and uncluttered.
 
 Color palette: warm copper/amber highlights, deep espresso/brown shadows, rich natural food colors (no neon, no oversaturation).
 
-TITLE TEXT (required, must be included):
+TITLE TEXT (required, must be included)
+
 Place the recipe title at the very top of the image, centered, with generous negative space behind it. Use a large elegant high-contrast serif font (Didot/Playfair Display-like). Text color warm ivory/off-white with a subtle soft shadow/glow. The title must be crisp, perfectly spelled, and easy to read.
 Title text must read exactly: “{RECIPE TITLE}”
 No other text. No logos. No watermarks. Keep title placement consistent across the whole series.
@@ -17,4 +42,51 @@ Avoid: bright white backgrounds, high-key lighting, flat lighting, clutter, mode
 
 If the title is not perfect and correctly spelled, regenerate until it is.
 
-for spreads, frostings, or sauces, present the mixture in a rustic ceramic bowl with visible swirls, and spatula marks to show texture and consistency, but keep relatively smooth. Include a palette knife or offset spatula partially resting in the bowl.
+For spreads, frostings, or sauces: present the mixture in a rustic ceramic bowl with visible swirls and spatula marks to show texture and consistency (relatively smooth). Include a palette knife or offset spatula partially resting in the bowl.
+
+Always check if the meal is served on something (rice, noodles, pasta, mashed potatoes etc.) and make sure to include it
+
+Section(B):
+Use the attached recipe photo as the exact content reference for the dish. Keep the dish the same (do not change the recipe type). Keep the main ingredients, plating style, and serving vessel recognizable. Do not add unrelated foods or change the dish into something else.
+
+Restyle into a cinematic cookbook hero image with a consistent moody dark rustic look: deep shadows, warm amber highlights, subtle vignette, textured dark stone tabletop, dark mottled brown/charcoal background. Photorealistic, high detail, natural imperfections; no CGI, no illustration.
+
+Composition: 3:2 landscape. Hero dish centered or slightly right-of-center. Camera at a 3/4 angle (slightly above tabletop). Shallow depth of field: dish sharp, background softly blurred. Add gentle steam only if the dish would realistically be hot.
+
+Props & Styling (Hard Requirements)
+
+Rice rule (mandatory): Whenever rice is one of the ingredients, show a rustic bag/sack of uncooked rice placed at the back of the image (fully visible, not cropped).
+Rice exclusion (mandatory): If rice is NOT listed in the ingredients, do NOT include rice in any form (no rice bag/sack, no cooked rice, no grains, no rice bowls, no “rice-like” props).
+
+Fresh produce rule (mandatory): Whenever fresh produce (vegetables, fruits, herbs, spices) are listed in the ingredients, they must be clearly featured in-scene as real, fresh ingredients (not flakes/powders unless specifically listed that way). 
+
+Fresh meat rule (mandatory): Whenever fresh meat (chicken, beef, pork, fish) are listed in the ingredients, they must be clearly featured in-scene as real, fresh ingredients, on a rustic cutting board, if the recipe says how the meat is cut then show it that way, if not display it as whole.
+
+Ingredient rule (mandatory): place all of the generated ingredients (produce, meats, fresh herbs) on a rustic cutting board.
+
+Stir fry rule (mandatory): Whenever the recipe is a stir fry style recipe it should be displayed in a rustic wok type bowl.
+
+Asian meal rule (mandatory): Asian meals should include a pair of rustic chop sticks
+
+
+Ingredient fidelity (mandatory): Do not add any ingredients or ingredient-props that are not explicitly listed. Only stage props that are neutral (linen, utensils, ceramic bowls) or directly tied to listed ingredients.
+
+In-dish visibility: If the produce is part of the cooked dish (e.g., peppers, onions, scallions), it must also be visible in the finished dish (recognizable pieces + garnish where appropriate).
+
+Minimal rustic props consistent with the reference series: small matte dark ceramic bowls with relevant toppings/spices, scattered herbs, garlic, olive oil bottle, linen cloth, crumbs/salt flecks. Keep the scene cohesive, cinematic, and uncluttered.
+
+Color palette: warm copper/amber highlights, deep espresso/brown shadows, rich natural food colors (no neon, no oversaturation).
+
+TITLE TEXT (required, must be included)
+
+Place the recipe title at the very top of the image, centered, with generous negative space behind it. Use a large elegant high-contrast serif font (Didot/Playfair Display-like). Text color warm ivory/off-white with a subtle soft shadow/glow. The title must be crisp, perfectly spelled, and easy to read.
+Title text must read exactly: “{RECIPE TITLE}”
+No other text. No logos. No watermarks. Keep title placement consistent across the whole series.
+
+Avoid: bright white backgrounds, high-key lighting, flat lighting, clutter, modern glossy props, plastic look, neon colors, harsh HDR, borders/frames, hands/people, misspelled or warped text.
+
+If the title is not perfect and correctly spelled, regenerate until it is.
+
+For spreads, frostings, or sauces: present the mixture in a rustic ceramic bowl with visible swirls and spatula marks to show texture and consistency (relatively smooth). Include a palette knife or offset spatula partially resting in the bowl.
+
+Always check if the meal is served on something (rice, noodles, pasta, mashed potatoes etc.) and make sure to include it
