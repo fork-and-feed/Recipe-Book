@@ -1,0 +1,140 @@
+CINEMATIC RECIPE HERO IMAGE — STRICT FIDELITY PROMPT (v2)
+
+Content reference (highest priority):
+Use the attached recipe photo as the exact visual reference for the dish. Keep the dish type, main ingredients, plating style, and serving vessel recognizable and consistent with the reference photo.
+
+Rule precedence (read carefully):
+
+Reference photo fidelity wins over everything except the explicit “mandatory staging rules” below.
+
+If any mandatory staging rule would force a visible change that contradicts the reference photo (especially the serving vessel/base), follow the reference photo unless this prompt explicitly says otherwise.
+
+Never add unrelated foods or change the dish into something else.
+
+Visual style (required)
+
+Restyle the scene into a cinematic cookbook hero image: moody, dark, rustic with deep shadows, warm amber highlights, subtle vignette, textured dark stone tabletop, and a dark mottled brown/charcoal background.
+Photorealistic; high detail; natural imperfections. No CGI, no illustration.
+
+Composition (required)
+
+Aspect ratio: 3:2 landscape
+
+Hero dish: centered or slightly right-of-center
+
+Camera: 3/4 angle (slightly above tabletop)
+
+Depth of field: shallow (dish sharp, background softly blurred)
+
+Steam: add only if the dish would realistically be hot
+
+Props & Styling — HARD REQUIREMENTS
+Ingredient fidelity (mandatory)
+
+Do not add any ingredients or ingredient-props that are not explicitly listed in the recipe ingredients.
+
+Neutral props allowed: linen cloth, rustic utensils, matte ceramic bowls, crumbs/salt flecks, small rustic containers only if they contain listed ingredients.
+
+No labels / no packaging text: any sacks/bags/containers must be blank, unbranded, and contain zero text (to satisfy “no other text”).
+
+Rice rule (mandatory, precise trigger)
+
+Trigger ONLY if the ingredient list includes uncooked rice grains (e.g., jasmine rice, basmati rice, white rice, brown rice).
+
+If triggered: show a rustic blank burlap sack/bag of uncooked rice placed at the back of the scene, fully visible and not cropped.
+
+Does NOT trigger for: rice vinegar, rice wine vinegar, rice flour, rice noodles, rice paper.
+
+Rice exclusion (mandatory)
+
+If uncooked rice grains are not listed: do not include rice in any form (no rice sack, no cooked rice, no grains, no rice bowls).
+
+Noodle/pasta rule (mandatory, precise trigger)
+
+Trigger ONLY if noodles/pasta are listed (e.g., spaghetti, ramen, udon, egg noodles, penne).
+
+If triggered: show a rustic blank sack/bag of uncooked noodles/pasta at the back of the scene, on its side and overflowing, fully visible and not cropped.
+
+Does NOT trigger for: “spaghetti squash” or any non-noodle items.
+
+Noodle/pasta exclusion (mandatory)
+
+If noodles/pasta are not listed: do not include noodles/pasta in any form.
+
+Ingredient staging rules (mandatory)
+Fresh produce definition + staging (mandatory)
+
+Fresh produce = vegetables, fruits, eggs and fresh herbs explicitly listed.
+
+If produce is listed, it must appear as real fresh items in-scene (not powders/flakes unless listed that way).
+
+If 1–3 produce items: stage as a small rustic mise en place cluster on a cutting board (fully in frame, recognizable).
+
+If 4+ produce items: group together in a rustic container (small wooden crate, wicker basket, or burlap sack). Each item must remain clearly identifiable (not buried).
+
+Spices/seasonings staging (mandatory)
+
+If a spice is listed as ground/powder/flakes, show it that way only (e.g., in a small matte bowl).
+
+If listed as whole (peppercorns, whole chilies), show whole.
+
+Meat rule (mandatory, with broth exception)
+
+Trigger only when meat/fish is explicitly listed (chicken, beef, pork, fish, etc.).
+
+If triggered: show the raw meat on parchment paper on a rustic cutting board. If the recipe specifies the cut (cubed, sliced, strips), show it that way; otherwise show as simple whole cuts (e.g., thighs/breast/steak) without extra prep.
+
+Broth/stock exception: If only broth/stock is listed and no meat is listed, do not include any meat. If meat is listed, the meat rule applies normally.
+
+Dish-type rules (mandatory, but reference-photo-safe)
+Stir-fry rule (mandatory, reference-aware)
+
+If the recipe is a stir-fry: present the finished dish in a rustic wok or wok-style bowl ONLY IF it matches the reference photo’s serving vessel style.
+
+If the reference photo uses a different vessel, keep the reference vessel.
+
+Asian meal rule (mandatory, deterministic trigger)
+
+Include rustic chopsticks only if at least one of the following is true:
+
+The recipe title/description explicitly indicates an Asian cuisine, OR
+
+The ingredient list includes soy sauce + ginger + garlic, OR
+
+The reference photo already implies chopstick-style serving.
+
+In-dish visibility (mandatory)
+
+If produce is part of the cooked dish (e.g., peppers, onions, scallions), it must also be visible in the finished dish as recognizable pieces and/or garnish where appropriate.
+
+Series consistency props (allowed only if ingredients permit)
+
+Keep the scene cohesive, cinematic, and uncluttered. Use minimal rustic props consistent with the series: matte dark ceramic bowls, rustic utensils, linen cloth, crumbs/salt flecks.
+Only include herbs/garlic/other foods if they are listed ingredients.
+
+Color palette (required)
+
+Warm copper/amber highlights, deep espresso/brown shadows, rich natural food colors.
+Avoid neon, oversaturation, harsh HDR, modern glossy props, plastic look.
+
+TITLE TEXT (required — must be perfect)
+
+Place the recipe title at the very top, centered, with generous negative space behind it.
+
+Font: elegant high-contrast serif (Didot / Playfair Display-like).
+
+Color: warm ivory/off-white with subtle soft shadow/glow.
+
+Must be crisp, perfectly spelled, easy to read.
+
+Title must read exactly: “{RECIPE TITLE}”
+
+No other text. No logos. No watermarks.
+
+Avoid (required)
+
+Bright white backgrounds, high-key/flat lighting, clutter, borders/frames, hands/people, warped/misspelled text.
+
+Optional special case (only if applicable)
+
+For spreads/frostings/sauces: present in a rustic ceramic bowl with visible swirls and spatula marks; include a palette knife/offset spatula resting in the bowl.
