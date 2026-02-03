@@ -562,3 +562,59 @@ html { color-scheme: dark; }
     transform: none;                   /* remove the tiny scale that can “feel” wider */
   }
 }
+
+/* =========================
+   SIZE SCALE: ~125% larger (desktop)
+   Paste at END of styles.css
+   Remove the @media line if you want this on mobile too.
+   ========================= */
+@media (min-width: 721px) {
+  /* overall page width + padding */
+  .container { max-width: 1225px; padding: 28px 20px 75px; }
+
+  /* header */
+  .header { padding: 20px 0 18px; margin-bottom: 18px; gap: 15px; }
+  .brand h1 { font-size: 43px; }
+  .brand p { font-size: 18px; max-width: 70ch; }
+  .nav a { padding: 11px 18px; }
+
+  /* main card + grid */
+  .card { padding: 23px; border-radius: 22px; }
+  .card h2 { font-size: 20px; margin: 0 0 13px; }
+  .grid {
+    gap: 18px;
+    margin-top: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+  }
+
+  /* cover hero */
+  .cover-hero { border-radius: 22px; max-height: 625px; min-height: 250px; margin: 13px 0 23px; }
+
+  /* homepage recipe cards */
+  .recipe-link { border-radius: 18px; }
+  .recipe-link .card-media { height: 475px; }
+  .recipe-link .card-overlay { padding: 18px; gap: 8px; }
+  .recipe-link .card-title { font-size: 20px; }
+  .recipe-link .card-desc { font-size: 16px; }
+  .recipe-link .tag { font-size: 15px; padding: 5px 10px; }
+  .tag-row { gap: 8px; }
+
+  /* recipe page typography + spacing */
+  .meta { gap: 13px; font-size: 16px; }
+  .badge { padding: 8px 13px; }
+  hr { margin: 23px 0; }
+  h3 { margin: 20px 0 10px; font-size: 20px; }
+  ul, ol { padding-left: 23px; }
+  li { margin: 8px 0; }
+  .recipe-hero img { border-radius: 20px; }
+
+  /* search controls */
+  .controls { gap: 15px; margin-top: 15px; grid-template-columns: 1fr 275px auto; }
+  .control-label { font-size: 15px; }
+  .input, .select { padding: 13px 15px; border-radius: 15px; }
+  .button { padding: 13px 15px; border-radius: 15px; }
+
+  .footer { margin-top: 28px; font-size: 16px; }
+  .small { font-size: 15px; }
+}
+
