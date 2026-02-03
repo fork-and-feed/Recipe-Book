@@ -96,7 +96,7 @@ Trigger only when meat/fish is explicitly listed (chicken, beef, pork, fish, etc
 
 If triggered: show the raw meat on parchment paper on a rustic cutting board. If the recipe specifies the cut (cubed, sliced, strips), show it that way; otherwise show as simple whole cuts (e.g., thighs/breast/steak) without extra prep.
 
-Broth/stock exception: If only broth/stock is listed and no meat is listed, do not include any meat. If meat is listed, the meat rule applies normally. Broth/stock should be displayed in a rustic glass pitcher or measuring cup, something with a handle.
+Broth/stock exception: If only broth/stock is listed and no meat is listed, do not include any meat. If meat is listed, the meat rule applies normally. Broth/stock should be displayed in a rustic glass pitcher, something with a handle.
 
 Dish-type rules (mandatory, but reference-photo-safe)
 Stir-fry rule (mandatory, reference-aware)
@@ -107,7 +107,7 @@ If the reference photo uses a different vessel, keep the reference vessel.
 
 Asian meal rule (mandatory, deterministic trigger)
 
-Include rustic chopsticks only if at least one of the following is true:
+Include rustic chopsticks and display finished dish in a rustic wok type dish only if at least one of the following is true:
 
 The recipe title/description explicitly indicates an Asian cuisine, OR
 

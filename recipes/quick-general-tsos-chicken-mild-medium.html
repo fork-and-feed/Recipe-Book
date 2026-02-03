@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quick General Tso’s Chicken (Mild &amp; Medium) — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Quick General Tso’s Chicken (Mild &amp; Medium)</h1>
+        <p>Air-fried popcorn chicken tossed in a fast, glossy General Tso’s-style sauce — choose mild or medium heat.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 2 min</span>
+        <span class="badge">Cook: 15 min</span>
+        <span class="badge">Total: 17 min</span>
+        <span class="badge">Serves: 2–4</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Quick General Tso’s Chicken (Mild & Medium)" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+
+      <h3>The Chicken</h3>
+      <ul>
+        <li>1 bag (approx. 700 g) Prime breaded popcorn chicken</li>
+      </ul>
+
+      <h3>The Slurry (Thickener)</h3>
+      <ul>
+        <li>1 tbsp cornstarch + 1 tbsp cold water</li>
+      </ul>
+
+      <h3>The Sauce Base</h3>
+      <ul>
+        <li>1/2 cup chicken broth (or water)</li>
+        <li>3 tbsp soy sauce</li>
+        <li>2 tbsp rice vinegar</li>
+        <li>1 tsp sesame oil</li>
+        <li>1 clove garlic, minced</li>
+        <li>1/2 tsp fresh ginger, grated</li>
+      </ul>
+
+      <h3>Choose Your Heat Level</h3>
+      <ul>
+        <li><strong>Mild:</strong> add 3 tbsp sugar or honey</li>
+        <li><strong>Medium:</strong> add 1 1/2 tbsp sugar or honey <em>and</em> 1–2 tsp Lee Kum Kee (LKK) Chiu Chow Chili Oil</li>
+      </ul>
+
+      <hr />
+
+      <h2>Quick Method</h2>
+      <ol>
+        <li>
+          <strong>Air fry:</strong>
+          Cook popcorn chicken at <strong>400°F (200°C)</strong> for <strong>12–14 minutes</strong>.
+          (Air fryer is best — it keeps the breading from getting soggy once sauced.)
+        </li>
+        <li>
+          <strong>Simmer:</strong>
+          In a large skillet over medium heat, whisk together the Sauce Base plus your chosen heat-level ingredients.
+          Bring to a bubble and simmer for <strong>2 minutes</strong>.
+        </li>
+        <li>
+          <strong>Thicken:</strong>
+          Stir the cornstarch slurry, then pour it into the pan while whisking.
+          Cook about <strong>45 seconds</strong> until thick and glossy.
+        </li>
+        <li>
+          <strong>Toss:</strong>
+          Turn off heat. Add the hot chicken and toss for about <strong>15 seconds</strong> until coated.
+          Serve immediately over rice.
+        </li>
+      </ol>
+
+      <h3>Pro-Tip: Split Batch for a Family</h3>
+      <p>
+        Make the <strong>Mild</strong> version first. Remove about half the sauce and chicken.
+        Then stir <strong>1 tsp</strong> LKK chili oil into the remaining sauce, simmer for 10 seconds,
+        and toss the rest of the chicken for the <strong>Medium</strong> version.
+      </p>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-30">January 30, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
