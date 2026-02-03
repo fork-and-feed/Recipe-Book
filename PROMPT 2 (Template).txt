@@ -39,6 +39,12 @@ No labels / no packaging text: any sacks/bags/containers must be blank, unbrande
 
 Honey rule (mandatory): ONLY if honey is listed in the ingredients it must be displayed with a small mason type jar of honey with a honey dripper next to a small bowl containing a piece of honey comb.
 
+flour rule (mandatory): ONLY if flour is listed in the ingredients it must be displayed towards the back in a large rustic glass container
+
+milk rule (mandatory): ONLY if milk/cream/ half and half is listed in the ingredients it must be displayed towards the back in a rustic glass pitcher style container
+
+oatmeal rule (mandatory): ONLY if oatmeal is listed in the ingredients it must be displayed towards the back in a rustic paper bag or burlap sack, something rustic.
+
 Rice rule (mandatory, precise trigger)
 
 Trigger ONLY if the ingredient list includes uncooked rice grains (e.g., jasmine rice, basmati rice, white rice, brown rice) or if it appears in the instructions.
@@ -55,7 +61,7 @@ Noodle/pasta rule (mandatory, precise trigger)
 
 Trigger ONLY if noodles/pasta are listed (e.g., spaghetti, ramen, udon, egg noodles, penne) or appear in the instructions.
 
-If triggered: show a rustic blank sack/bag of uncooked noodles/pasta at the back of the scene, on its side and overflowing, fully visible and not cropped.
+If triggered: show a rustic blank paper bag of uncooked noodles/pasta at the back of the scene, on its side and overflowing, fully visible and not cropped.
 
 Does NOT trigger for: “spaghetti squash” or any non-noodle items.
 

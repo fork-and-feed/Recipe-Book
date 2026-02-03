@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Creamy Spicy Mussel Ramen — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Creamy Spicy Mussel Ramen</h1>
+        <p>Spicy ramen turned creamy and glossy — topped with plump mussels and a hit of lime.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 5 min</span>
+        <span class="badge">Cook: 12 min</span>
+        <span class="badge">Total: 17 min</span>
+        <span class="badge">Serves: 1</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Creamy Spicy Mussel Ramen" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+
+      <h3>The Base</h3>
+      <ul>
+        <li>1 pack spicy ramen (Shin Ramyun is the gold standard)</li>
+      </ul>
+
+      <h3>The Star</h3>
+      <ul>
+        <li>1 lb mussels (fresh &amp; scrubbed, or frozen)</li>
+      </ul>
+
+      <h3>The Liquids</h3>
+      <ul>
+        <li>1 cup water</li>
+        <li>1 cup whole milk</li>
+      </ul>
+
+      <h3>The Aromatics</h3>
+      <ul>
+        <li>2 cloves garlic, minced</li>
+        <li>1 tsp ginger, grated</li>
+        <li>1 green onion, sliced (keep whites and greens separate)</li>
+      </ul>
+
+      <h3>The Richness</h3>
+      <ul>
+        <li>2 tbsp butter (1 tbsp for sautéing, 1 tbsp for finishing)</li>
+      </ul>
+
+      <h3>The Pop</h3>
+      <ul>
+        <li>1/2 lime (essential to cut the creaminess)</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>
+          <strong>Sauté:</strong>
+          Melt 1 tbsp butter in a pot over medium heat. Add garlic, ginger, and the whites of the green onion.
+          Sauté for 1 minute until fragrant.
+        </li>
+        <li>
+          <strong>Simmer base:</strong>
+          Add the ramen seasoning packet, 1 cup water, and 1 cup milk. Bring to a gentle simmer
+          (avoid a rolling boil so the milk doesn’t separate).
+        </li>
+        <li>
+          <strong>Steam mussels:</strong> Add mussels to the simmering liquid and cover with a lid.
+          <ul>
+            <li><strong>Fresh:</strong> Steam 3–5 minutes until they pop open.</li>
+            <li><strong>Frozen:</strong> Simmer 2–3 minutes until hot.</li>
+          </ul>
+          Remove mussels with tongs and set aside so they stay plump.
+        </li>
+        <li>
+          <strong>Cook noodles:</strong>
+          Add noodles to the creamy broth and cook for the package time, stirring frequently so the milk doesn’t scorch.
+        </li>
+        <li>
+          <strong>The finish:</strong>
+          Turn off the heat. Stir in the final 1 tbsp butter and a squeeze of lime.
+        </li>
+        <li>
+          <strong>Serve:</strong>
+          Pour noodles and broth into a bowl, top with mussels and green onion tops.
+        </li>
+      </ol>
+
+      <h3>Pro Tips</h3>
+      <ul>
+        <li><strong>Milk secret:</strong> Half milk/half water gives a rich “chowder” consistency without being as heavy as pure cream.</li>
+        <li><strong>Spice level:</strong> Milk mellows heat. For extra hot, add 1 tsp gochujang or chili oil at the end.</li>
+        <li><strong>Butter:</strong> Stirring in the final cold pat off-heat gives a glossy, restaurant-style finish.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-30">January 30, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
