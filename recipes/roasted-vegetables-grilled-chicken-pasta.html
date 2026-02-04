@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Roasted Vegetables &amp; Grilled Chicken Pasta — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Roasted Vegetables &amp; Grilled Chicken Pasta</h1>
+        <p>Sheet-pan roasted veggies + grilled chicken + lemon-Parmesan “pan-juice” sauce.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Serves: 4</span>
+        <span class="badge">Total: 30–35 min</span>
+        <span class="badge">Oven: 400°F / 200°C</span>
+        <span class="badge">Pasta: 1 lb</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Roasted Vegetables and Grilled Chicken Pasta" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+
+      <h3>The Roasted Base</h3>
+      <ul>
+        <li>2 cups mushrooms (cremini or button), quartered</li>
+        <li>2 cups cherry tomatoes</li>
+        <li>1 large red bell pepper, chopped into bite-sized pieces</li>
+        <li>1 medium red onion, cut into thin wedges</li>
+        <li>4 cloves garlic, whole and unpeeled</li>
+        <li>3 tbsp olive oil</li>
+        <li>1 tsp dried oregano</li>
+        <li>Salt and pepper</li>
+      </ul>
+
+      <h3>The Protein &amp; Pasta</h3>
+      <ul>
+        <li>2 large chicken breasts (about 1 lb)</li>
+        <li>1 lb (500 g) short pasta (penne, rigatoni, or fusilli)</li>
+      </ul>
+
+      <h3>The Finish</h3>
+      <ul>
+        <li>1/2 cup freshly grated Parmesan, divided</li>
+        <li>Juice of 1/2 lemon</li>
+        <li>1/2 cup reserved pasta water (use as needed)</li>
+        <li>Optional: fresh parsley or basil for garnish</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>
+          <strong>Roast the veggies:</strong>
+          Preheat oven to <strong>400°F (200°C)</strong>.
+          On a large sheet pan, toss mushrooms, tomatoes, pepper, onion, and unpeeled garlic with olive oil, oregano, salt, and pepper.
+          Spread in a single layer. Roast <strong>20–25 minutes</strong> until tomatoes burst and onions char.
+        </li>
+        <li>
+          <strong>Grill the chicken:</strong>
+          Season chicken with salt and pepper.
+          Heat a grill pan or skillet over medium-high heat with a drizzle of oil.
+          Cook <strong>5–7 minutes per side</strong> (to <strong>165°F / 74°C</strong> internal).
+          Rest 5 minutes, then slice into strips.
+        </li>
+        <li>
+          <strong>Boil the pasta:</strong>
+          Cook pasta in heavily salted water according to package directions.
+          Scoop out <strong>1 cup</strong> pasta water before draining.
+        </li>
+        <li>
+          <strong>The “sauce” base:</strong>
+          Pick roasted garlic cloves off the pan. Squeeze the soft garlic from the skins into a large serving bowl.
+          Mash with a fork and stir in a splash of olive oil.
+        </li>
+        <li>
+          <strong>Combine:</strong>
+          Add hot pasta, all roasted veggies (including pan juices), and sliced chicken to the bowl.
+        </li>
+        <li>
+          <strong>Toss &amp; serve:</strong>
+          Add lemon juice and <strong>half the Parmesan</strong>.
+          Splash in some reserved pasta water and toss vigorously until lightly saucy and glossy.
+          Add more pasta water if needed. Top with remaining Parmesan and fresh herbs.
+        </li>
+      </ol>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>Don’t skip the pan juices — they’re the flavor base for the “sauce.”</li>
+        <li>Warm pasta + Parmesan + starchy water emulsifies into a light, creamy coating.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-30">January 30, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

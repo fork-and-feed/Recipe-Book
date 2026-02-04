@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ninja Crepe Recipe — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Ninja Crepe Recipe</h1>
+        <p>Quick blender crepes with a short rest for the smoothest batter and best flavor.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 5 min</span>
+        <span class="badge">Rest: 30 min</span>
+        <span class="badge">Cook: 10 min</span>
+        <span class="badge">Yield: ~8–10 crepes</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Ninja Crepe Recipe" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>1 cup 1% milk (plus a splash more if too thick)</li>
+        <li>3/4 cup all-purpose flour, sifted</li>
+        <li>1 large egg</li>
+        <li>2 tbsp melted butter, slightly cooled</li>
+        <li>2 tsp sugar</li>
+        <li>3/4 tsp vanilla extract</li>
+        <li>Pinch of salt</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li><strong>Liquid first:</strong> Add milk, egg, vanilla, and melted butter into the Ninja cup first.</li>
+        <li><strong>Dry second:</strong> Add flour, sugar, and salt on top.</li>
+        <li><strong>The pulse:</strong> Blend for <strong>15–20 seconds</strong> until completely smooth.</li>
+        <li><strong>The rest:</strong> Refrigerate at least <strong>30 minutes</strong> (this removes the flour taste and improves texture).</li>
+        <li><strong>Consistency check:</strong> After resting, if batter is thicker than heavy cream, whisk in <strong>1 tbsp milk</strong>.</li>
+        <li>
+          <strong>Cook:</strong> Heat a non-stick pan over medium. Lightly butter.
+          Pour about <strong>3 tbsp</strong> batter and swirl quickly.
+          Cook <strong>60 seconds</strong> on side one, then <strong>30 seconds</strong> on side two.
+        </li>
+      </ol>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>First crepe is often a “tester” — adjust heat or add a tiny splash of milk if needed.</li>
+        <li>Stack cooked crepes on a plate and cover lightly to keep them soft.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-01-30">January 30, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
