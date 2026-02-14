@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Greek Lemon Potatoes — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Greek Lemon Potatoes</h1>
+        <p>Braised-then-crisped roasted potato wedges with lemon, oregano, garlic, and olive oil.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 5 min</span>
+        <span class="badge">Marinate: 30 min (optional)</span>
+        <span class="badge">Cook: ~35 min</span>
+        <span class="badge">Oven: 400°F / 200°C</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Greek Lemon Potatoes" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li><strong>Potatoes:</strong> 4–5 small/medium (skin on), cut into quarters (about 1-inch thick)</li>
+        <li><strong>Liquid:</strong> 1/2 cup broth + juice of 1 lemon</li>
+        <li><strong>Fat:</strong> 1/4 cup olive oil</li>
+        <li><strong>Seasoning:</strong> 3 cloves garlic, minced + 1 tbsp dried oregano + salt and pepper</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>
+          <strong>Toss:</strong>
+          Put potato wedges in a roasting pan. Pour over olive oil, lemon juice, broth, garlic, and oregano.
+          Add salt and pepper right before cooking.
+        </li>
+        <li>
+          <strong>Braise (Step 1):</strong>
+          Cover the pan tightly with foil. Bake at <strong>200°C (400°F)</strong> for <strong>20 minutes</strong>.
+          This steams them until buttery soft.
+        </li>
+        <li>
+          <strong>The blast (Step 2):</strong>
+          Remove foil. If there’s a lot of liquid, spoon a little out (leave the oil).
+          Increase heat to <strong>230°C (450°F)</strong> or turn on the broiler.
+        </li>
+        <li>
+          <strong>Crisp:</strong>
+          Roast another <strong>10–15 minutes</strong> without flipping until edges are blistered and golden brown.
+        </li>
+        <li>
+          <strong>Serve:</strong>
+          Let sit <strong>2 minutes</strong> to soak up any remaining oil before serving.
+        </li>
+      </ol>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>Optional marinate: toss everything and let sit 30 minutes before baking for deeper flavor.</li>
+        <li>If you broil, keep a close eye — they go from golden to dark fast.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-02-06">February 6, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

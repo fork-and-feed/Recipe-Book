@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>General Thai–Style Popcorn Chicken — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>General Thai–Style Popcorn Chicken</h1>
+        <p>Wok-style crisp popcorn chicken tossed in a glossy sweet-tangy sauce with quick stir-fried veggies.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Servings: 3–4</span>
+        <span class="badge">Total: ~25 min</span>
+        <span class="badge">Method: Wok / Stovetop</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="General Thai-Style Popcorn Chicken" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+
+      <h3>Protein</h3>
+      <ul>
+        <li>600–700 g frozen popcorn chicken (bake or air fry until deeply golden and crisp)</li>
+      </ul>
+
+      <h3>Sauce</h3>
+      <ul>
+        <li>1/3 cup water</li>
+        <li>1/4 cup white sugar</li>
+        <li>3 tbsp rice vinegar</li>
+        <li>2 tbsp ketchup</li>
+        <li>1 1/2 tbsp light soy sauce</li>
+        <li>1 tbsp hoisin sauce</li>
+        <li>1 tsp vegetarian oyster sauce <strong>or</strong> pantry substitute (below)</li>
+        <li>1 tsp sesame oil</li>
+        <li>1 tsp chili garlic sauce (optional)</li>
+        <li><strong>Slurry:</strong> 1 1/2 tsp cornstarch + 1 tbsp cold water</li>
+      </ul>
+
+      <h3>Pantry Substitute for 1 tsp Oyster Sauce</h3>
+      <p>If you don’t have vegetarian oyster sauce, mix and add directly into the sauce:</p>
+      <ul>
+        <li>3/4 tsp soy sauce</li>
+        <li>1/4 tsp Worcestershire sauce</li>
+        <li>Tiny pinch sugar</li>
+      </ul>
+
+      <h3>Vegetables</h3>
+      <ul>
+        <li>1 cup red bell pepper, large chunks</li>
+        <li>1/2–3/4 cup onion, large chunks</li>
+        <li>Optional: 2–3 dried red chilies</li>
+        <li>Green onions, sliced (to finish)</li>
+      </ul>
+
+      <hr />
+
+      <h2>Method</h2>
+      <ol>
+        <li>
+          <strong>Cook the chicken:</strong>
+          Bake or air fry popcorn chicken according to package instructions, cooking <strong>1–2 minutes longer</strong>
+          than directed for a firmer crust. Keep hot.
+        </li>
+        <li>
+          <strong>Prepare sauce:</strong>
+          Whisk all sauce ingredients together (including vegetarian oyster sauce or the pantry substitute).
+          Keep the slurry separate for now.
+        </li>
+        <li>
+          <strong>Stir-fry vegetables:</strong>
+          Heat 1 tbsp neutral oil in a wok over high heat. Add onion and bell pepper (and dried chilies if using).
+          Stir-fry <strong>60–90 seconds</strong> — vegetables should remain slightly crisp.
+        </li>
+        <li>
+          <strong>Thicken:</strong>
+          Pour sauce into the wok and bring to a strong simmer.
+          Stir the slurry, then add while stirring. Cook <strong>30–45 seconds</strong> until glossy and medium-thick.
+          <br />
+          <em>Texture goal:</em> coats the back of a spoon but still fluid.
+        </li>
+        <li>
+          <strong>Finish:</strong>
+          Lower heat. Add hot popcorn chicken and toss gently <strong>20–30 seconds only</strong>.
+          Remove immediately. Garnish with green onions and serve over jasmine rice.
+        </li>
+      </ol>
+
+      <h3>Texture Control Notes</h3>
+      <ul>
+        <li>Do not simmer chicken in sauce.</li>
+        <li>Toss briefly to preserve the crisp coating.</li>
+        <li>Serve immediately for best texture.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-02-14">February 14, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
