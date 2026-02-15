@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mushroom Bouillon “Oyster Sauce” Base (Freezer-Friendly) — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Mushroom Bouillon “Oyster Sauce” Base (Freezer-Friendly)</h1>
+        <p>Freezer-ready umami sauce base (best frozen unthickened, then thickened fresh while cooking).</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Yield: 1 cup</span>
+        <span class="badge">Prep: 5 min</span>
+        <span class="badge">Simmer: 3 min</span>
+        <span class="badge">Freezer-friendly</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Mushroom Bouillon Oyster Sauce Base" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients (Base)</h2>
+      <ul>
+        <li>4 mushroom bouillon tablets (Aurora)</li>
+        <li>1 cup (250 ml) boiling water</li>
+        <li>6 tbsp soy sauce (or tamari)</li>
+        <li>4 tbsp brown sugar</li>
+        <li>1 tbsp molasses <em>or</em> 2 tbsp dark soy sauce (for color/depth)</li>
+        <li>2 tsp rice vinegar (optional, for balance)</li>
+        <li>1 tsp sesame oil (optional)</li>
+      </ul>
+
+      <hr />
+
+      <h2>Make the Base</h2>
+      <ol>
+        <li><strong>Dissolve tablets:</strong> Crush the 4 tablets and whisk into 1 cup boiling water until fully dissolved.</li>
+        <li><strong>Build flavor:</strong> Stir in soy sauce, brown sugar, molasses (or dark soy), and optional vinegar/sesame oil.</li>
+        <li><strong>Simmer:</strong> Simmer 2–3 minutes to blend, then cool completely.</li>
+      </ol>
+
+      <h2>Freeze (1 Cup)</h2>
+      <p>Portion into:</p>
+      <ul>
+        <li><strong>1 tbsp cubes</strong> (you’ll get ~16 cubes), or</li>
+        <li><strong>2 tbsp cubes</strong> (you’ll get ~8 cubes)</li>
+      </ul>
+      <p>Freeze until solid, then transfer to a labeled freezer bag/container.</p>
+
+      <hr />
+
+      <h2>To Use (Thicken Fresh)</h2>
+      <ol>
+        <li>Melt the amount you need in a pan and bring to a gentle simmer.</li>
+        <li>Add slurry and simmer until glossy (15–30 seconds):</li>
+      </ol>
+
+      <h3>Slurry Ratios</h3>
+      <ul>
+        <li><strong>Per 1 tbsp base:</strong> 1/8 tsp cornstarch + 1/8 tsp cold water</li>
+        <li><strong>Per 1/4 cup base (4 tbsp):</strong> 1/2 tsp cornstarch + 1/2 tsp cold water</li>
+        <li><strong>For the full 1 cup base:</strong> 2 tsp cornstarch + 2 tsp cold water</li>
+      </ul>
+
+      <p>Whisk slurry in and simmer 15–30 seconds until thickened and glossy.</p>
+
+      <hr />
+
+      <h2>Storage</h2>
+      <p>Freeze for 2–3 months for best flavor.</p>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-02-14">February 14, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
