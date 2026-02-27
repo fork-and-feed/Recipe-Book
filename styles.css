@@ -204,7 +204,6 @@ a:hover { text-decoration: underline; }
   .cover-inner{ padding: 16px 14px 14px; }
 }
 
-
 /* ✅ Keep the rustic grey->black vibe, but lighter than before */
 .cover-overlay{
   position: absolute;
@@ -257,8 +256,9 @@ a:hover { text-decoration: underline; }
 
 
 /* -----------------------------
-   HOMEPAGE RECIPE CARDS (Option A)
-   Entire image visible (no crop) + titles align + stronger fades
+   HOMEPAGE RECIPE CARDS
+   FIXED: keep info visible when grid has 1–2 results
+   AND: hero image area ALWAYS 3:2
 -------------------------------- */
 .recipe-link {
   display: block;
@@ -279,9 +279,10 @@ a:hover { text-decoration: underline; }
   box-shadow: 0 16px 34px rgba(0,0,0,0.34);
 }
 
-/* Fixed card height + grey->black background visible */
+/* ✅ Let the card grow naturally; keep a minimum so cards feel consistent */
 .recipe-link .card-media{
-  height: 380px;
+  min-height: 380px;
+  height: auto; /* ✅ key change */
   display: flex;
   flex-direction: column;
   background: linear-gradient(to bottom, #2a2e38 0%, #000 100%);
@@ -289,19 +290,19 @@ a:hover { text-decoration: underline; }
   position: relative;
 }
 
-/* Image area: keep your 1.5:1 photos fully visible and SAME height on every card */
+/* ✅ ALWAYS 3:2 hero area (no matter how many cards per row) */
 .recipe-link .card-hero{
   width: 100%;
-  aspect-ratio: 3 / 2;
-  height: auto;
-  object-fit: contain;        /* ✅ no cropping */
-  object-position: top center;
+  aspect-ratio: 3 / 2;   /* ✅ exact 3:2 */
+  height: auto;          /* aspect-ratio controls size */
+  object-fit: contain;   /* ✅ no cropping (use cover if you prefer) */
+  object-position: center;
   display: block;
   flex: 0 0 auto;
   z-index: 0;
 }
 
-/* ✅ Stronger overall fade across the card */
+/* Stronger overall fade across the card */
 .recipe-link .card-media::after{
   content: "";
   position: absolute;
@@ -317,16 +318,15 @@ a:hover { text-decoration: underline; }
   z-index: 1;
 }
 
-/* Text area always starts exactly below the image (titles align perfectly) */
+/* Text area always starts below the image */
 .recipe-link .card-overlay{
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* ✅ titles align */
+  justify-content: flex-start;
   gap: 6px;
   padding: 14px;
 
-  /* stronger fade inside text area */
   background: linear-gradient(
     to bottom,
     rgba(0,0,0,0.10) 0%,
@@ -344,7 +344,6 @@ a:hover { text-decoration: underline; }
   font-size: 16px;
   line-height: 1.2;
 
-  /* consistent title block height (2 lines max) */
   min-height: calc(1.2em * 2);
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -369,7 +368,7 @@ a:hover { text-decoration: underline; }
 
 /* Tags inside the text area */
 .recipe-link .tag-row{
-  margin-top: auto;   /* pushes tags to the bottom */
+  margin-top: auto;
   padding-top: 10px;
 }
 
@@ -471,7 +470,6 @@ html { color-scheme: dark; }
   background: rgba(119, 230, 200, 0.25);
   color: #0b0c10;
 }
-
 
 .input::placeholder{
   color: rgba(181,183,194,0.70);
@@ -590,9 +588,10 @@ html { color-scheme: dark; }
   /* cover hero */
   .cover-hero { border-radius: 22px; max-height: 625px; min-height: 250px; margin: 13px 0 23px; }
 
-  /* homepage recipe cards */
+  /* homepage recipe cards (desktop) */
   .recipe-link { border-radius: 18px; }
-  .recipe-link .card-media { height: 475px; }
+  .recipe-link .card-media { min-height: 475px; height: auto; } /* ✅ key change */
+  /* NOTE: no fixed/clamp height here; hero stays 3:2 from aspect-ratio */
   .recipe-link .card-overlay { padding: 18px; gap: 8px; }
   .recipe-link .card-title { font-size: 20px; }
   .recipe-link .card-desc { font-size: 16px; }
@@ -617,4 +616,3 @@ html { color-scheme: dark; }
   .footer { margin-top: 28px; font-size: 16px; }
   .small { font-size: 15px; }
 }
-

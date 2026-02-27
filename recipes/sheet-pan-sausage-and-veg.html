@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sheet-Pan Sausage + Veg (Cooked or Raw) — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Sheet-Pan Sausage + Veg (Cooked or Raw)</h1>
+        <p>One-pan dinner with two timing paths: fully cooked sausage or raw sausage links.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 10 min</span>
+        <span class="badge">Cook: 20–30 min</span>
+        <span class="badge">Total: 30–40 min</span>
+        <span class="badge">Oven: 425°F / 220°C</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Sheet-Pan Sausage and Veg" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients (Both Versions)</h2>
+      <ul>
+        <li>3–4 cups broccoli florets</li>
+        <li>1 bell pepper, sliced</li>
+        <li>1 onion, sliced</li>
+        <li>2–3 tbsp oil</li>
+        <li>1 tsp salt + 1/2 tsp pepper</li>
+        <li>1–2 tsp garlic powder</li>
+        <li><em>Optional:</em> paprika / chili flakes / Italian seasoning</li>
+      </ul>
+
+      <hr />
+
+      <h2>Version A: Fully Cooked Sausage</h2>
+      <p><strong>Examples:</strong> kielbasa, smoked sausage, cooked Italian sausage (package usually says “fully cooked”).</p>
+
+      <h3>Ingredients</h3>
+      <ul>
+        <li>1 pack fully cooked sausage, sliced into 1/2-inch coins</li>
+      </ul>
+
+      <h3>Steps</h3>
+      <ol>
+        <li><strong>Heat oven:</strong> 425°F / 220°C. (Optional: preheat your sheet pan for better browning.)</li>
+        <li><strong>Season veg:</strong> Toss broccoli + pepper + onion with oil, salt, pepper, and garlic powder.</li>
+        <li><strong>Roast veg first:</strong> Spread in a single layer. Roast <strong>10 minutes</strong>.</li>
+        <li><strong>Add cooked sausage:</strong> Stir veg, add sausage, spread out again.</li>
+        <li><strong>Finish roasting:</strong> Roast <strong>10–15 minutes</strong> more until browned at the edges and everything is hot.</li>
+        <li><strong>Optional finish:</strong> Broil 1–2 minutes for extra crisping (watch closely).</li>
+      </ol>
+
+      <hr />
+
+      <h2>Version B: Raw / Uncooked Sausage</h2>
+      <p><strong>Examples:</strong> raw Italian sausage links, raw bratwurst, fresh sausage.</p>
+
+      <h3>Ingredients</h3>
+      <ul>
+        <li>1 pack raw sausage (links or chunks)</li>
+      </ul>
+
+      <h3>Steps (Best Timing)</h3>
+      <ol>
+        <li><strong>Heat oven:</strong> 425°F / 220°C.</li>
+        <li><strong>Start sausage first (key):</strong> Put raw sausage on one side of a sheet pan (whole links are easiest). Roast <strong>10 minutes</strong>.</li>
+        <li><strong>Add veg:</strong> Toss broccoli + pepper + onion with oil, salt, pepper, and garlic powder. Add veg to the other side of the pan (single layer as much as possible).</li>
+        <li>
+          <strong>Keep roasting:</strong> Roast <strong>15–20 minutes</strong> more, flipping/stirring halfway, until:
+          <ul>
+            <li>Sausage is browned and cooked through (<strong>160°F / 71°C</strong> internal), and</li>
+            <li>Veg is tender with crispy edges.</li>
+          </ul>
+        </li>
+        <li><strong>Optional finish:</strong> Broil 1–2 minutes at the end for extra browning.</li>
+      </ol>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-02-14">February 14, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

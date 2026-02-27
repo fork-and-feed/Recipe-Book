@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Birthday Pupcake Recipe — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>The Birthday Pupcake Recipe</h1>
+        <p>Simple banana–peanut butter pupcakes for a dog-friendly birthday treat.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 10 min</span>
+        <span class="badge">Bake: 20 min</span>
+        <span class="badge">Total: 30 min</span>
+        <span class="badge">Yields: ~6</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="The Birthday Pupcake Recipe" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>1 ripe banana, mashed</li>
+        <li>3 tbsp peanut butter <strong>(must be xylitol-free)</strong></li>
+        <li>1 egg</li>
+        <li>1/4 cup oats (or whole wheat flour)</li>
+        <li>1/2 tsp baking powder</li>
+        <li><em>Optional frosting:</em> peanut butter</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li><strong>Preheat &amp; prep:</strong> Heat oven to <strong>180°C (350°F)</strong>. Grease a muffin tin or use paper liners.</li>
+        <li><strong>Mix the wet:</strong> Mash banana until smooth. Stir in peanut butter and egg until well combined.</li>
+        <li><strong>Add the dry:</strong> Fold in oats (or flour) and baking powder.</li>
+        <li><strong>Bake:</strong> Scoop batter into the muffin tin. Bake <strong>18–20 minutes</strong>, until a toothpick comes out clean.</li>
+        <li><strong>Cool &amp; decorate:</strong> Cool completely before “frosting.” Hot treats can upset a pup’s stomach.</li>
+      </ol>
+
+      <h3>Safety Note</h3>
+      <ul>
+        <li><strong>Xylitol is toxic to dogs.</strong> Always confirm the peanut butter label is xylitol-free.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-02-14">February 14, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
