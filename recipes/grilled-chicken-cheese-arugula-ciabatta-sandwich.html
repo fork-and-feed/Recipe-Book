@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Healthy Grilled Chicken — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Healthy Grilled Chicken</h1>
+        <p>Toasty ciabatta with grilled chicken, melty cheese, peppery arugula, and a quick Dijon mayo spread.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 10 min</span>
+        <span class="badge">Cook: 10 min</span>
+        <span class="badge">Total: 20 min</span>
+        <span class="badge">Makes: 2 sandwiches</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Grilled Chicken, Cheese and Arugula Ciabatta Sandwich" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients (2 sandwiches)</h2>
+      <ul>
+        <li>2 ciabatta rolls, sliced</li>
+        <li>1 large chicken breast, sliced horizontally</li>
+        <li>1–2 tsp olive oil</li>
+        <li>Salt and black pepper</li>
+        <li>1/2 tsp garlic powder</li>
+        <li>1/2 tsp dried oregano or Italian seasoning</li>
+      </ul>
+
+      <h3>Cheese (choose one)</h3>
+      <ul>
+        <li>Fresh mozzarella, provolone, or mild white cheddar</li>
+      </ul>
+
+      <h3>Vegetables</h3>
+      <ul>
+        <li>1–2 handfuls arugula</li>
+        <li>1 small tomato, thinly sliced (optional)</li>
+        <li>Thin slices red onion (optional)</li>
+      </ul>
+
+      <h3>Mayo Spread</h3>
+      <ul>
+        <li>2 tbsp mayonnaise</li>
+        <li>1 tsp Dijon mustard</li>
+        <li>1/2 tsp lemon juice</li>
+        <li>Pinch of salt</li>
+      </ul>
+
+      <h3>Optional Additions</h3>
+      <ul>
+        <li>Roasted red peppers</li>
+        <li>Avocado slices</li>
+        <li>Balsamic glaze drizzle</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>
+          <strong>Cook the chicken:</strong>
+          Lightly coat chicken with olive oil. Season with salt, pepper, garlic powder, and oregano.
+          Grill or pan-sear over medium heat for <strong>4–5 minutes per side</strong> until cooked through.
+          Rest 3 minutes, then slice.
+        </li>
+        <li><strong>Toast the bread:</strong> Lightly toast the ciabatta until warm and slightly crisp.</li>
+        <li>
+          <strong>Make the spread:</strong>
+          Mix mayonnaise, Dijon, lemon juice, and a pinch of salt. Spread on both sides of the bread.
+        </li>
+        <li>
+          <strong>Assemble:</strong> Layer in this order:
+          chicken → cheese → tomato (optional) → arugula → red onion (optional).
+        </li>
+        <li>
+          <strong>Optional melt step:</strong>
+          Warm the assembled sandwich in a skillet or sandwich press for <strong>1–2 minutes</strong> to soften the cheese.
+        </li>
+      </ol>
+
+      <h3>Tip</h3>
+      <p>
+        Toss the arugula with a few drops of olive oil and lemon juice before adding for extra flavor.
+      </p>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-02-14">February 14, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

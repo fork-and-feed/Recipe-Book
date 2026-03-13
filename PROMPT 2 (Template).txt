@@ -28,6 +28,8 @@ Depth of field: shallow (dish sharp, background softly blurred)
 
 Steam: add only if the dish would realistically be hot
 
+Ingredients/ props should be balanced between the left and right side of the screen
+
 Props & Styling — HARD REQUIREMENTS
 Ingredient fidelity (mandatory)
 
@@ -143,7 +145,7 @@ Must be crisp, perfectly spelled, easy to read.
 
 Title must read exactly: “{RECIPE TITLE}”
 
-No other text. No logos. No watermarks.
+Absolutely No other text. No logos. No watermarks.
 
 Avoid (required)
 
