@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Savory Smash Burger Bowl (Oven Version) — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Savory Smash Burger Bowl (Oven Version)</h1>
+        <p>Crispy roasted potatoes + smash-style beef + caramelized onions + burger sauce.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Oven: 425°F / 220°C</span>
+        <span class="badge">Total: ~45 min</span>
+        <span class="badge">Serves: 3–4</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Savory Smash Burger Bowl (Oven Version)" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+
+      <h3>Potatoes</h3>
+      <ul>
+        <li>3–4 medium red potatoes, diced small</li>
+        <li>1–2 tbsp olive oil</li>
+        <li>1 tsp salt</li>
+        <li>1/2 tsp black pepper</li>
+        <li>1 tsp garlic powder</li>
+        <li>1 tsp paprika (or smoked paprika)</li>
+        <li>1/2 tsp onion powder</li>
+        <li>1/2 tsp dried oregano or thyme</li>
+        <li><em>Optional:</em> 1/4 tsp cayenne</li>
+      </ul>
+
+      <h3>Beef &amp; Onions</h3>
+      <ul>
+        <li>1 lb (450 g) ground beef</li>
+        <li>1 small onion, finely diced</li>
+        <li>1 tsp salt</li>
+        <li>1/2 tsp black pepper</li>
+        <li>1/2 tsp garlic powder</li>
+        <li>1/2 tsp onion powder</li>
+        <li>1/2 tsp smoked paprika</li>
+        <li>1/4 tsp mustard powder</li>
+        <li><em>Optional:</em> pinch of MSG</li>
+        <li><em>Optional:</em> a few drops Worcestershire sauce (at the end)</li>
+      </ul>
+
+      <h3>Toppings</h3>
+      <ul>
+        <li>1 cup shredded cheddar cheese</li>
+        <li><em>Optional:</em> pickles, shredded lettuce</li>
+      </ul>
+
+      <h3>Burger Sauce</h3>
+      <ul>
+        <li>1/4 cup mayonnaise</li>
+        <li>2 tbsp ketchup</li>
+        <li>1 tbsp mustard</li>
+        <li>1/2–1 tsp Cajun seasoning</li>
+        <li><em>Optional:</em> 1–2 tsp pickle juice</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+
+      <h3>1) Roast the Potatoes</h3>
+      <ol>
+        <li>Preheat oven to <strong>425°F (220°C)</strong>. (Optional: preheat the sheet pan for better browning.)</li>
+        <li>Toss potatoes with oil and all potato seasonings.</li>
+        <li>Spread on a large baking sheet in a single layer (spacing matters).</li>
+        <li>Roast <strong>25–35 minutes</strong>, flipping halfway, until deep golden and crisp.</li>
+      </ol>
+
+      <h3>2) Caramelize the Onions</h3>
+      <ol>
+        <li>Heat a little oil in a skillet over medium heat.</li>
+        <li>Cook onions <strong>10–15 minutes</strong>, stirring occasionally, until soft and deep golden brown. Set aside.</li>
+      </ol>
+
+      <h3>3) Cook the Beef (Smash Style)</h3>
+      <ol>
+        <li>Increase heat to medium-high.</li>
+        <li>Add ground beef, break it up, then press it into the pan.</li>
+        <li>Let it sit briefly between stirs to build a crust. Cook <strong>5–7 minutes</strong> until browned.</li>
+        <li>Drain excess fat. Add beef seasonings and mix well.</li>
+        <li><em>Optional:</em> add a few drops of Worcestershire at the end.</li>
+      </ol>
+
+      <h3>4) Make the Sauce</h3>
+      <ol>
+        <li>Mix mayo, ketchup, mustard, Cajun seasoning, and optional pickle juice. Adjust to taste.</li>
+      </ol>
+
+      <h3>5) Assemble</h3>
+      <ol>
+        <li>Layer: crispy potatoes → hot beef → caramelized onions → cheddar (melts from heat) → sauce.</li>
+        <li>Top with pickles and/or shredded lettuce if using.</li>
+      </ol>
+
+      <h3>Oven Notes</h3>
+      <ul>
+        <li>Key to crispiness: high heat + spacing + flipping.</li>
+        <li>If potatoes aren’t crisping, roast 5–10 minutes longer.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-03-29">March 29, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
