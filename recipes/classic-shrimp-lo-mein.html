@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Classic Shrimp Lo Mein — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Classic Shrimp Lo Mein</h1>
+        <p>High-heat wok noodles with tender shrimp, glossy sauce, and crisp-tender vegetables.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Serves: 2–3</span>
+        <span class="badge">Prep: 10 min</span>
+        <span class="badge">Cook: 10 min</span>
+        <span class="badge">Total: 20 min</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Classic Shrimp Lo Mein" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients (2–3 servings)</h2>
+
+      <h3>Noodles + Oil</h3>
+      <ul>
+        <li>Lo mein noodles (225 grams, or enough for 2–3 servings)</li>
+        <li>2–3 tbsp neutral oil</li>
+      </ul>
+
+      <h3>Shrimp Marinade</h3>
+      <ul>
+        <li>1/2–1 lb shrimp, peeled and deveined</li>
+        <li>1 tbsp light soy sauce</li>
+        <li>1/4 tsp baking soda</li>
+        <li>1 tbsp cornstarch</li>
+        <li>1 tsp oil</li>
+      </ul>
+
+      <h3>Sauce</h3>
+      <ul>
+        <li>2 tbsp light soy sauce</li>
+        <li>1 tbsp oyster sauce</li>
+        <li>1 tbsp dark soy sauce</li>
+        <li>1 tbsp cooking wine (optional)</li>
+        <li>1 tsp sesame oil</li>
+        <li>1/2 tbsp sugar</li>
+        <li>1 tbsp water</li>
+        <li>1/2 tbsp cornstarch</li>
+	<li>1/2 tsp chicken bouillon paste</li>
+      </ul>
+
+      <h3>Aromatics + Vegetables</h3>
+      <ul>
+        <li>3–5 cloves garlic, minced</li>
+        <li>1 tbsp ginger, minced</li>
+        <li>3–4 scallions (separate whites and greens)</li>
+        <li>1 carrot, julienned</li>
+        <li>2–3 cups cabbage, sliced</li>
+        <li>1/2 onion, sliced</li>
+        <li>1 handful mushrooms, sliced</li>
+        <li>Bean sprouts (optional)</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>
+          <strong>Prep shrimp &amp; noodles:</strong>
+          Pat shrimp dry and toss with light soy sauce, baking soda, cornstarch, and 1 tsp oil.
+          Let sit while you prep everything else.
+          Boil noodles until slightly underdone, drain, and set aside.
+        </li>
+        <li>
+          <strong>Make sauce:</strong>
+          Mix soy sauces, oyster sauce, cooking wine (optional), sesame oil, sugar, water, and cornstarch.
+          Stir until smooth.
+        </li>
+        <li>
+          <strong>Cook shrimp:</strong>
+          Heat 1–2 tbsp oil over high heat. Sear shrimp 2–3 minutes until just cooked.
+          Remove and set aside.
+        </li>
+        <li>
+          <strong>Stir-fry vegetables:</strong>
+          In the same pan, cook garlic and ginger briefly.
+          Add scallion whites, carrots, cabbage, onion, and mushrooms.
+          Stir-fry on high heat until slightly softened but still crisp.
+        </li>
+        <li>
+          <strong>Combine:</strong>
+          Add noodles and sauce and toss well.
+          Return shrimp to the pan and mix.
+          Cook 1–2 minutes until coated and glossy.
+          Add scallion greens and bean sprouts at the end.
+        </li>
+      </ol>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>Don’t overcook shrimp — they cook fast and can turn rubbery.</li>
+        <li>Slightly undercook noodles so they don’t get mushy when stir-fried.</li>
+        <li>High heat is key for that classic lo mein texture and flavor.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-04-29">April 29, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

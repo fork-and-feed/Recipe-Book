@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Breakfast Potatoes (Norland) — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Breakfast Potatoes (Norland)</h1>
+        <p>Freezer-friendly par-baked breakfast potatoes with extra-crisp coating (rice flour + cornstarch).</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Batch: 4 lb</span>
+        <span class="badge">Par-bake: 425°F / 220°C</span>
+        <span class="badge">Freezer-friendly</span>
+        <span class="badge">Cook from frozen</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Breakfast Potatoes (Norland)" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>4 lb Norland potatoes</li>
+        <li>2 tbsp cornstarch</li>
+        <li>1 tbsp rice flour (important for crisping)</li>
+        <li>3 tbsp canola or vegetable oil</li>
+        <li>1 1/2 tsp salt</li>
+        <li>1 tsp black pepper</li>
+        <li>1 tsp garlic powder</li>
+        <li>1 tsp onion powder</li>
+        <li>1/2 tsp paprika</li>
+        <li>1/2 tsp turmeric</li>
+        <li><em>Optional:</em> 1/2 tsp sugar, 1/2 tsp MSG</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+
+      <h3>1) Cut</h3>
+      <ol>
+        <li>Dice potatoes into <strong>3/4 inch</strong> cubes.</li>
+        <li>Rinse until the water runs mostly clear.</li>
+      </ol>
+
+      <h3>2) Parboil</h3>
+      <ol>
+        <li>Boil potatoes in <strong>salted water</strong> for <strong>3–4 minutes</strong> only.</li>
+        <li>Drain and let steam-dry for <strong>10–15 minutes</strong> (very important).</li>
+      </ol>
+
+      <h3>3) Season</h3>
+      <ol>
+        <li>Toss potatoes with oil first.</li>
+        <li>Mix all dry seasonings + cornstarch + rice flour, then coat potatoes evenly.</li>
+      </ol>
+
+      <h3>4) Par-bake (for freezing)</h3>
+      <ol>
+        <li>Preheat oven to <strong>425°F (220°C)</strong>.</li>
+        <li>Spread potatoes on a sheet pan in a single layer.</li>
+        <li>Bake <strong>25–30 minutes</strong>, flipping once, until <strong>light-to-medium golden</strong> (not fully crisped). Extra time helps set the coating.</li>
+      </ol>
+
+      <h3>5) Freeze</h3>
+      <ol>
+        <li>Cool completely.</li>
+        <li>Freeze on a tray <strong>1–2 hours</strong> until firm.</li>
+        <li>Transfer to freezer bags (label + date).</li>
+      </ol>
+
+      <hr />
+
+      <h2>Cook From Frozen</h2>
+      <ul>
+        <li><strong>Air fryer:</strong> 400°F (200°C), <strong>14–18 minutes</strong>, shake halfway</li>
+        <li><strong>Oven:</strong> 425°F (220°C), <strong>25–35 minutes</strong>, flip once</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-04-29">April 29, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

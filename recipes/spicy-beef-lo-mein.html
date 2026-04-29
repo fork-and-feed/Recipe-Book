@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spicy Beef Lo Mein — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Spicy Beef Lo Mein</h1>
+        <p>Marinated, tender beef + spicy-glossy sauce + quick stir-fried veggies.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Serves: 2–3</span>
+        <span class="badge">Prep: 10 min</span>
+        <span class="badge">Cook: 10 min</span>
+        <span class="badge">Total: 20 min</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Spicy Beef Lo Mein" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients (2–3 servings)</h2>
+
+      <h3>Noodles + Oil</h3>
+      <ul>
+        <li>225 g lo mein noodles</li>
+        <li>2–3 tbsp neutral oil (for stir-frying)</li>
+      </ul>
+
+      <h3>Marinated Beef</h3>
+      <ul>
+        <li>1/2 lb beef sirloin, thinly sliced</li>
+        <li>2 tsp light soy sauce</li>
+        <li>3/4 tsp sugar</li>
+        <li>1/4 tsp baking soda</li>
+        <li>1 tbsp cornstarch</li>
+        <li>2 tsp chili crisp oil</li>
+      </ul>
+
+      <h3>Sauce</h3>
+      <ul>
+        <li>3 tbsp oyster sauce</li>
+        <li>2 tsp light soy sauce</li>
+        <li>2 tsp dark soy sauce</li>
+        <li>1 tsp beef bouillon paste</li>
+      </ul>
+
+      <h3>Aromatics + Vegetables</h3>
+      <ul>
+        <li>1 shallot, diced</li>
+        <li>Thai chilies, to taste</li>
+        <li>1/2 bell pepper, sliced</li>
+        <li>1 carrot, julienned</li>
+        <li>1 handful mushrooms, sliced</li>
+        <li>Scallions, chopped (for garnish)</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>
+          <strong>Cook noodles &amp; prep beef:</strong>
+          Boil noodles until slightly underdone, then drain well.
+          Slice beef thinly against the grain.
+        </li>
+        <li>
+          <strong>Marinate beef:</strong>
+          Toss beef with light soy sauce, sugar, baking soda, chili crisp, and cornstarch until evenly coated and slightly sticky.
+        </li>
+        <li>
+          <strong>Make sauce:</strong>
+          Mix oyster sauce, light soy sauce, dark soy sauce, and beef bouillon paste in a small bowl. Set aside.
+        </li>
+        <li>
+          <strong>Sear beef:</strong>
+          Heat 1–2 tbsp oil in a wok or large pan over high heat.
+          Add beef in a single layer and sear until browned. Remove and set aside.
+        </li>
+        <li>
+          <strong>Stir-fry vegetables:</strong>
+          Add a bit more oil if needed.
+          Cook shallots and chilies about 1 minute, then add carrots, bell pepper, and mushrooms.
+          Stir-fry until slightly softened but still crisp.
+        </li>
+        <li>
+          <strong>Combine:</strong>
+          Add noodles and sauce and toss until well coated.
+          Return beef to the pan and toss thoroughly to heat through.
+          Finish with scallions.
+        </li>
+      </ol>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>Slightly undercook noodles so they don’t get mushy when stir-frying.</li>
+        <li>Baking soda + cornstarch helps keep the beef tender (velveting technique).</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-04-29">April 29, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
