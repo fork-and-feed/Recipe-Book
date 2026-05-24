@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chinese Pepper Beef — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Chinese Pepper Beef</h1>
+        <p>High-heat stir-fry with tender beef, crisp peppers, and a glossy black pepper sauce.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 10–15 min</span>
+        <span class="badge">Cook: 10 min</span>
+        <span class="badge">Total: ~25 min</span>
+        <span class="badge">Serves: 3–4</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Chinese Pepper Beef" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) { fig.remove(); return; }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+
+      <h3>Beef</h3>
+      <ul>
+        <li>1 lb thinly sliced beef</li>
+        <li>1 tbsp soy sauce</li>
+        <li>1 tsp cornstarch</li>
+        <li>1 tsp oil</li>
+        <li>Black pepper, to taste</li>
+      </ul>
+
+      <h3>Vegetables</h3>
+      <ul>
+        <li>2 bell peppers, sliced</li>
+        <li>1 onion, sliced</li>
+        <li>3 cloves garlic, minced</li>
+        <li><em>Optional:</em> mushrooms</li>
+      </ul>
+
+      <h3>Sauce</h3>
+      <ul>
+        <li>1/3 cup beef broth or water</li>
+        <li>3 tbsp soy sauce</li>
+        <li>1 tbsp oyster sauce</li>
+        <li>1 tsp dark soy sauce (optional)</li>
+        <li>1 tsp sugar or honey</li>
+        <li>1 tsp sesame oil</li>
+        <li>2 tsp cornstarch</li>
+      </ul>
+
+      <h3>Optional Additions</h3>
+      <ul>
+        <li>Chili flakes or chili crisp</li>
+        <li>Green onions</li>
+        <li>Sesame seeds</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li><strong>Marinate beef:</strong> Toss beef with soy sauce, cornstarch, oil, and black pepper. Let sit <strong>10–15 minutes</strong>.</li>
+        <li><strong>Mix sauce:</strong> Whisk all sauce ingredients in a bowl until smooth.</li>
+        <li><strong>Heat pan:</strong> Heat a wok or skillet over high heat until very hot.</li>
+        <li><strong>Sear beef:</strong> Sear beef in batches for <strong>1–2 minutes total</strong>. Remove before fully cooked.</li>
+        <li><strong>Stir-fry veg:</strong> Add a bit more oil if needed. Cook onions and peppers <strong>3–5 minutes</strong> until slightly blistered but still crisp.</li>
+        <li><strong>Add garlic:</strong> Stir in garlic and cook <strong>30 seconds</strong>.</li>
+        <li><strong>Thicken:</strong> Stir sauce again (cornstarch settles), pour into pan, and simmer <strong>30–60 seconds</strong> until thickened and glossy.</li>
+        <li><strong>Finish:</strong> Return beef to pan and toss <strong>1 minute</strong> until coated and heated through.</li>
+        <li><strong>Serve:</strong> Serve over rice or noodles. Add optional toppings if you like.</li>
+      </ol>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>High heat + quick cooking keeps the peppers crisp and the beef tender.</li>
+        <li>For extra pepper punch, add more freshly cracked black pepper at the end.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">Last updated: <time datetime="2026-04-29">April 29, 2026</time></p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
