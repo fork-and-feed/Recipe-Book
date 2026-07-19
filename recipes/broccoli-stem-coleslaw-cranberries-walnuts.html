@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Broccoli Stem Coleslaw with Dried Cranberries &amp; Walnuts — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Broccoli Stem Coleslaw with Dried Cranberries &amp; Walnuts</h1>
+        <p>A creamy, crunchy slaw with sweet cranberries and toasted walnuts.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 10 min</span>
+        <span class="badge">Chill: 30 min</span>
+        <span class="badge">Serves: 6</span>
+        <span class="badge">No Cooking</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Broccoli Stem Coleslaw with Dried Cranberries and Walnuts" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) {
+              fig.remove();
+              return;
+            }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>1 bag shredded broccoli stems / broccoli slaw (340–400 g / 12–14 oz)</li>
+        <li>3/4 cup dried cranberries</li>
+        <li>3/4 cup prepared coleslaw dressing</li>
+        <li>2 tbsp mayonnaise (optional, for a creamier texture)</li>
+        <li>1 tbsp apple cider vinegar</li>
+        <li>1 tbsp honey</li>
+        <li>1/4 tsp salt</li>
+        <li>1/4 tsp freshly ground black pepper</li>
+        <li>1/4–1/2 cup crushed walnuts</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>Place the shredded broccoli stems and dried cranberries into a large bowl.</li>
+        <li>In a small bowl, whisk together the coleslaw dressing, mayonnaise (if using), apple cider vinegar, honey, salt, and pepper until smooth.</li>
+        <li>Pour the dressing over the broccoli mixture and toss until evenly coated.</li>
+        <li>Refrigerate for at least <strong>30 minutes</strong> to allow the broccoli stems to soften slightly and the flavors to blend.</li>
+        <li>Just before serving, stir in the crushed walnuts so they stay crunchy.</li>
+        <li>Toss once more and serve chilled.</li>
+      </ol>
+
+      <hr />
+
+      <h2>Storage</h2>
+      <ul>
+        <li>Store in an airtight container in the refrigerator for up to <strong>3 days</strong>.</li>
+        <li>For the best texture, add the walnuts just before serving. If mixed in too early, they will soften.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">
+          Last updated:
+          <time datetime="2026-07-11">July 11, 2026</time>
+        </p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

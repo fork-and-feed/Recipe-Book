@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cooked Thai Chili Garlic Paste — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Cooked Thai Chili Garlic Paste</h1>
+        <p>A rich, aromatic chili paste that freezes beautifully and adds instant heat and flavor to stir-fries, soups, and sauces.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 10 min</span>
+        <span class="badge">Cook: 5–8 min</span>
+        <span class="badge">Yield: ~1 cup</span>
+        <span class="badge">Freezer Friendly</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Cooked Thai Chili Garlic Paste" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) {
+              fig.remove();
+              return;
+            }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>1 cup Thai chilies, stems removed</li>
+        <li>5–6 cloves garlic</li>
+        <li>1 tsp salt</li>
+        <li>1 tsp sugar (optional)</li>
+        <li>1–2 tbsp vinegar or lime juice</li>
+        <li>2–3 tbsp neutral oil (canola, avocado, or vegetable)</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>
+          <strong>Blend:</strong>
+          Combine Thai chilies, garlic, salt, sugar (if using), and vinegar or lime juice in a blender or food processor.
+          Blend until smooth or slightly chunky, depending on your preference.
+        </li>
+        <li>
+          <strong>Cook:</strong>
+          Heat the oil in a skillet or saucepan over medium-low heat.
+          Add the chili mixture and cook for <strong>5–8 minutes</strong>, stirring frequently,
+          until the raw garlic smell disappears and the paste becomes fragrant.
+        </li>
+        <li>
+          <strong>Cool:</strong>
+          Remove from the heat and allow the paste to cool completely.
+        </li>
+        <li>
+          <strong>Store:</strong>
+          Transfer to a clean, airtight jar.
+        </li>
+      </ol>
+
+      <hr />
+
+      <h2>Storage</h2>
+      <ul>
+        <li><strong>Refrigerator:</strong> 1–2 weeks</li>
+        <li><strong>Freezer:</strong> Up to 6 months (freeze in ice cube trays or small containers for easy portions)</li>
+      </ul>
+
+      <hr />
+
+      <h2>How to Use</h2>
+      <p>
+        Sauté <strong>1–2 teaspoons</strong> in a little oil before adding meat,
+        vegetables, noodles, rice, soups, or sauces to build a rich, spicy flavor base.
+      </p>
+
+      <footer class="footer">
+        <p class="small">Last updated:
+          <time datetime="2026-04-29">April 29, 2026</time>
+        </p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
