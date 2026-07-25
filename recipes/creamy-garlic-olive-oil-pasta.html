@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Creamy Garlic and Olive Oil Pasta — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Creamy Garlic and Olive Oil Pasta</h1>
+        <p>A silky garlic pasta made by blending tender boiled garlic with starchy pasta water and extra virgin olive oil into a naturally creamy sauce—without cream or cheese.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 5 min</span>
+        <span class="badge">Cook: 15–20 min</span>
+        <span class="badge">Serves: 4–5</span>
+        <span class="badge">Vegetarian</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Creamy Garlic and Olive Oil Pasta" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) {
+              fig.remove();
+              return;
+            }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+
+      <ul>
+        <li>454 g spaghetti, bucatini, or linguine</li>
+        <li>55–60 g whole garlic cloves, peeled (about 1 medium head)</li>
+        <li>3/8 cup high-quality extra virgin olive oil</li>
+        <li>1 cup reserved hot starchy pasta water</li>
+        <li>15 g salt (for the pasta water)</li>
+        <li>Freshly ground black pepper, to taste</li>
+        <li>Red pepper flakes, to taste (optional)</li>
+        <li>2–3 tbsp finely chopped fresh parsley or basil (optional)</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+
+      <h3>1. Boil the Garlic</h3>
+      <ol>
+        <li>Place the peeled garlic cloves in a small saucepan and cover with water.</li>
+        <li>Bring to a gentle boil and cook for 10–12 minutes, or until the garlic is completely tender and easily pierced with a fork.</li>
+        <li>Drain well and set aside.</li>
+      </ol>
+
+      <h3>2. Cook the Pasta</h3>
+      <ol>
+        <li>Bring a large pot of water to a boil and add the salt.</li>
+        <li>Add the pasta and cook until about 1–2 minutes before al dente.</li>
+        <li>Before draining, reserve 1 cup of the hot starchy pasta water.</li>
+        <li>Drain the pasta without rinsing.</li>
+      </ol>
+
+      <h3>3. Blend the Garlic Sauce</h3>
+      <ol>
+        <li>Place the boiled garlic and the full 1 cup of hot pasta water into a blender or tall blending container.</li>
+        <li>Blend until completely smooth.</li>
+        <li>With the blender running on low, slowly stream in the olive oil until the sauce becomes pale, smooth, and fully emulsified.</li>
+        <li><strong>Caution:</strong> Hot liquids expand when blended. Follow your blender manufacturer's safety instructions and allow steam to escape as recommended.</li>
+      </ol>
+
+      <h3>4. Finish the Pasta</h3>
+      <ol>
+        <li>Pour the garlic sauce into the empty pasta pot or a large skillet.</li>
+        <li>Add the drained pasta and cook over low heat, tossing continuously for 1–2 minutes until the sauce lightly thickens and coats every strand.</li>
+        <li>Remove from the heat and stir in black pepper, red pepper flakes, and fresh herbs, if using.</li>
+        <li>Taste before adding additional salt, as the pasta water may already provide enough seasoning.</li>
+        <li>Let the pasta rest for 1 minute before serving. The sauce will continue to thicken slightly.</li>
+        <li>Serve immediately.</li>
+      </ol>
+
+      <hr />
+
+      <h2>Optional Additions</h2>
+
+      <h3>Roasted Cherry Tomatoes</h3>
+
+      <ul>
+        <li>250 g cherry tomatoes</li>
+        <li>1–2 tsp olive oil</li>
+        <li>Salt and freshly ground black pepper, to taste</li>
+      </ul>
+
+      <ol>
+        <li>Preheat the oven to <strong>200°C (400°F)</strong>.</li>
+        <li>Toss the tomatoes with olive oil, salt, and pepper.</li>
+        <li>Roast for 15–20 minutes until blistered, softened, and beginning to burst.</li>
+        <li>Fold the tomatoes and their juices into the finished pasta just before serving.</li>
+      </ol>
+
+      <h3>Crispy Bacon</h3>
+
+      <ul>
+        <li>150 g bacon, diced or chopped</li>
+      </ul>
+
+      <ol>
+        <li>Cook the bacon over medium heat until crisp.</li>
+        <li>Drain on paper towels.</li>
+        <li>Fold the bacon into the finished pasta immediately before serving.</li>
+        <li>For extra flavor, stir up to 1 tbsp of the rendered bacon fat into the garlic sauce.</li>
+        <li>If using bacon, reduce the salt in the pasta water slightly and season the finished dish to taste.</li>
+      </ol>
+
+      <hr />
+
+      <h2>Storage &amp; Reheating</h2>
+
+      <ul>
+        <li>Store leftovers in an airtight container in the refrigerator for up to <strong>3 days</strong>.</li>
+        <li>Reheat gently over low heat with a small splash of water, tossing frequently until the sauce becomes creamy again.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">
+          Last updated:
+          <time datetime="2026-07-25">July 25, 2026</time>
+        </p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
