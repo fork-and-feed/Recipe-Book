@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sourdough Grilled Cheese — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Sourdough Grilled Cheese</h1>
+        <p>A crispy, golden grilled cheese made with tangy sourdough bread and plenty of melted cheese.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 5 min</span>
+        <span class="badge">Cook: 8–10 min</span>
+        <span class="badge">Serves: 2</span>
+        <span class="badge">Vegetarian</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Sourdough Grilled Cheese" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) {
+              fig.remove();
+              return;
+            }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+
+      <ul>
+        <li>4 slices sourdough bread</li>
+        <li>2 tbsp softened butter or mayonnaise</li>
+        <li>1½ cups shredded cheese, or 4–6 slices cheese</li>
+        <li>¼ tsp garlic powder (optional)</li>
+        <li>Freshly ground black pepper (optional)</li>
+      </ul>
+
+      <h3>Cheese Suggestions</h3>
+
+      <ul>
+        <li>Cheddar</li>
+        <li>Mozzarella</li>
+        <li>Monterey Jack</li>
+        <li>Havarti</li>
+        <li>Gouda</li>
+        <li>Swiss</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+
+      <h3>1. Assemble the Sandwiches</h3>
+
+      <ol>
+        <li>Spread butter or mayonnaise evenly over one side of each slice of sourdough bread.</li>
+        <li>Place two slices of bread buttered-side down on a cutting board.</li>
+        <li>Divide the cheese evenly between the two slices.</li>
+        <li>Sprinkle with garlic powder and black pepper, if desired.</li>
+        <li>Top with the remaining bread, buttered-side facing up.</li>
+      </ol>
+
+      <h3>2. Cook the Grilled Cheese</h3>
+
+      <ol>
+        <li>Heat a large skillet over medium-low heat.</li>
+        <li>Cook the sandwiches for 3–5 minutes, or until the bottoms are golden brown.</li>
+        <li>Flip carefully and cook another 3–5 minutes until the second side is golden brown and the cheese is completely melted.</li>
+        <li>If the bread is browning before the cheese melts, cover the skillet with a lid for the final 1–2 minutes.</li>
+      </ol>
+
+      <h3>3. Serve</h3>
+
+      <ol>
+        <li>Allow the sandwiches to rest for 1 minute before slicing.</li>
+        <li>Serve warm with tomato soup, pickles, or a simple salad.</li>
+      </ol>
+
+      <hr />
+
+      <h2>Tips</h2>
+
+      <ul>
+        <li>Medium-low heat allows the cheese to melt before the sourdough becomes too dark.</li>
+        <li>Shredded cheese melts more quickly and evenly than thick slices.</li>
+        <li>For thick-cut sourdough, gently press the sandwich with a spatula while it cooks.</li>
+        <li>A combination of sharp cheddar and mozzarella provides great flavor and an excellent cheese pull.</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">
+          Last updated:
+          <time datetime="2026-07-26">July 26, 2026</time>
+        </p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
