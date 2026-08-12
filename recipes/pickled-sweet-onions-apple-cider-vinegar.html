@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pickled Sweet Onions (Apple Cider Vinegar) — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Pickled Sweet Onions (Apple Cider Vinegar)</h1>
+        <p>Quick refrigerator pickled sweet onions with a lightly sweet apple cider vinegar brine.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 15 min</span>
+        <span class="badge">Soak: 30–60 min</span>
+        <span class="badge">Ready: 24–48 hrs</span>
+        <span class="badge">Refrigerator Pickles</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Pickled Sweet Onions (Apple Cider Vinegar)" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) {
+              fig.remove();
+              return;
+            }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+
+      <h3>Onion Soak</h3>
+      <ul>
+        <li>2 large sweet onions (about 4 cups thinly sliced)</li>
+        <li>2 cups cold water</li>
+        <li>1 tbsp pickling salt or non-iodized salt</li>
+      </ul>
+
+      <h3>Pickling Brine</h3>
+      <ul>
+        <li>1 cup apple cider vinegar (5% acidity)</li>
+        <li>1 cup water</li>
+        <li>1 tbsp sugar (adjust to taste)</li>
+        <li>1 tsp pickling salt or non-iodized salt</li>
+        <li>1 tsp black peppercorns (optional)</li>
+        <li>1 tsp mustard seeds (optional)</li>
+        <li>1 bay leaf (optional)</li>
+        <li>Chili flakes (optional)</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+
+      <ol>
+        <li>Thinly slice the sweet onions.</li>
+        <li>Dissolve 1 tbsp salt in 2 cups cold water. Add the onions and soak for <strong>30–60 minutes</strong>.</li>
+        <li>Drain the onions and rinse briefly with cold water.</li>
+        <li>Pack the onions into a clean jar, leaving a little space at the top.</li>
+        <li>In a small saucepan, combine the apple cider vinegar, water, sugar, salt, and any optional spices. Warm gently until the sugar and salt dissolve. <strong>Do not boil.</strong></li>
+        <li>Pour the warm brine over the onions until they are completely submerged.</li>
+        <li>Allow to cool to room temperature, then seal the jar and refrigerate.</li>
+        <li>For the best flavor, wait <strong>24–48 hours</strong> before serving. The flavor continues to improve during the first week.</li>
+      </ol>
+
+      <hr />
+
+      <h2>Storage</h2>
+
+      <ul>
+        <li>Keep refrigerated.</li>
+        <li>Best quality within <strong>2–3 months</strong>.</li>
+        <li>Keep the onions fully submerged in the brine and always use a clean utensil when serving.</li>
+      </ul>
+
+      <hr />
+
+      <h2>Serving Ideas</h2>
+
+      <ul>
+        <li>Burgers and sandwiches</li>
+        <li>Tacos and wraps</li>
+        <li>Salads</li>
+        <li>Charcuterie boards</li>
+        <li>Grilled meats</li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">
+          Last updated:
+          <time datetime="2026-08-06">August 6, 2026</time>
+        </p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cheddar Cheese Sauce — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Cheddar Cheese Sauce</h1>
+        <p>A rich and creamy Béchamel-based cheese sauce made with sharp Cheddar, mustard, Worcestershire, and a touch of cayenne.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 5 min</span>
+        <span class="badge">Cook: 5 min</span>
+        <span class="badge">Yield: ~2 1/2 cups</span>
+        <span class="badge">Cheese Sauce</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Cheddar Cheese Sauce" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) {
+              fig.remove();
+              return;
+            }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>1 recipe prepared Béchamel Sauce, hot</li>
+        <li>1 1/2 cups (150 g) sharp Cheddar cheese, shredded</li>
+        <li>1/2 tsp English mustard powder (or Dijon mustard)</li>
+        <li>1/2 tsp Worcestershire sauce</li>
+        <li>Pinch of cayenne pepper or paprika</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+
+      <h3>1. Prepare the Base</h3>
+      <p>
+        Prepare the standard Béchamel Sauce and remove the saucepan from the heat.
+      </p>
+
+      <h3>2. Add the Seasonings</h3>
+      <p>
+        Whisk the mustard powder, Worcestershire sauce, and cayenne pepper or
+        paprika into the hot sauce until evenly combined.
+      </p>
+
+      <h3>3. Melt the Cheese</h3>
+      <p>
+        Add the shredded Cheddar in small batches, stirring gently after each
+        addition until completely melted and smooth.
+      </p>
+
+      <p>
+        <strong>Important:</strong> Do not boil the sauce after adding the cheese,
+        as excessive heat can cause the cheese to separate and the sauce to
+        become grainy.
+      </p>
+
+      <h3>4. Finish &amp; Serve</h3>
+      <p>
+        Taste and adjust the salt and pepper if needed. Serve immediately while
+        hot and creamy.
+      </p>
+
+      <p>
+        Excellent over vegetables, pasta, baked potatoes, or anywhere a creamy
+        Cheddar sauce is needed.
+      </p>
+
+      <footer class="footer">
+        <p class="small">
+          Last updated:
+          <time datetime="2026-08-12">August 12, 2026</time>
+        </p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

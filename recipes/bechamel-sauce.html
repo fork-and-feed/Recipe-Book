@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Béchamel Sauce — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Béchamel Sauce</h1>
+        <p>A classic creamy white sauce made with butter, flour, warm milk, and a touch of nutmeg.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 5 min</span>
+        <span class="badge">Cook: 10 min</span>
+        <span class="badge">Yield: ~2 cups</span>
+        <span class="badge">Classic Sauce</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Béchamel Sauce" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) {
+              fig.remove();
+              return;
+            }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>2 tbsp (30 g) unsalted butter</li>
+        <li>2 tbsp (30 g) all-purpose flour</li>
+        <li>2 cups (480 mL) whole milk, warmed</li>
+        <li>1/8 tsp freshly grated nutmeg</li>
+        <li>Salt and white pepper (or black pepper), to taste</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+
+      <h3>1. Melt the Butter</h3>
+      <p>
+        Melt the butter in a heavy-bottomed saucepan over medium-low heat.
+        Do not let it brown.
+      </p>
+
+      <h3>2. Make the Roux</h3>
+      <p>
+        Add the flour and whisk constantly for <strong>1–2 minutes</strong>
+        until the mixture is smooth and bubbly. This cooks out the raw flour
+        taste while keeping the roux pale.
+      </p>
+
+      <h3>3. Incorporate the Milk</h3>
+      <p>
+        Slowly pour in the warm milk in a steady stream, whisking vigorously
+        to prevent lumps.
+      </p>
+
+      <h3>4. Thicken the Sauce</h3>
+      <p>
+        Bring the mixture to a gentle simmer over medium heat, stirring
+        frequently. Cook for <strong>5–8 minutes</strong>, until the sauce
+        thickens enough to coat the back of a spoon.
+      </p>
+
+      <h3>5. Season &amp; Finish</h3>
+      <p>
+        Remove the saucepan from the heat. Stir in the nutmeg, salt, and
+        white or black pepper. Taste and adjust the seasoning as needed.
+      </p>
+
+      <footer class="footer">
+        <p class="small">
+          Last updated:
+          <time datetime="2026-08-12">August 12, 2026</time>
+        </p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
