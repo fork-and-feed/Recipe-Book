@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oven-Finished Sourdough Cinnamon French Toast — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Oven-Finished Sourdough Cinnamon French Toast</h1>
+        <p>Thick sourdough French toast seared until golden, sprinkled with cinnamon sugar, and finished in the oven for a soft, custardy centre.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 5 min</span>
+        <span class="badge">Cook: 10–15 min</span>
+        <span class="badge">Serves: 2</span>
+        <span class="badge">Makes: 4 slices</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Oven-Finished Sourdough Cinnamon French Toast" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) {
+              fig.remove();
+              return;
+            }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>4 thick slices sourdough bread</li>
+        <li>2 large eggs</li>
+        <li>1/2 cup milk</li>
+        <li>1 tbsp brown sugar</li>
+        <li>3/4 tsp ground cinnamon</li>
+        <li>1 tsp vanilla extract</li>
+        <li>1/8 tsp salt</li>
+        <li>1–2 tbsp butter, for cooking</li>
+      </ul>
+
+      <h3>Cinnamon Sugar</h3>
+      <ul>
+        <li>1 tbsp granulated sugar</li>
+        <li>1/2 tsp ground cinnamon</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+
+      <ol>
+        <li>
+          <strong>Preheat the oven:</strong>
+          Preheat to <strong>375°F (190°C)</strong>. Place a baking sheet in the oven while it preheats.
+        </li>
+
+        <li>
+          <strong>Make the custard:</strong>
+          In a shallow bowl, whisk together the eggs, milk, brown sugar, cinnamon, vanilla, and salt.
+        </li>
+
+        <li>
+          <strong>Make the cinnamon sugar:</strong>
+          In a small bowl, mix together the granulated sugar and cinnamon. Set aside.
+        </li>
+
+        <li>
+          <strong>Soak the bread:</strong>
+          Dip each slice of sourdough into the egg mixture. Let thick or slightly stale bread soak for about
+          <strong>20–30 seconds per side</strong>. Fresh bread only needs about
+          <strong>10–15 seconds per side</strong>.
+        </li>
+
+        <li>
+          <strong>Heat the skillet:</strong>
+          Melt the butter in a large skillet over medium heat.
+        </li>
+
+        <li>
+          <strong>Brown the French toast:</strong>
+          Cook the soaked bread for about <strong>2 minutes per side</strong>,
+          until golden brown. The centre does not need to be fully cooked yet.
+        </li>
+
+        <li>
+          <strong>Transfer to the oven:</strong>
+          Carefully remove the hot baking sheet from the oven. Lightly butter the sheet and arrange the French toast in a single layer.
+        </li>
+
+        <li>
+          <strong>Add the cinnamon sugar:</strong>
+          Sprinkle the tops evenly with the cinnamon sugar.
+        </li>
+
+        <li>
+          <strong>Finish baking:</strong>
+          Bake for <strong>6–10 minutes</strong>, depending on the thickness of the bread,
+          until the centres are cooked through but still soft and custardy.
+        </li>
+
+        <li>
+          <strong>Serve:</strong>
+          Serve immediately with butter and maple syrup.
+        </li>
+      </ol>
+
+      <footer class="footer">
+        <p class="small">
+          Last updated:
+          <time datetime="2026-08-16">August 16, 2026</time>
+        </p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
