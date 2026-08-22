@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shepherd's Pie — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Shepherd's Pie</h1>
+        <p>A simple family-style shepherd's pie layered with seasoned ground beef, creamy corn, and buttery mashed potatoes.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 20 min</span>
+        <span class="badge">Bake: 25–30 min</span>
+        <span class="badge">Rest: 5 min</span>
+        <span class="badge">Comfort Food</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Shepherd's Pie" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) {
+              fig.remove();
+              return;
+            }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+
+      <h3>Beef &amp; Corn</h3>
+      <ul>
+        <li>1 lb ground beef</li>
+        <li>1 onion, chopped</li>
+        <li>1 tbsp Montreal steak spice</li>
+        <li>2 small cans (about 10 oz / 284 mL each) creamed corn</li>
+      </ul>
+
+      <h3>Mashed Potatoes</h3>
+      <ul>
+        <li>1.5 lbs yellow or Russet potatoes (about 3–4 medium)</li>
+        <li>3 tbsp butter</li>
+        <li>1/4 cup milk or cream</li>
+        <li>Salt and pepper, to taste</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+
+      <h3>1. Boil the Potatoes</h3>
+      <p>
+        Peel and cube the potatoes. Place them in a pot and cover with cold,
+        salted water. Bring to a boil and cook for <strong>12–15 minutes</strong>,
+        or until fork-tender.
+      </p>
+
+      <p>
+        Drain well, then mash with the butter and milk or cream. Season with
+        salt and pepper and mash until smooth.
+      </p>
+
+      <h3>2. Cook the Meat</h3>
+      <p>
+        Heat a skillet over medium-high heat. Add the chopped onion and cook
+        for <strong>3–5 minutes</strong>, until softened.
+      </p>
+
+      <p>
+        Add the ground beef and Montreal steak spice. Cook until the beef is
+        completely browned, breaking it apart as it cooks. Drain excess fat
+        if needed.
+      </p>
+
+      <h3>3. Assemble</h3>
+      <p>
+        Preheat the oven to <strong>375°F (190°C)</strong>.
+      </p>
+
+      <p>Layer the ingredients in a <strong>9x6-inch baking dish</strong> in this order:</p>
+
+      <ol>
+        <li><strong>Bottom:</strong> Spread the browned ground beef mixture evenly in the dish.</li>
+        <li><strong>Middle:</strong> Spread the 2 cans of creamed corn evenly over the beef.</li>
+        <li><strong>Top:</strong> Spread the mashed potatoes over the corn. Rough up the surface with a fork to create crispy peaks.</li>
+      </ol>
+
+      <h3>4. Bake</h3>
+      <p>
+        Bake uncovered at <strong>375°F (190°C) for 25–30 minutes</strong>.
+      </p>
+
+      <p>
+        Broil on high for an additional <strong>2–3 minutes</strong>, or until
+        the mashed potato topping is golden brown. Watch closely while broiling.
+      </p>
+
+      <p>
+        Let the shepherd's pie rest for <strong>5 minutes</strong> before serving.
+      </p>
+
+      <footer class="footer">
+        <p class="small">
+          Last updated:
+          <time datetime="2026-08-22">August 22, 2026</time>
+        </p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
