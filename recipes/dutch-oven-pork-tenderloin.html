@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dutch Oven Pork Tenderloin — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Dutch Oven Pork Tenderloin</h1>
+        <p>Juicy seared pork tenderloin roasted with baby potatoes, carrots, and onions in a savory Dijon pan sauce.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 15 min</span>
+        <span class="badge">Cook: 30–35 min</span>
+        <span class="badge">Serves: 3–4</span>
+        <span class="badge">Oven: 400°F</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Dutch Oven Pork Tenderloin" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) {
+              fig.remove();
+              return;
+            }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>1 pork tenderloin, about 1–1 1/4 lb</li>
+        <li>1 tbsp oil</li>
+        <li>1 tbsp butter</li>
+        <li>1 medium onion, sliced</li>
+        <li>3 cloves garlic, minced</li>
+        <li>1 lb baby potatoes, halved</li>
+        <li>2 carrots, cut into chunks</li>
+        <li>1 cup chicken broth</li>
+        <li>1 tbsp Dijon mustard</li>
+        <li>1 tbsp Worcestershire sauce</li>
+        <li>1 tsp dried thyme</li>
+        <li>1/2 tsp paprika</li>
+        <li>Salt and freshly ground black pepper, to taste</li>
+        <li>1 tbsp all-purpose flour</li>
+        <li>1 tbsp butter, optional for finishing</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+
+      <h3>1. Season the Pork</h3>
+      <p>
+        Preheat the oven to <strong>400°F (205°C)</strong>.
+        Heat a Dutch oven over medium-high heat.
+      </p>
+
+      <p>
+        Pat the pork tenderloin dry and season generously with salt, black
+        pepper, paprika, and thyme.
+      </p>
+
+      <h3>2. Sear the Pork</h3>
+      <p>
+        Add the oil to the Dutch oven. Sear the pork for
+        <strong>2–3 minutes per side</strong>, until nicely browned.
+        Transfer to a plate and set aside.
+      </p>
+
+      <h3>3. Cook the Onion</h3>
+      <p>
+        Reduce the heat to medium. Add <strong>1 tbsp butter</strong> and the
+        sliced onion. Cook for <strong>4–5 minutes</strong>, until the onion
+        begins to soften and brown.
+      </p>
+
+      <h3>4. Add the Garlic</h3>
+      <p>
+        Add the minced garlic and cook for <strong>30 seconds</strong>, until
+        fragrant.
+      </p>
+
+      <h3>5. Add the Flour</h3>
+      <p>
+        Sprinkle the flour over the onions and stir continuously for about
+        <strong>1 minute</strong>.
+      </p>
+
+      <h3>6. Build the Sauce</h3>
+      <p>
+        Slowly pour in the chicken broth, stirring and scraping up the browned
+        bits from the bottom of the Dutch oven.
+      </p>
+
+      <p>
+        Stir in the Dijon mustard and Worcestershire sauce until combined.
+      </p>
+
+      <h3>7. Add the Vegetables</h3>
+      <p>
+        Add the halved baby potatoes and carrots to the sauce. Nestle the
+        seared pork tenderloin on top of the vegetables.
+      </p>
+
+      <h3>8. Cover &amp; Roast</h3>
+      <p>
+        Cover the Dutch oven and transfer it to the preheated oven.
+        Roast at <strong>400°F (205°C) for about 15 minutes</strong>.
+      </p>
+
+      <h3>9. Finish Uncovered</h3>
+      <p>
+        Remove the lid and continue roasting for another
+        <strong>5–10 minutes</strong>, or until the thickest part of the pork
+        reaches an internal temperature of <strong>145°F (63°C)</strong>.
+      </p>
+
+      <h3>10. Rest the Pork &amp; Finish the Sauce</h3>
+      <p>
+        Transfer the pork to a cutting board and let it rest for
+        <strong>5–10 minutes</strong>.
+      </p>
+
+      <p>
+        If the sauce is too thin, place the Dutch oven over medium heat and
+        simmer uncovered for a few minutes until it reaches your desired
+        consistency.
+      </p>
+
+      <p>
+        For a richer finish, stir in the optional tablespoon of butter.
+      </p>
+
+      <h3>11. Serve</h3>
+      <p>
+        Slice the rested pork tenderloin and serve over the potatoes, carrots,
+        and onions with plenty of the Dijon pan sauce spooned over the top.
+      </p>
+
+      <hr />
+
+      <h2>Important</h2>
+      <p>
+        Pork tenderloin is very lean. Cook it to an internal temperature of
+        <strong>145°F (63°C)</strong> to keep it juicy rather than cooking it
+        to the higher temperatures commonly used for tougher cuts such as pork
+        shoulder.
+      </p>
+
+      <footer class="footer">
+        <p class="small">
+          Last updated:
+          <time datetime="2026-08-26">August 26, 2026</time>
+        </p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
