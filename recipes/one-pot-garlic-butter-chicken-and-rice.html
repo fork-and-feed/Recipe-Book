@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>One-Pot Garlic Butter Chicken and Rice — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>One-Pot Garlic Butter Chicken and Rice</h1>
+        <p>A rich, comforting one-pot meal with golden chicken and tender rice cooked directly in garlic butter, seasoned chicken drippings, and broth.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 10 min</span>
+        <span class="badge">Cook: 40–45 min</span>
+        <span class="badge">Serves: 4</span>
+        <span class="badge">One-Pot Meal</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="One-Pot Garlic Butter Chicken and Rice" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) {
+              fig.remove();
+              return;
+            }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>4 bone-in, skin-on chicken thighs (or breasts)</li>
+        <li>1 tbsp olive oil</li>
+        <li>2 tbsp butter</li>
+        <li>1 medium yellow onion, diced</li>
+        <li>4 cloves garlic, minced</li>
+        <li>1 cup long-grain white rice, rinsed</li>
+        <li>2 cups chicken broth</li>
+        <li>1 tsp Italian seasoning (or thyme/rosemary)</li>
+        <li>Salt and freshly ground black pepper, to taste</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+
+      <h3>1. Sear the Chicken</h3>
+      <p>
+        Preheat the oven to <strong>375°F (190°C)</strong>.
+      </p>
+
+      <p>
+        Season the chicken generously with salt, black pepper, and Italian seasoning.
+        Heat the olive oil in a Dutch oven over medium-high heat.
+      </p>
+
+      <p>
+        Place the chicken skin-side down and sear for <strong>5–6 minutes</strong>,
+        until deeply golden. Flip and cook for another <strong>2 minutes</strong>,
+        then transfer the chicken to a plate.
+      </p>
+
+      <h3>2. Sauté the Aromatics &amp; Toast the Rice</h3>
+      <p>
+        Reduce the heat to medium and melt the butter in the remaining chicken
+        drippings.
+      </p>
+
+      <p>
+        Add the diced onion and sauté for <strong>3 minutes</strong>, until
+        translucent.
+      </p>
+
+      <p>
+        Stir in the minced garlic and rinsed rice. Cook for
+        <strong>1–2 minutes</strong>, stirring frequently, to lightly toast the
+        rice.
+      </p>
+
+      <h3>3. Deglaze &amp; Assemble</h3>
+      <p>
+        Pour in the chicken broth, scraping the bottom of the Dutch oven to
+        release the browned bits.
+      </p>
+
+      <p>
+        Bring the liquid to a simmer, then place the seared chicken on top of
+        the rice with the <strong>skin-side facing up</strong>.
+      </p>
+
+      <h3>4. Bake Until Tender</h3>
+      <p>
+        Cover the Dutch oven with its lid and transfer to the preheated oven.
+      </p>
+
+      <p>
+        Bake for <strong>25–30 minutes</strong>, or until the rice is tender
+        and the chicken reaches an internal temperature of
+        <strong>165°F (74°C)</strong>.
+      </p>
+
+      <p>
+        Let rest for <strong>5 minutes</strong> before serving.
+      </p>
+
+      <footer class="footer">
+        <p class="small">
+          Last updated:
+          <time datetime="2026-08-25">August 25, 2026</time>
+        </p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

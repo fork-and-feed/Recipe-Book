@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>1-Pot Baked Sausage Penne — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>1-Pot Baked Sausage Penne</h1>
+        <p>A hearty one-pot pasta with browned Italian sausage, marinara, tender penne, and a bubbling layer of melted mozzarella.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 10 min</span>
+        <span class="badge">Cook: 30 min</span>
+        <span class="badge">Serves: 4–6</span>
+        <span class="badge">One-Pot Meal</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="1-Pot Baked Sausage Penne" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) {
+              fig.remove();
+              return;
+            }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>450 g Italian sausage (sweet or hot, casings removed)</li>
+        <li>600 mL marinara sauce</li>
+        <li>3 cups beef broth (or chicken broth)</li>
+        <li>340 g penne pasta, uncooked</li>
+        <li>225 g mozzarella cheese, shredded</li>
+        <li>1 tbsp olive oil</li>
+        <li>Salt, to taste</li>
+        <li>Freshly ground black pepper, to taste</li>
+        <li>Italian seasoning, to taste</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+
+      <h3>1. Brown the Sausage</h3>
+      <p>
+        Heat the olive oil in a Dutch oven over medium-high heat.
+        Add the sausage and cook for <strong>6–8 minutes</strong>, breaking it
+        into crumbles as it cooks, until browned.
+      </p>
+
+      <p>
+        Drain excess fat if desired.
+      </p>
+
+      <h3>2. Add the Pasta &amp; Liquid</h3>
+      <p>
+        Pour in the marinara sauce and broth. Add the uncooked penne and stir
+        well to combine, making sure the pasta is submerged in the liquid.
+      </p>
+
+      <h3>3. Simmer</h3>
+      <p>
+        Bring the mixture to a boil over high heat. Cover with the Dutch oven
+        lid, reduce the heat to low, and simmer for
+        <strong>10–12 minutes</strong>.
+      </p>
+
+      <p>
+        Stir once halfway through cooking to prevent the pasta from sticking.
+        Continue cooking until the penne is al dente.
+      </p>
+
+      <h3>4. Add the Cheese &amp; Bake</h3>
+      <p>
+        Preheat the oven to <strong>400°F</strong>.
+      </p>
+
+      <p>
+        Remove the lid and scatter the shredded mozzarella evenly over the
+        pasta.
+      </p>
+
+      <p>
+        Transfer the Dutch oven, uncovered, to the preheated oven and bake for
+        <strong>10 minutes</strong>, or until the cheese is completely melted
+        and bubbling.
+      </p>
+
+      <p>
+        For a faster finish, broil for <strong>2–3 minutes</strong> instead,
+        watching closely to prevent burning.
+      </p>
+
+      <footer class="footer">
+        <p class="small">
+          Last updated:
+          <time datetime="2026-08-25">August 25, 2026</time>
+        </p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
