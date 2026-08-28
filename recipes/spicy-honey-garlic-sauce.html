@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spicy Honey Garlic Sauce — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Spicy Honey Garlic Sauce</h1>
+        <p>A quick sweet and spicy honey mustard sauce with Dijon, mayo, mustard powder, and chili oil.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 2 min</span>
+        <span class="badge">Rest: 5–10 min</span>
+        <span class="badge">No Cooking</span>
+        <span class="badge">Quick Sauce</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Spicy Honey Garlic Sauce" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) {
+              fig.remove();
+              return;
+            }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>2 tbsp honey</li>
+        <li>1 tbsp mayonnaise</li>
+        <li>1 tbsp Dijon mustard</li>
+        <li>1 1/2 tsp mustard powder</li>
+        <li>1 1/2 tsp chili oil</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+
+      <ol>
+        <li>
+          Add the honey, mayonnaise, Dijon mustard, mustard powder, and chili oil
+          to a small bowl.
+        </li>
+        <li>
+          Whisk until completely smooth and evenly combined.
+        </li>
+        <li>
+          Let the sauce rest for <strong>5–10 minutes</strong> before serving to
+          allow the flavors to blend.
+        </li>
+      </ol>
+
+      <footer class="footer">
+        <p class="small">
+          Last updated:
+          <time datetime="2026-08-28">August 28, 2026</time>
+        </p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
