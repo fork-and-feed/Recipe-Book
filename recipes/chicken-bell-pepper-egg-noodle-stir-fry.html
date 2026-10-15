@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chicken &amp; Bell Pepper Egg Noodle Stir-Fry — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Chicken &amp; Bell Pepper Egg Noodle Stir-Fry</h1>
+        <p>A quick and flavorful stir-fry with tender chicken, crisp bell peppers, and egg noodles tossed in a sweet and savory garlic-soy glaze.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 10 min</span>
+        <span class="badge">Cook: 10 min</span>
+        <span class="badge">Serves: 2–3</span>
+        <span class="badge">Stir-Fry</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Chicken and Bell Pepper Egg Noodle Stir-Fry" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) {
+              fig.remove();
+              return;
+            }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+
+      <h3>Main Stir-Fry</h3>
+      <ul>
+        <li>1 package (300 g) Blue Dragon Medium Egg Noodles</li>
+        <li>1 lb (450 g) boneless, skinless chicken breasts, cut into 1-inch cubes</li>
+        <li>2 large bell peppers (any color), chopped into 1-inch pieces</li>
+        <li>3 cloves garlic, minced</li>
+        <li>1 tsp fresh ginger, minced or grated (optional)</li>
+        <li>1 1/2 tbsp neutral cooking oil (vegetable, canola, or avocado), divided</li>
+        <li>Green onions or sesame seeds, for garnish (optional)</li>
+      </ul>
+
+      <h3>Stir-Fry Sauce</h3>
+      <ul>
+        <li>3 tbsp soy sauce</li>
+        <li>2 tbsp honey or brown sugar</li>
+        <li>2 tbsp warm water or chicken broth</li>
+        <li>1 tbsp rice vinegar or apple cider vinegar</li>
+        <li>1 tsp sesame oil</li>
+        <li>1 tsp cornstarch</li>
+        <li>1/2 tsp red pepper flakes or sriracha (optional, for heat)</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+
+      <h3>1. Cook the Noodles</h3>
+      <p>
+        Bring a large pot of water to a boil.
+        Add the Blue Dragon Medium Egg Noodles and cook for
+        <strong>3–4 minutes</strong>, or according to package instructions,
+        until just tender.
+      </p>
+
+      <p>
+        Drain thoroughly and toss with a small splash of oil to prevent
+        the noodles from sticking together. Set aside.
+      </p>
+
+      <h3>2. Prepare the Sauce</h3>
+      <p>
+        In a small bowl, combine the soy sauce, honey or brown sugar,
+        warm water or chicken broth, vinegar, sesame oil, cornstarch,
+        and optional red pepper flakes or sriracha.
+      </p>
+
+      <p>
+        Whisk until completely smooth and free of lumps.
+        Set aside.
+      </p>
+
+      <h3>3. Sear the Chicken</h3>
+      <p>
+        Heat <strong>1 tbsp cooking oil</strong> in a large skillet or wok
+        over medium-high heat.
+      </p>
+
+      <p>
+        Add the cubed chicken in a single layer.
+        Allow it to cook undisturbed for <strong>3–4 minutes</strong>,
+        until golden on the bottom.
+      </p>
+
+      <p>
+        Flip the chicken and continue cooking until fully cooked through
+        and the internal temperature reaches <strong>165°F</strong>.
+      </p>
+
+      <p>
+        Transfer the chicken to a plate and set aside.
+      </p>
+
+      <h3>4. Stir-Fry the Vegetables</h3>
+      <p>
+        Add the remaining <strong>1/2 tbsp cooking oil</strong> to the
+        same skillet.
+      </p>
+
+      <p>
+        Add the chopped bell peppers, minced garlic, and optional ginger.
+      </p>
+
+      <p>
+        Stir-fry over medium-high heat for <strong>2–3 minutes</strong>,
+        until the peppers are brightly colored and crisp-tender.
+      </p>
+
+      <h3>5. Combine the Chicken &amp; Noodles</h3>
+      <p>
+        Return the cooked chicken to the skillet with the bell peppers.
+      </p>
+
+      <p>
+        Add the drained egg noodles and gently toss everything together
+        until evenly distributed.
+      </p>
+
+      <h3>6. Glaze &amp; Serve</h3>
+      <p>
+        Give the prepared sauce another quick whisk to redistribute
+        the cornstarch.
+      </p>
+
+      <p>
+        Pour the sauce evenly over the chicken, noodles, and vegetables.
+      </p>
+
+      <p>
+        Toss continuously over medium-high heat for
+        <strong>1–2 minutes</strong>, until the sauce bubbles and thickens
+        into a glossy glaze that coats everything evenly.
+      </p>
+
+      <p>
+        Remove from the heat and garnish with sliced green onions
+        or sesame seeds, if desired.
+      </p>
+
+      <p>
+        Serve immediately while hot.
+      </p>
+
+      <hr />
+
+      <h2>Tips</h2>
+      <ul>
+        <li>
+          <strong>Avoid overcooking the noodles:</strong>
+          Cook them until just tender, as they will continue cooking
+          briefly when tossed with the sauce.
+        </li>
+        <li>
+          <strong>For extra heat:</strong>
+          Increase the red pepper flakes or sriracha to taste.
+        </li>
+        <li>
+          <strong>For a thicker glaze:</strong>
+          Allow the sauce to bubble for an additional 30–60 seconds,
+          stirring continuously.
+        </li>
+        <li>
+          <strong>For crisp vegetables:</strong>
+          Keep the skillet hot and avoid overcooking the bell peppers.
+        </li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">
+          Last updated:
+          <time datetime="2026-10-15">October 15, 2026</time>
+        </p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
