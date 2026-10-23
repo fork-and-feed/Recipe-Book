@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cucumber &amp; Pickled Red Onion Couscous Salad — Recipe Book</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <h1>Cucumber &amp; Pickled Red Onion Couscous Salad</h1>
+        <p>A light and refreshing couscous salad with crisp cucumber, tangy pickled red onions, fresh herbs, and a simple olive oil dressing.</p>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">← Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <div class="meta">
+        <span class="badge">Prep: 10 min</span>
+        <span class="badge">Rest: 5 min</span>
+        <span class="badge">Serves: 3–4</span>
+        <span class="badge">Side Dish</span>
+      </div>
+
+      <figure class="recipe-hero">
+        <img id="recipeHero" alt="Cucumber and Pickled Red Onion Couscous Salad" />
+      </figure>
+
+      <script>
+        (function () {
+          const img = document.getElementById("recipeHero");
+          const fig = img.closest("figure");
+          const page = location.pathname.split("/").pop().replace(".html", "");
+          const exts = ["jpg", "png", "webp"];
+          let i = 0;
+
+          function tryNext() {
+            if (i >= exts.length) {
+              fig.remove();
+              return;
+            }
+            img.src = `../images/${page}.${exts[i++]}`;
+          }
+
+          img.onerror = tryNext;
+          tryNext();
+        })();
+      </script>
+
+      <hr />
+
+      <h2>Ingredients</h2>
+
+      <h3>Couscous</h3>
+      <ul>
+        <li>1 cup plain couscous</li>
+        <li>1 cup hot chicken or vegetable broth</li>
+        <li>1 tbsp olive oil</li>
+      </ul>
+
+      <h3>Salad</h3>
+      <ul>
+        <li>1/2 English cucumber, finely diced</li>
+        <li>1/4 cup pickled red onions, roughly chopped</li>
+        <li>1 tbsp pickled red onion liquid</li>
+        <li>1 tbsp extra-virgin olive oil</li>
+        <li>1 tbsp fresh lemon juice (optional, adjust to taste)</li>
+        <li>2 tbsp fresh parsley or mint, chopped (optional)</li>
+        <li>Salt and freshly ground black pepper, to taste</li>
+      </ul>
+
+      <hr />
+
+      <h2>Instructions</h2>
+
+      <h3>1. Prepare the Couscous</h3>
+      <p>
+        Place the plain couscous in a medium mixing bowl.
+      </p>
+
+      <p>
+        Pour the hot chicken or vegetable broth over the couscous
+        and add <strong>1 tbsp olive oil</strong>.
+      </p>
+
+      <p>
+        Stir briefly to combine, then immediately cover the bowl
+        with a plate or lid.
+      </p>
+
+      <p>
+        Let sit undisturbed for <strong>5 minutes</strong>,
+        allowing the couscous to absorb the broth.
+      </p>
+
+      <h3>2. Fluff &amp; Cool</h3>
+      <p>
+        Remove the cover and fluff the couscous thoroughly
+        with a fork to separate the grains.
+      </p>
+
+      <p>
+        Allow the couscous to cool for approximately
+        <strong>5 minutes</strong> before adding the vegetables.
+      </p>
+
+      <p>
+        This helps keep the cucumber crisp and prevents
+        the vegetables from becoming steamed or softened.
+      </p>
+
+      <h3>3. Add the Vegetables &amp; Herbs</h3>
+      <p>
+        Add the finely diced cucumber and chopped pickled
+        red onions to the couscous.
+      </p>
+
+      <p>
+        Sprinkle in the chopped parsley or mint, if using.
+      </p>
+
+      <p>
+        Gently fold everything together until the ingredients
+        are evenly distributed.
+      </p>
+
+      <h3>4. Dress &amp; Season</h3>
+      <p>
+        Drizzle the extra-virgin olive oil and
+        <strong>1 tbsp pickled red onion liquid</strong>
+        over the salad.
+      </p>
+
+      <p>
+        Add the optional fresh lemon juice for extra brightness
+        and acidity.
+      </p>
+
+      <p>
+        Toss gently until the couscous and vegetables
+        are evenly coated.
+      </p>
+
+      <p>
+        Season with salt and freshly ground black pepper
+        to taste.
+      </p>
+
+      <h3>5. Serve</h3>
+      <p>
+        Serve warm or at room temperature.
+      </p>
+
+      <p>
+        Fluff gently with a fork before serving to keep
+        the couscous light and separated.
+      </p>
+
+      <hr />
+
+      <h2>Chef's Tip</h2>
+      <p>
+        This salad makes an excellent accompaniment to sticky
+        pork strips or other richly seasoned meats.
+      </p>
+
+      <p>
+        The crisp cucumber and tangy pickled onions provide
+        a refreshing contrast to sweet and savory sauces,
+        while the couscous absorbs any extra sauce left
+        on the plate.
+      </p>
+
+      <hr />
+
+      <h2>Tips</h2>
+      <ul>
+        <li>
+          <strong>For extra tanginess:</strong>
+          Add a little more pickled onion liquid or fresh
+          lemon juice to taste.
+        </li>
+        <li>
+          <strong>For a fresher flavor:</strong>
+          Use chopped mint or parsley just before serving.
+        </li>
+        <li>
+          <strong>For fluffy couscous:</strong>
+          Avoid stirring while it absorbs the broth.
+          Fluff thoroughly with a fork afterward.
+        </li>
+        <li>
+          <strong>For a chilled salad:</strong>
+          Refrigerate after preparing and toss gently
+          before serving.
+        </li>
+        <li>
+          <strong>Make ahead:</strong>
+          Prepare the couscous in advance and add the
+          cucumber shortly before serving for the
+          best texture.
+        </li>
+      </ul>
+
+      <footer class="footer">
+        <p class="small">
+          Last updated:
+          <time datetime="2026-10-23">October 23, 2026</time>
+        </p>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
